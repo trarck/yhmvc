@@ -123,11 +123,11 @@
     <ClCompile Include="..\Classes\BaseScene.cpp" />
     <ClCompile Include="..\Classes\HelloWorldController.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
-    <ClCompile Include="..\mvc\YHLayer.cpp" />
-    <ClCompile Include="..\mvc\YHLayerController.cpp" />
-    <ClCompile Include="..\mvc\YHScene.cpp" />
-    <ClCompile Include="..\mvc\YHSceneDirector.cpp" />
-    <ClCompile Include="..\mvc\YHWindow.cpp" />
+    <ClCompile Include="..\mvc\Layer.cpp" />
+    <ClCompile Include="..\mvc\LayerController.cpp" />
+    <ClCompile Include="..\mvc\Scene.cpp" />
+    <ClCompile Include="..\mvc\SceneDirector.cpp" />
+    <ClCompile Include="..\mvc\Window.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -135,12 +135,12 @@
     <ClInclude Include="..\Classes\BaseScene.h" />
     <ClInclude Include="..\Classes\HelloWorldController.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
-    <ClInclude Include="..\mvc\YHLayer.h" />
-    <ClInclude Include="..\mvc\YHLayerController.h" />
+    <ClInclude Include="..\mvc\Layer.h" />
+    <ClInclude Include="..\mvc\LayerController.h" />
+    <ClInclude Include="..\mvc\Scene.h" />
+    <ClInclude Include="..\mvc\SceneDirector.h" />
+    <ClInclude Include="..\mvc\Window.h" />
     <ClInclude Include="..\mvc\YHMVCMacros.h" />
-    <ClInclude Include="..\mvc\YHScene.h" />
-    <ClInclude Include="..\mvc\YHSceneDirector.h" />
-    <ClInclude Include="..\mvc\YHWindow.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>

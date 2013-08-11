@@ -1,9 +1,9 @@
 #ifndef __HELLOWORLD_HELLOWORLDCONTROLLER_H__
 #define __HELLOWORLD_HELLOWORLDCONTROLLER_H__
 
-#include "mvc/YHLayerController.h"
+#include "mvc/LayerController.h"
 
-class HelloWorldController:public cocos2d::yhmvc::YHLayerController
+class HelloWorldController:public cocos2d::yhmvc::LayerController
 {
 public:
 	HelloWorldController(void);

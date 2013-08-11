@@ -6,20 +6,20 @@
 
 NS_CC_YHMVC_BEGIN
 
-class YHLayerController;
+class LayerController;
 
-class YHScene : public CCScene
+class Scene : public cocos2d::CCScene
 {
     
 public:
     
-    YHScene();
+    Scene();
     
-    ~YHScene();
+    ~Scene();
 
     bool init();
       
-    CREATE_FUNC(YHScene);
+    CREATE_FUNC(Scene);
     
     virtual void onEnter();
     
@@ -32,15 +32,15 @@ public:
      */
     virtual void loadContents();
 
-    void addLayerController(YHLayerController* layerController);
+    void addLayerController(LayerController* layerController);
     
-	void addLayerController(YHLayerController* layerController,const std::string& name);
+	void addLayerController(LayerController* layerController,const std::string& name);
 
-    void removeLayerController(YHLayerController* layerController);
+    void removeLayerController(LayerController* layerController);
 
 	void removeLayerControllerByName(const std::string& name);
     
-    YHLayerController* getLayerControllerByName(const std::string& name);
+    LayerController* getLayerControllerByName(const std::string& name);
 
 private:
         

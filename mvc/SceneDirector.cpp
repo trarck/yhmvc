@@ -1,4 +1,4 @@
-﻿#include "YHSceneDirector.h"
+﻿#include "SceneDirector.h"
 
 NS_CC_YHMVC_BEGIN
 

@@ -2,22 +2,22 @@
 #define COCOS_YHMVC_YHWINDOW_H_
 
 #include "cocos2d.h"
-#include "YHScene.h"
+#include "Scene.h"
 
 NS_CC_YHMVC_BEGIN
 
-class YHLayerController;
+class LayerController;
 
-class YHWindow : public YHScene
+class Window : public Scene
 {
     
 public:
     
-    YHWindow();
+    Window();
     
-    ~YHWindow();
+    ~Window();
       
-    CREATE_FUNC(YHWindow);
+    CREATE_FUNC(Window);
    
     /**
      * 加载场景内容。
@@ -26,15 +26,15 @@ public:
      */
     virtual void loadContents();
 
-	void setRootLayerController(YHLayerController* rootLayerController);
+	void setRootLayerController(LayerController* rootLayerController);
 
-	inline YHLayerController* getRootLayerController()
+	inline LayerController* getRootLayerController()
 	{
 		return m_rootLayerController;
 	}
 
 private:
-	YHLayerController* m_rootLayerController;
+	LayerController* m_rootLayerController;
 };
 
 NS_CC_YHMVC_END

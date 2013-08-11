@@ -6,7 +6,7 @@
 
 NS_CC_YHMVC_BEGIN
 
-class YHScene;
+class Scene;
 
 class YHSceneDirector : public CCObject
 {
@@ -19,12 +19,12 @@ public:
       
     static YHSceneDirector* getInstance();
    
-    void runWithScene(YHScene *pScene);
-    void pushScene(YHScene* scene);
+    void runWithScene(Scene *pScene);
+    void pushScene(Scene* scene);
     void popScene();
     void popToRootScene();
 	void popToSceneStackLevel(int level);
-    void replaceScene(YHScene *pScene);
+    void replaceScene(Scene *pScene);
 protected:
     
     CCArray* m_scenesStack;

@@ -6,15 +6,15 @@
 
 NS_CC_YHMVC_BEGIN
 
-class YHLayerController;
+class LayerController;
 
-class YHLayer : public CCLayer
+class Layer : public cocos2d::CCLayer
 {
 public:
 
-	YHLayer();
+	Layer();
 
-	~YHLayer();
+	~Layer();
     
 	bool init();  
 	
@@ -27,20 +27,20 @@ public:
 
 	void onExit();
 
-    CREATE_FUNC(YHLayer);
+    CREATE_FUNC(Layer);
 
-	inline void setLayerController(YHLayerController* layerController)
+	inline void setLayerController(LayerController* layerController)
 	{
 		m_layerController = layerController;
 	}
 
-	inline YHLayerController* getLayerController()
+	inline LayerController* getLayerController()
 	{
 		return m_layerController;
 	}
 
 protected:
-	YHLayerController* m_layerController;
+	LayerController* m_layerController;
 
 };
 

@@ -1,9 +1,9 @@
-﻿#include "YHLayerController.h"
-#include "YHLayer.h"
+﻿#include "LayerController.h"
+#include "Layer.h"
 
 NS_CC_YHMVC_BEGIN
 
-YHLayerController::YHLayerController()
+LayerController::LayerController()
 :m_sDefineDataName("")
 ,m_pLayer(NULL)
 ,m_childLayerControllers(NULL)
@@ -12,7 +12,7 @@ YHLayerController::YHLayerController()
     
 }
 
-YHLayerController::~YHLayerController()
+LayerController::~LayerController()
 {
     CC_SAFE_RELEASE_NULL(m_pLayer);
     CC_SAFE_RELEASE_NULL(m_childLayerControllers);
@@ -20,7 +20,7 @@ YHLayerController::~YHLayerController()
 }
 
 // on "init" you need to initialize your instance
-bool YHLayerController::init()
+bool LayerController::init()
 {
     m_childLayerControllers=new CCArray();
     m_childLayerControllers->init();
@@ -28,11 +28,11 @@ bool YHLayerController::init()
 }
 
 //默认从描述文件中加载
-void YHLayerController::loadLayer()
+void LayerController::loadLayer()
 {
     if(m_sDefineDataName==""){
         //create a empty layer
-        YHLayer* layer=new YHLayer();
+        Layer* layer=new Layer();
         layer->init();
         setLayer(layer);
 		layer->release();
@@ -45,7 +45,7 @@ void YHLayerController::loadLayer()
 
 //layer.已经加载。如果是从配置文件中加载。此处提供而外操作
 //比如绑定事件，修改文体内容
-void YHLayerController::layerDidLoad()
+void LayerController::layerDidLoad()
 {
     
 }
@@ -53,7 +53,7 @@ void YHLayerController::layerDidLoad()
 /**
  * 当layer的onEnter事件执行时调用
  */
-void YHLayerController::onLayerEnter()
+void LayerController::onLayerEnter()
 {
 
 }
@@ -61,37 +61,37 @@ void YHLayerController::onLayerEnter()
 /**
  * 当layer的onExit事件执行时调用
  */
-void YHLayerController::onLayerExit()
+void LayerController::onLayerExit()
 {
 
 }
 
-void YHLayerController::layerWillAppear()
-{
-    
-}
-
-void YHLayerController::layerDidAppear()
+void LayerController::layerWillAppear()
 {
     
 }
 
-void YHLayerController::layerWillDisappear()
+void LayerController::layerDidAppear()
 {
     
 }
 
-void YHLayerController::layerDidDisappear()
+void LayerController::layerWillDisappear()
 {
     
 }
 
-bool YHLayerController::isLayerLoaded()
+void LayerController::layerDidDisappear()
+{
+    
+}
+
+bool LayerController::isLayerLoaded()
 {
     return m_tState.isLoaded;
 }
 
-void YHLayerController::setLayer(YHLayer* layer)
+void LayerController::setLayer(Layer* layer)
 {
     CC_SAFE_RETAIN(layer);
 	if(m_pLayer) m_pLayer->setLayerController(NULL);
@@ -101,7 +101,7 @@ void YHLayerController::setLayer(YHLayer* layer)
 }
 
 
-YHLayer* YHLayerController::getLayer()
+Layer* LayerController::getLayer()
 {
     if (!m_pLayer) {
         this->loadLayer();
@@ -113,7 +113,7 @@ YHLayer* YHLayerController::getLayer()
 
 //==================child layer controller=================//
 
-void YHLayerController::addChildLayerController(YHLayerController* layerController)
+void LayerController::addChildLayerController(LayerController* layerController)
 {
     layerController->willAddToParentLayerController(this);
     m_childLayerControllers->addObject(layerController);
@@ -121,7 +121,7 @@ void YHLayerController::addChildLayerController(YHLayerController* layerControll
     layerController->didAddToParentLayerController(this);
 }
 
-void YHLayerController::removeChildLayerController(YHLayerController* layerController)
+void LayerController::removeChildLayerController(LayerController* layerController)
 {
     layerController->willRemoveFromParentLayerController();
     m_childLayerControllers->removeObject(layerController);
@@ -129,19 +129,19 @@ void YHLayerController::removeChildLayerController(YHLayerController* layerContr
     layerController->didRemoveFromParentLayerController();
 }
 
-void YHLayerController::removeFromParentLayerController()
+void LayerController::removeFromParentLayerController()
 {
     if (m_parent!=NULL){
         m_parent->removeChildLayerController(this);
     }
 }
 
-YHLayerController* YHLayerController::getLayerControllerByName(const std::string& name)
+LayerController* LayerController::getLayerControllerByName(const std::string& name)
 {
     CCObject* pObj=NULL;
-    YHLayerController* layerController=NULL;
+    LayerController* layerController=NULL;
     CCARRAY_FOREACH(m_childLayerControllers, pObj){
-        layerController=static_cast<YHLayerController*>(pObj);
+        layerController=static_cast<LayerController*>(pObj);
         if (name.compare(layerController->getName())==0) {
             return layerController;
         }
@@ -149,22 +149,22 @@ YHLayerController* YHLayerController::getLayerControllerByName(const std::string
     return NULL;
 }
 
-void YHLayerController::willAddToParentLayerController(YHLayerController* parent)
+void LayerController::willAddToParentLayerController(LayerController* parent)
 {
     
 }
 
-void YHLayerController::didAddToParentLayerController(YHLayerController* parent)
+void LayerController::didAddToParentLayerController(LayerController* parent)
 {
     
 }
 
-void YHLayerController::willRemoveFromParentLayerController()
+void LayerController::willRemoveFromParentLayerController()
 {
     
 }
 
-void YHLayerController::didRemoveFromParentLayerController()
+void LayerController::didRemoveFromParentLayerController()
 {
     
 }

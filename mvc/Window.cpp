@@ -1,26 +1,26 @@
-#include "YHWindow.h"
-#include "YHLayerController.h"
-#include "YHLayer.h"
+#include "Window.h"
+#include "LayerController.h"
+#include "Layer.h"
 
 NS_CC_YHMVC_BEGIN
 
-YHWindow::YHWindow()
+Window::Window()
 :m_rootLayerController(NULL)
 {
     
 }
 
-YHWindow::~YHWindow()
+Window::~Window()
 {
     CC_SAFE_RELEASE_NULL(m_rootLayerController);
 }
 
-void YHWindow::loadContents()
+void Window::loadContents()
 {
 
 }
 
-void YHWindow::setRootLayerController(YHLayerController* rootLayerController)
+void Window::setRootLayerController(LayerController* rootLayerController)
 {
 	if(m_rootLayerController){
 		this->removeChild(m_rootLayerController->getLayer(),true);

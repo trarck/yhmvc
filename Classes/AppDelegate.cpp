@@ -2,7 +2,7 @@
 
 #include "cocos2d.h"
 #include "HelloWorldScene.h"
-#include "mvc/YHWindow.h"
+#include "mvc/Window.h"
 #include "HelloWorldController.h"
 
 USING_NS_CC;
@@ -31,7 +31,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     // set FPS. the default value is 1.0/60 if you don't call this
     pDirector->setAnimationInterval(1.0 / 60);
 
-	yhmvc::YHWindow* window=yhmvc::YHWindow::create();
+	yhmvc::Window* window=yhmvc::Window::create();
 	HelloWorldController* helloWorldController=new HelloWorldController();
 	window->setRootLayerController(helloWorldController);
 	helloWorldController->release();

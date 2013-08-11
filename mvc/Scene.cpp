@@ -1,20 +1,20 @@
-#include "YHScene.h"
-#include "YHLayerController.h"
+#include "Scene.h"
+#include "LayerController.h"
 
 NS_CC_YHMVC_BEGIN
 
-YHScene::YHScene()
+Scene::Scene()
 :m_layerControllers(NULL)
 {
     
 }
 
-YHScene::~YHScene()
+Scene::~Scene()
 {
     CC_SAFE_RELEASE_NULL(m_layerControllers);
 }
 
-bool YHScene::init()
+bool Scene::init()
 {
     if (!CCScene::init()){
         return false;
@@ -23,23 +23,23 @@ bool YHScene::init()
     return true;
 }
 
-void YHScene::onEnter()
+void Scene::onEnter()
 {
-	CCScene::onEnter();
+	cocos2d::CCScene::onEnter();
     loadContents();
 }
 
-void YHScene::onExit()
+void Scene::onExit()
 {
-	CCScene::onExit();
+	cocos2d::CCScene::onExit();
 }
 
-void YHScene::loadContents()
+void Scene::loadContents()
 {
 
 }
 
-void YHScene::addLayerController(YHLayerController* layerController)
+void Scene::addLayerController(LayerController* layerController)
 {
 //	addLayerController(layerController,layerController->getName().c_str());
 	m_layerControllers->setObject(layerController,layerController->getName());
@@ -49,13 +49,13 @@ void YHScene::addLayerController(YHLayerController* layerController)
 //    layerController->layerDidAppear();
 }
 
-void YHScene::addLayerController(YHLayerController* layerController,const std::string& name)
+void Scene::addLayerController(LayerController* layerController,const std::string& name)
 {
 	layerController->setName(name);
 	addLayerController(layerController);
 }
 
-void YHScene::removeLayerController(YHLayerController* layerController)
+void Scene::removeLayerController(LayerController* layerController)
 {
 	removeLayerControllerByName(layerController->getName());
 //	layerController->layerWillDisappear();
@@ -64,14 +64,14 @@ void YHScene::removeLayerController(YHLayerController* layerController)
 //    layerController->layerDidDisappear();
 }
 
-void YHScene::removeLayerControllerByName(const std::string& name)
+void Scene::removeLayerControllerByName(const std::string& name)
 {
 	m_layerControllers->removeObjectForKey(name);
 }
 
-YHLayerController* YHScene::getLayerControllerByName(const std::string& name)
+LayerController* Scene::getLayerControllerByName(const std::string& name)
 {
-    return static_cast<YHLayerController*>(m_layerControllers->objectForKey(name));
+    return static_cast<LayerController*>(m_layerControllers->objectForKey(name));
 }
 
 NS_CC_YHMVC_END

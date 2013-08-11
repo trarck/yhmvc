@@ -10,9 +10,9 @@
 #define __CCUI__BaseScene__
 
 #include "cocos2d.h"
-#include "mvc/YHScene.h"
+#include "mvc/Scene.h"
 
-class BaseScene:public cocos2d::yhmvc::YHScene
+class BaseScene:public cocos2d::yhmvc::Scene
 {
 public:
     

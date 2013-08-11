@@ -17,16 +17,16 @@ typedef struct {
     
 } LayerControllerFlag;
 
-class YHLayer;
+class Layer;
 
-class YHLayerController : public CCObject
+class LayerController : public CCObject
 {
 
 public:
     
-    YHLayerController();
+    LayerController();
     
-    ~YHLayerController();
+    ~LayerController();
     
     virtual bool init();
      
@@ -84,22 +84,22 @@ public:
 	 */
     bool isLayerLoaded();
        
-    void setLayer(YHLayer* layer);
+    void setLayer(Layer* layer);
     
-    YHLayer* getLayer();
+    Layer* getLayer();
 
     //==================child layer controller=================//
-    virtual void addChildLayerController(YHLayerController* layerController);
+    virtual void addChildLayerController(LayerController* layerController);
 
-    virtual void removeChildLayerController(YHLayerController* layerController);
+    virtual void removeChildLayerController(LayerController* layerController);
     
     virtual void removeFromParentLayerController();
     
-    virtual YHLayerController* getLayerControllerByName(const std::string& name);
+    virtual LayerController* getLayerControllerByName(const std::string& name);
 
-    virtual void willAddToParentLayerController(YHLayerController* parent);
+    virtual void willAddToParentLayerController(LayerController* parent);
 
-    virtual void didAddToParentLayerController(YHLayerController* parent);
+    virtual void didAddToParentLayerController(LayerController* parent);
     
     virtual void willRemoveFromParentLayerController();
     
@@ -125,12 +125,12 @@ public:
 		return m_sName;
 	}
 
-    inline void setParent(YHLayerController* parent)
+    inline void setParent(LayerController* parent)
     {
         m_parent = parent;
     }
     
-    inline YHLayerController* getParent()
+    inline LayerController* getParent()
     {
         return m_parent;
     }
@@ -143,11 +143,11 @@ protected:
 
 	std::string m_sName;
     
-    YHLayer* m_pLayer;
+    Layer* m_pLayer;
 
     CCArray* m_childLayerControllers;
     
-    YHLayerController* m_parent;
+    LayerController* m_parent;
 };
 
 NS_CC_YHMVC_END

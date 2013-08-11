@@ -24,23 +24,23 @@
     <ClCompile Include="..\Classes\BaseScene.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\mvc\YHLayer.cpp">
-      <Filter>mvc</Filter>
-    </ClCompile>
-    <ClCompile Include="..\mvc\YHLayerController.cpp">
-      <Filter>mvc</Filter>
-    </ClCompile>
-    <ClCompile Include="..\mvc\YHScene.cpp">
-      <Filter>mvc</Filter>
-    </ClCompile>
-    <ClCompile Include="..\mvc\YHSceneDirector.cpp">
-      <Filter>mvc</Filter>
-    </ClCompile>
-    <ClCompile Include="..\mvc\YHWindow.cpp">
-      <Filter>mvc</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\HelloWorldController.cpp">
       <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mvc\Layer.cpp">
+      <Filter>mvc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mvc\LayerController.cpp">
+      <Filter>mvc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mvc\Scene.cpp">
+      <Filter>mvc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mvc\SceneDirector.cpp">
+      <Filter>mvc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mvc\Window.cpp">
+      <Filter>mvc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -56,26 +56,26 @@
     <ClInclude Include="..\Classes\BaseScene.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\mvc\YHLayer.h">
+    <ClInclude Include="..\Classes\HelloWorldController.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mvc\Layer.h">
       <Filter>mvc</Filter>
     </ClInclude>
-    <ClInclude Include="..\mvc\YHLayerController.h">
+    <ClInclude Include="..\mvc\LayerController.h">
+      <Filter>mvc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mvc\Scene.h">
+      <Filter>mvc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mvc\SceneDirector.h">
+      <Filter>mvc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mvc\Window.h">
       <Filter>mvc</Filter>
     </ClInclude>
     <ClInclude Include="..\mvc\YHMVCMacros.h">
       <Filter>mvc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mvc\YHScene.h">
-      <Filter>mvc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mvc\YHSceneDirector.h">
-      <Filter>mvc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mvc\YHWindow.h">
-      <Filter>mvc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\HelloWorldController.h">
-      <Filter>Classes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
