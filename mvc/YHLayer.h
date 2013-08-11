@@ -13,6 +13,7 @@ class YHLayer : public CCLayer
 public:
 
 	YHLayer();
+
 	~YHLayer();
     
 	bool init();  
