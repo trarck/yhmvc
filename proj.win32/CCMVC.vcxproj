@@ -123,6 +123,7 @@
     <ClCompile Include="..\Classes\BaseScene.cpp" />
     <ClCompile Include="..\Classes\HelloWorldController.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\mvc\Controllers\NavigateController.cpp" />
     <ClCompile Include="..\mvc\Layer.cpp" />
     <ClCompile Include="..\mvc\LayerController.cpp" />
     <ClCompile Include="..\mvc\Scene.cpp" />
@@ -135,6 +136,7 @@
     <ClInclude Include="..\Classes\BaseScene.h" />
     <ClInclude Include="..\Classes\HelloWorldController.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\mvc\Controllers\NavigateController.h" />
     <ClInclude Include="..\mvc\Layer.h" />
     <ClInclude Include="..\mvc\LayerController.h" />
     <ClInclude Include="..\mvc\Scene.h" />

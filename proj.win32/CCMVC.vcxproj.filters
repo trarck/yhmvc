@@ -10,6 +10,9 @@
     <Filter Include="mvc">
       <UniqueIdentifier>{561c86c0-2890-4273-969d-896483a036ce}</UniqueIdentifier>
     </Filter>
+    <Filter Include="mvc\Controllers">
+      <UniqueIdentifier>{d3d2d833-766e-4a8f-b237-860e987b2915}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -41,6 +44,9 @@
     </ClCompile>
     <ClCompile Include="..\mvc\Window.cpp">
       <Filter>mvc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mvc\Controllers\NavigateController.cpp">
+      <Filter>mvc\Controllers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +82,9 @@
     </ClInclude>
     <ClInclude Include="..\mvc\YHMVCMacros.h">
       <Filter>mvc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mvc\Controllers\NavigateController.h">
+      <Filter>mvc\Controllers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
