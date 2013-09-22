@@ -1,5 +1,5 @@
-﻿#ifndef COCOS_YHMVC_YHSCENEDIRECTOR_H_
-#define COCOS_YHMVC_YHSCENEDIRECTOR_H_
+﻿#ifndef COCOS_YHMVC_SCENEDIRECTOR_H_
+#define COCOS_YHMVC_SCENEDIRECTOR_H_
 
 #include "cocos2d.h"
 #include "YHMVCMacros.h"
@@ -8,16 +8,16 @@ NS_CC_YHMVC_BEGIN
 
 class Scene;
 
-class YHSceneDirector : public CCObject
+class SceneDirector : public CCObject
 {
     
 public:
     
-    YHSceneDirector();
+    SceneDirector();
     
-    ~YHSceneDirector();
+    ~SceneDirector();
       
-    static YHSceneDirector* getInstance();
+    static SceneDirector* getInstance();
    
     void runWithScene(Scene *pScene);
     void pushScene(Scene* scene);
@@ -32,4 +32,4 @@ protected:
 
 NS_CC_YHMVC_END
 
-#endif // COCOS_YHMVC_YHSCENEDIRECTOR_H_
+#endif // COCOS_YHMVC_SCENEDIRECTOR_H_

@@ -2,14 +2,14 @@
 
 NS_CC_YHMVC_BEGIN
 
-YHSceneDirector::YHSceneDirector()
+SceneDirector::SceneDirector()
 :m_scenesStack(NULL)
 {
     
     
 }
 
-YHSceneDirector::~YHSceneDirector()
+SceneDirector::~SceneDirector()
 {
 
 }
