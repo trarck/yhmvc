@@ -42,6 +42,29 @@ void LayerController::loadLayer()
     }
 }
 
+bool LayerController::isLayerLoaded()
+{
+    return m_tState.isLoaded;
+}
+
+void LayerController::setLayer(Layer* layer)
+{
+    CC_SAFE_RETAIN(layer);
+	if(m_pLayer) m_pLayer->setLayerController(NULL);
+    CC_SAFE_RELEASE(m_pLayer);
+    m_pLayer = layer;
+	if(m_pLayer) m_pLayer->setLayerController(this);
+}
+
+Layer* LayerController::getLayer()
+{
+    if (!m_pLayer) {
+        this->loadLayer();
+        m_tState.isLoaded=true;
+        this->layerDidLoad();
+    }
+    return m_pLayer;
+}
 
 //layer.已经加载。如果是从配置文件中加载。此处提供而外操作
 //比如绑定事件，修改文体内容
@@ -84,31 +107,6 @@ void LayerController::layerWillDisappear()
 void LayerController::layerDidDisappear()
 {
     
-}
-
-bool LayerController::isLayerLoaded()
-{
-    return m_tState.isLoaded;
-}
-
-void LayerController::setLayer(Layer* layer)
-{
-    CC_SAFE_RETAIN(layer);
-	if(m_pLayer) m_pLayer->setLayerController(NULL);
-    CC_SAFE_RELEASE(m_pLayer);
-    m_pLayer = layer;
-	if(m_pLayer) m_pLayer->setLayerController(this);
-}
-
-
-Layer* LayerController::getLayer()
-{
-    if (!m_pLayer) {
-        this->loadLayer();
-        m_tState.isLoaded=true;
-        this->layerDidLoad();
-    }
-    return m_pLayer;
 }
 
 //==================child layer controller=================//

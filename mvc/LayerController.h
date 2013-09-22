@@ -34,7 +34,16 @@ public:
 	 * 默认从描述文件中加载
 	 */
     virtual void loadLayer();
+    	    
+	/**
+	 * layer是否已经加载成功
+	 */
+    bool isLayerLoaded();
+       
+    void setLayer(Layer* layer);
     
+    Layer* getLayer();
+
     /**
 	 * layer.已经加载。如果是从配置文件中加载。此处提供而外操作
      * 比如绑定事件，修改文体内容
@@ -78,15 +87,6 @@ public:
 	 * 如果没有使用动画，则会和will disappear一起调用
 	 */
     virtual void layerDidDisappear();
-    
-	/**
-	 * layer是否已经加载成功
-	 */
-    bool isLayerLoaded();
-       
-    void setLayer(Layer* layer);
-    
-    Layer* getLayer();
 
     //==================child layer controller=================//
     virtual void addChildLayerController(LayerController* layerController);
