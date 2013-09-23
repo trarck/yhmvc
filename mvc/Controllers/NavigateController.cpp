@@ -71,8 +71,11 @@ void NavigateController::setNextController()
 	m_currentController->layerWillDisappear();
 	m_nextController->layerWillAppear();
 
-	m_pLayer->removeChild(m_currentController->getLayer());
-	m_pLayer->addChild(m_nextController->getLayer());
+	//can't use m_pLayer，becase m_pLayer may be non't create
+	Layer* selfLayer=getLayer();
+	
+	selfLayer->removeChild(m_currentController->getLayer());
+	selfLayer->addChild(m_nextController->getLayer());
 
 	m_nextController->layerDidDisappear();
 	m_currentController->layerDidAppear();
