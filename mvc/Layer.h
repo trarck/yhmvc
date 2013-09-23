@@ -1,5 +1,5 @@
-﻿#ifndef COCOS_YHMVC_YHLAYER_H_
-#define COCOS_YHMVC_YHLAYER_H_
+﻿#ifndef COCOS_YHMVC_LAYER_H_
+#define COCOS_YHMVC_LAYER_H_
 
 #include "cocos2d.h"
 #include "YHMVCMacros.h"

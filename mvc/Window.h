@@ -1,5 +1,5 @@
-﻿#ifndef COCOS_YHMVC_YHWINDOW_H_
-#define COCOS_YHMVC_YHWINDOW_H_
+﻿#ifndef COCOS_YHMVC_WINDOW_H_
+#define COCOS_YHMVC_WINDOW_H_
 
 #include "cocos2d.h"
 #include "Scene.h"
@@ -39,4 +39,4 @@ private:
 
 NS_CC_YHMVC_END
 
-#endif // COCOS_YHMVC_YHWINDOW_H_
+#endif // COCOS_YHMVC_WINDOW_H_
