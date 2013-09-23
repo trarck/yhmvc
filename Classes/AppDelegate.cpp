@@ -31,16 +31,16 @@ bool AppDelegate::applicationDidFinishLaunching()
     // set FPS. the default value is 1.0/60 if you don't call this
     pDirector->setAnimationInterval(1.0 / 60);
 
-	yhmvc::Window* window=yhmvc::Window::create();
-	HelloWorldController* helloWorldController=new HelloWorldController();
-	window->setRootLayerController(helloWorldController);
-	helloWorldController->release();
+	//yhmvc::Window* window=yhmvc::Window::create();
+	//HelloWorldController* helloWorldController=new HelloWorldController();
+	//window->setRootLayerController(helloWorldController);
+	//helloWorldController->release();
 
     // create a scene. it's an autorelease object
-    //CCScene *pScene = HelloWorld::create();
+    CCScene *pScene = HelloWorld::create();
 
     // run
-    pDirector->runWithScene(window);
+    pDirector->runWithScene(pScene);
 
     return true;
 }

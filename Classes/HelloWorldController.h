@@ -2,6 +2,7 @@
 #define __HELLOWORLD_HELLOWORLDCONTROLLER_H__
 
 #include "mvc/LayerController.h"
+#include "mvc/Layer.h"
 
 class HelloWorldController:public cocos2d::yhmvc::LayerController
 {
