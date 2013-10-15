@@ -46,4 +46,4 @@ protected:
 
 NS_CC_YHMVC_END
 
-#endif // COCOS_YHMVC_YHLAYER_H_
+#endif // COCOS_YHMVC_LAYER_H_
