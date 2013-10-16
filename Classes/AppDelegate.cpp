@@ -1,9 +1,9 @@
 #include "AppDelegate.h"
 
 #include "cocos2d.h"
-#include "HelloWorldScene.h"
 #include "mvc/Window.h"
-#include "HelloWorldController.h"
+#include "Scenes/HelloWorldScene.h"
+#include "Controllers/HelloWorldController.h"
 
 USING_NS_CC;
 

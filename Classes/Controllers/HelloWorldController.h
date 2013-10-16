@@ -12,10 +12,10 @@ public:
 
 	void loadLayer();
 
-	void menuCloseCallback(CCObject* pSender);
+	void menuCloseCallback(cocos2d::CCObject* pSender);
     
-    void menuRunCallback(CCObject* pSender);
-    void menuStopCallback(CCObject* pSender);
-    void menuMoveToCallback(CCObject* pSender);
+    void menuRunCallback(cocos2d::CCObject* pSender);
+    void menuStopCallback(cocos2d::CCObject* pSender);
+    void menuMoveToCallback(cocos2d::CCObject* pSender);
 };
 #endif //__HELLOWORLD_HELLOWORLDCONTROLLER_H__
