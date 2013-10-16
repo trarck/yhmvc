@@ -33,7 +33,22 @@ public:
 		return m_rootLayerController;
 	}
 
+public:
+    
+    static inline void setCurrentWindow(Window* currentWindow)
+    {
+        s_currentWindow = currentWindow;
+    }
+    
+    static inline Window* getCurrentWindow()
+    {
+        return s_currentWindow;
+    }
+    
 private:
+    
+    static Window* s_currentWindow;
+    
 	LayerController* m_rootLayerController;
 };
 

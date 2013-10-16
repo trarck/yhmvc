@@ -4,6 +4,8 @@
 
 NS_CC_YHMVC_BEGIN
 
+Window* Window::s_currentWindow=NULL;
+
 Window::Window()
 :m_rootLayerController(NULL)
 {
