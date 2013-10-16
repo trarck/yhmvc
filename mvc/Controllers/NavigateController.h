@@ -6,6 +6,11 @@
 
 NS_CC_YHMVC_BEGIN
 
+/**
+ * controller切换
+ * 用于任意controller切换
+ * 可被扩展带有nav bar.
+ */
 class NavigateController : public LayerController
 {
 public:
