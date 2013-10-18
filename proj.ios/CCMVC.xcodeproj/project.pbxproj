@@ -87,6 +87,8 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		5765D8EC18112A960032D0F1 /* InitializeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5765D8EA18112A960032D0F1 /* InitializeScene.cpp */; };
+		5765D8EF18112B190032D0F1 /* InitializeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5765D8ED18112B190032D0F1 /* InitializeController.cpp */; };
 		578A54DD180CEB8F006894D5 /* NavigateController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 578A54D0180CEB8F006894D5 /* NavigateController.cpp */; };
 		578A54DE180CEB8F006894D5 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 578A54D2180CEB8F006894D5 /* Layer.cpp */; };
 		578A54DF180CEB8F006894D5 /* LayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 578A54D4180CEB8F006894D5 /* LayerController.cpp */; };
@@ -298,6 +300,10 @@
 		1D6058910D05DD3D006BFB54 /* CCMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5765D8EA18112A960032D0F1 /* InitializeScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InitializeScene.cpp; sourceTree = "<group>"; };
+		5765D8EB18112A960032D0F1 /* InitializeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitializeScene.h; sourceTree = "<group>"; };
+		5765D8ED18112B190032D0F1 /* InitializeController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InitializeController.cpp; sourceTree = "<group>"; };
+		5765D8EE18112B190032D0F1 /* InitializeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitializeController.h; sourceTree = "<group>"; };
 		578A54D0180CEB8F006894D5 /* NavigateController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavigateController.cpp; sourceTree = "<group>"; };
 		578A54D1180CEB8F006894D5 /* NavigateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigateController.h; sourceTree = "<group>"; };
 		578A54D2180CEB8F006894D5 /* Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Layer.cpp; sourceTree = "<group>"; };
@@ -710,6 +716,8 @@
 		5797A5B1180E8DBD00BA5455 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5765D8ED18112B190032D0F1 /* InitializeController.cpp */,
+				5765D8EE18112B190032D0F1 /* InitializeController.h */,
 				5797A5B2180E8DBD00BA5455 /* HelloWorldController.cpp */,
 				5797A5B3180E8DBD00BA5455 /* HelloWorldController.h */,
 			);
@@ -730,6 +738,8 @@
 		5797A5B5180E8DBD00BA5455 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5765D8EA18112A960032D0F1 /* InitializeScene.cpp */,
+				5765D8EB18112A960032D0F1 /* InitializeScene.h */,
 				5797A5B6180E8DBD00BA5455 /* BaseScene.cpp */,
 				5797A5B7180E8DBD00BA5455 /* BaseScene.h */,
 				5797A5B8180E8DBD00BA5455 /* HelloWorldScene.cpp */,
@@ -902,6 +912,7 @@
 				15A3DAEC1682F8A6002FB0C5 /* CDOpenALSupport.m in Sources */,
 				15A3DAED1682F8A6002FB0C5 /* CocosDenshion.m in Sources */,
 				15A3DAEE1682F8A6002FB0C5 /* SimpleAudioEngine.mm in Sources */,
+				5765D8EF18112B190032D0F1 /* InitializeController.cpp in Sources */,
 				15A3DAEF1682F8A6002FB0C5 /* SimpleAudioEngine_objc.m in Sources */,
 				1A27573F1697CF2B00504026 /* CCEditBoxImplAndroid.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
@@ -918,6 +929,7 @@
 				1A40E7251727BF49006D4861 /* AttachmentLoader.cpp in Sources */,
 				1A40E7261727BF49006D4861 /* Bone.cpp in Sources */,
 				1A40E7271727BF49006D4861 /* BoneData.cpp in Sources */,
+				5765D8EC18112A960032D0F1 /* InitializeScene.cpp in Sources */,
 				1A40E7281727BF49006D4861 /* extension.cpp in Sources */,
 				1A40E7291727BF49006D4861 /* Json.cpp in Sources */,
 				1A40E72A1727BF49006D4861 /* RegionAttachment.cpp in Sources */,

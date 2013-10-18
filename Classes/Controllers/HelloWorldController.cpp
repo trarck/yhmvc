@@ -13,6 +13,7 @@ HelloWorldController::HelloWorldController(void)
 
 HelloWorldController::~HelloWorldController(void)
 {
+    
 }
 
 void HelloWorldController::loadLayer()
@@ -59,7 +60,7 @@ void HelloWorldController::loadLayer()
 
     /////////////////////////////
     // 3. add your codes below...
-       
+    
 }
 
 void HelloWorldController::menuCloseCallback(CCObject* pSender)
@@ -97,10 +98,7 @@ void HelloWorldController::menuStopCallback(CCObject* pSender)
 
 void HelloWorldController::menuMoveToCallback(CCObject* pSender)
 {
-   
-    
     CCSize screenSize= CCDirector::sharedDirector()->getWinSize();
     CCPoint to=ccp(screenSize.width/2+50,screenSize.height/2+50);
-    
 }
 

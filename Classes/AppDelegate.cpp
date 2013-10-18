@@ -2,10 +2,10 @@
 
 #include "cocos2d.h"
 #include "mvc/Window.h"
-#include "Scenes/HelloWorldScene.h"
-#include "Controllers/HelloWorldController.h"
+#include "Scenes/InitializeScene.h"
 
 USING_NS_CC;
+USING_NS_CC_YHMVC;
 
 AppDelegate::AppDelegate()
 {
@@ -37,7 +37,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 	//helloWorldController->release();
 
     // create a scene. it's an autorelease object
-    CCScene *pScene = HelloWorld::create();
+    CCScene *pScene = InitializeScene::create();
 
     // run
     pDirector->runWithScene(pScene);
