@@ -1,5 +1,6 @@
 #include "HelloWorldController.h"
 #include "mvc/Layer.h"
+#include "Layers/HelloLayer.h"
 
 using namespace cocos2d;
 using namespace cocos2d::yhmvc;
@@ -16,8 +17,9 @@ HelloWorldController::~HelloWorldController(void)
 
 void HelloWorldController::loadLayer()
 {
-	Layer* layer=new Layer();
-
+	HelloLayer* layer=new HelloLayer();
+    layer->init();
+    
 	setLayer(layer);
 	layer->release();
 

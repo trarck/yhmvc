@@ -9,6 +9,21 @@
 #ifndef __CCMVC__HelloLayer__
 #define __CCMVC__HelloLayer__
 
-#include <iostream>
+#include "mvc/Layer.h"
+
+class HelloLayer:public cocos2d::yhmvc::Layer
+{
+    
+public:
+    
+    HelloLayer();
+    
+    ~HelloLayer();
+    
+    bool init();
+    
+    void createBody();
+};
+
 
 #endif /* defined(__CCMVC__HelloLayer__) */
