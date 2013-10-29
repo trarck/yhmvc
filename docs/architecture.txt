@@ -17,6 +17,7 @@
    在这个架构中。一个scene有一个或多个子layer，即没有root layer。即有多个controller（间接引用的不算。被controller引用的）
    同时有多个controller，适合中大型项目。由于比较灵活，自然就比较复杂。
    实际使用的时候，通常有一个被缩放的layer,来适应不同的屏幕大小。一个简单的UI layer用来放置按钮，如果UI layer复杂则最好等比缩放。
+   scene和layer只有和显示相关的逻辑，没有和游戏相关的逻辑。
 	
 
 3、类ios mvc的架构
