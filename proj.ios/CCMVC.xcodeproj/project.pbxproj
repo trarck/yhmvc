@@ -90,6 +90,7 @@
 		574619DA18237D7200B44F4F /* MainController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574619D818237D7200B44F4F /* MainController.cpp */; };
 		574619DD18237D8A00B44F4F /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574619DB18237D8A00B44F4F /* MainScene.cpp */; };
 		574619E318238B2400B44F4F /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574619E118238B2400B44F4F /* Game.cpp */; };
+		574619E71823919800B44F4F /* GameSceneDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574619E51823919800B44F4F /* GameSceneDirector.cpp */; };
 		5765D8EC18112A960032D0F1 /* InitializeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5765D8EA18112A960032D0F1 /* InitializeScene.cpp */; };
 		5765D8EF18112B190032D0F1 /* InitializeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5765D8ED18112B190032D0F1 /* InitializeController.cpp */; };
 		578A54DD180CEB8F006894D5 /* NavigateController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 578A54D0180CEB8F006894D5 /* NavigateController.cpp */; };
@@ -310,6 +311,9 @@
 		574619E118238B2400B44F4F /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = ../Classes/Game.cpp; sourceTree = "<group>"; };
 		574619E218238B2400B44F4F /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../Classes/Game.h; sourceTree = "<group>"; };
 		574619E418238B6000B44F4F /* GameMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameMacros.h; path = ../Classes/GameMacros.h; sourceTree = "<group>"; };
+		574619E51823919800B44F4F /* GameSceneDirector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameSceneDirector.cpp; sourceTree = "<group>"; };
+		574619E61823919800B44F4F /* GameSceneDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSceneDirector.h; sourceTree = "<group>"; };
+		574619E8182392CD00B44F4F /* SceneDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDefine.h; sourceTree = "<group>"; };
 		5765D8EA18112A960032D0F1 /* InitializeScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InitializeScene.cpp; sourceTree = "<group>"; };
 		5765D8EB18112A960032D0F1 /* InitializeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitializeScene.h; sourceTree = "<group>"; };
 		5765D8ED18112B190032D0F1 /* InitializeController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InitializeController.cpp; sourceTree = "<group>"; };
@@ -337,6 +341,7 @@
 		5797A5B9180E8DBD00BA5455 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
 		5797A5BD180E917100BA5455 /* HelloLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloLayer.cpp; sourceTree = "<group>"; };
 		5797A5BE180E917100BA5455 /* HelloLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloLayer.h; sourceTree = "<group>"; };
+		57EA398C1823958E001A0E96 /* SceneRegisterData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneRegisterData.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -761,6 +766,10 @@
 				5797A5B7180E8DBD00BA5455 /* BaseScene.h */,
 				5797A5B8180E8DBD00BA5455 /* HelloWorldScene.cpp */,
 				5797A5B9180E8DBD00BA5455 /* HelloWorldScene.h */,
+				574619E51823919800B44F4F /* GameSceneDirector.cpp */,
+				574619E61823919800B44F4F /* GameSceneDirector.h */,
+				574619E8182392CD00B44F4F /* SceneDefine.h */,
+				57EA398C1823958E001A0E96 /* SceneRegisterData.h */,
 			);
 			name = Scenes;
 			path = ../Classes/Scenes;
@@ -956,6 +965,7 @@
 				1A40E72B1727BF49006D4861 /* Skeleton.cpp in Sources */,
 				1A40E72C1727BF49006D4861 /* SkeletonData.cpp in Sources */,
 				1A40E72D1727BF49006D4861 /* SkeletonJson.cpp in Sources */,
+				574619E71823919800B44F4F /* GameSceneDirector.cpp in Sources */,
 				578A54E2180CEB8F006894D5 /* Window.cpp in Sources */,
 				1A40E72E1727BF49006D4861 /* Skin.cpp in Sources */,
 				1A40E72F1727BF49006D4861 /* Slot.cpp in Sources */,

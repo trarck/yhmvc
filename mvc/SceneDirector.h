@@ -8,7 +8,7 @@
 NS_CC_YHMVC_BEGIN
 
 typedef yhmvc::Scene* (*SceneCreate)() ;
-#define SCENE_CREATE_SELECTOR(_SELECTOR) (SceneCreate)(&_SELECTOR)
+#define SCENE_CREATE_SELECTOR(_SELECTOR) (cocos2d::yhmvc::SceneCreate)(&_SELECTOR)
 
 class SceneDirector : public CCObject
 {

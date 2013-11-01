@@ -2,10 +2,8 @@
 
 #include "cocos2d.h"
 #include "mvc/Window.h"
-#include "mvc/SceneDirector.h"
 #include "Game.h"
-
-#include "Scenes/InitializeScene.h"
+#include "Scenes/GameSceneDirector.h"
 
 USING_NS_CC;
 USING_NS_CC_YHMVC;
@@ -42,7 +40,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 
     Game::getInstance()->setupSceneDirector();
     
-    SceneDirector::getInstance()->runWithScene("initialize");
+    GameSceneDirector::getInstance()->runWithScene(kInitializeScene);
     
 //    // create a scene. it's an autorelease object
 //    CCScene *pScene = InitializeScene::create();

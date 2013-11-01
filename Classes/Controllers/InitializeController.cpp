@@ -1,6 +1,6 @@
 #include "InitializeController.h"
 #include "mvc/Layer.h"
-#include "mvc/SceneDirector.h"
+#include "Scenes/GameSceneDirector.h"
 
 using namespace cocos2d;
 using namespace cocos2d::yhmvc;
@@ -40,5 +40,5 @@ void InitializeController::loadLayer()
 
 void InitializeController::startGameCallback(CCObject* pSender)
 {
-    SceneDirector::getInstance()->replaceScene("main");
+    cocos2d::mygame::GameSceneDirector::getInstance()->replaceScene(kMainScene);
 }

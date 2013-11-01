@@ -8,10 +8,10 @@
 
 #include "Game.h"
 
-#include "mvc/SceneDirector.h"
+#include "Scenes/GameSceneDirector.h"
 
-#include "Scenes/InitializeScene.h"
-#include "Scenes/MainScene.h"
+#include "Scenes/SceneDefine.h"
+#include "Scenes/SceneRegisterData.h"
 
 USING_NS_CC;
 USING_NS_CC_YHMVC;
@@ -29,8 +29,15 @@ Game* Game::getInstance()
 
 void Game::setupSceneDirector()
 {
-    SceneDirector::getInstance()->registerSceneCreate("initialize",SCENE_CREATE_SELECTOR(InitializeScene::create));
-    SceneDirector::getInstance()->registerSceneCreate("main",SCENE_CREATE_SELECTOR(MainScene::create));
+    GameSceneDirector* sceneDirector=GameSceneDirector::getInstance();
+    
+    int registerDataSize=sizeof(kSceneRegisterData)/sizeof(SceneRegisterItem);
+    
+    CCLOG("scene register data size=%d",registerDataSize);
+    
+    for (int i=0; i<registerDataSize; ++i) {
+        sceneDirector->registerSceneCreate(kSceneRegisterData[i].name,kSceneRegisterData[i].createFun);
+    }
 }
 
 
