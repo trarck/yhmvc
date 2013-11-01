@@ -80,7 +80,6 @@
 		1AC3624B16D4A1E8000847F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3624516D4A1E8000847F2 /* main.m */; };
 		1ACB3244164770DE00914215 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACB3243164770DE00914215 /* libcurl.a */; };
 		1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */; };
-		1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */; };
 		1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B916D35E4900DB1158 /* CloseNormal.png */; };
 		1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */; };
 		1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */; };
@@ -88,14 +87,23 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		574619DA18237D7200B44F4F /* MainController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574619D818237D7200B44F4F /* MainController.cpp */; };
+		574619DD18237D8A00B44F4F /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574619DB18237D8A00B44F4F /* MainScene.cpp */; };
+		574619E318238B2400B44F4F /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574619E118238B2400B44F4F /* Game.cpp */; };
+		574619E71823919800B44F4F /* GameSceneDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574619E51823919800B44F4F /* GameSceneDirector.cpp */; };
+		5765D8EC18112A960032D0F1 /* InitializeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5765D8EA18112A960032D0F1 /* InitializeScene.cpp */; };
+		5765D8EF18112B190032D0F1 /* InitializeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5765D8ED18112B190032D0F1 /* InitializeController.cpp */; };
 		578A54DD180CEB8F006894D5 /* NavigateController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 578A54D0180CEB8F006894D5 /* NavigateController.cpp */; };
 		578A54DE180CEB8F006894D5 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 578A54D2180CEB8F006894D5 /* Layer.cpp */; };
 		578A54DF180CEB8F006894D5 /* LayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 578A54D4180CEB8F006894D5 /* LayerController.cpp */; };
 		578A54E0180CEB8F006894D5 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 578A54D6180CEB8F006894D5 /* Scene.cpp */; };
 		578A54E1180CEB8F006894D5 /* SceneDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 578A54D8180CEB8F006894D5 /* SceneDirector.cpp */; };
 		578A54E2180CEB8F006894D5 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 578A54DA180CEB8F006894D5 /* Window.cpp */; };
-		578A54E7180CECFB006894D5 /* BaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 578A54E3180CECFB006894D5 /* BaseScene.cpp */; };
-		578A54E8180CECFB006894D5 /* HelloWorldController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 578A54E5180CECFB006894D5 /* HelloWorldController.cpp */; };
+		5797A5A1180E67EE00BA5455 /* ControllerDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5797A59F180E67EE00BA5455 /* ControllerDirector.cpp */; };
+		5797A5BB180E8DBD00BA5455 /* BaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5797A5B6180E8DBD00BA5455 /* BaseScene.cpp */; };
+		5797A5BF180E917100BA5455 /* HelloLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5797A5BD180E917100BA5455 /* HelloLayer.cpp */; };
+		57EA398F1823A10B001A0E96 /* ShopController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57EA398D1823A10B001A0E96 /* ShopController.cpp */; };
+		57EA39921823A110001A0E96 /* ShopScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57EA39901823A110001A0E96 /* ShopScene.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
@@ -287,8 +295,6 @@
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = ../Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		1AFAF8B416D35DE700DB1158 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../Classes/AppDelegate.h; sourceTree = "<group>"; };
-		1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = ../Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
-		1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = ../Classes/HelloWorldScene.h; sourceTree = "<group>"; };
 		1AFAF8B916D35E4900DB1158 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
 		1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
@@ -298,6 +304,20 @@
 		1D6058910D05DD3D006BFB54 /* CCMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		574619D818237D7200B44F4F /* MainController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainController.cpp; sourceTree = "<group>"; };
+		574619D918237D7200B44F4F /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		574619DB18237D8A00B44F4F /* MainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainScene.cpp; sourceTree = "<group>"; };
+		574619DC18237D8A00B44F4F /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
+		574619E118238B2400B44F4F /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = ../Classes/Game.cpp; sourceTree = "<group>"; };
+		574619E218238B2400B44F4F /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../Classes/Game.h; sourceTree = "<group>"; };
+		574619E418238B6000B44F4F /* GameMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameMacros.h; path = ../Classes/GameMacros.h; sourceTree = "<group>"; };
+		574619E51823919800B44F4F /* GameSceneDirector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameSceneDirector.cpp; sourceTree = "<group>"; };
+		574619E61823919800B44F4F /* GameSceneDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSceneDirector.h; sourceTree = "<group>"; };
+		574619E8182392CD00B44F4F /* SceneDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDefine.h; sourceTree = "<group>"; };
+		5765D8EA18112A960032D0F1 /* InitializeScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InitializeScene.cpp; sourceTree = "<group>"; };
+		5765D8EB18112A960032D0F1 /* InitializeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitializeScene.h; sourceTree = "<group>"; };
+		5765D8ED18112B190032D0F1 /* InitializeController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InitializeController.cpp; sourceTree = "<group>"; };
+		5765D8EE18112B190032D0F1 /* InitializeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitializeController.h; sourceTree = "<group>"; };
 		578A54D0180CEB8F006894D5 /* NavigateController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NavigateController.cpp; sourceTree = "<group>"; };
 		578A54D1180CEB8F006894D5 /* NavigateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigateController.h; sourceTree = "<group>"; };
 		578A54D2180CEB8F006894D5 /* Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Layer.cpp; sourceTree = "<group>"; };
@@ -311,10 +331,17 @@
 		578A54DA180CEB8F006894D5 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		578A54DB180CEB8F006894D5 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
 		578A54DC180CEB8F006894D5 /* YHMVCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHMVCMacros.h; sourceTree = "<group>"; };
-		578A54E3180CECFB006894D5 /* BaseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BaseScene.cpp; path = ../Classes/BaseScene.cpp; sourceTree = "<group>"; };
-		578A54E4180CECFB006894D5 /* BaseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseScene.h; path = ../Classes/BaseScene.h; sourceTree = "<group>"; };
-		578A54E5180CECFB006894D5 /* HelloWorldController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldController.cpp; path = ../Classes/HelloWorldController.cpp; sourceTree = "<group>"; };
-		578A54E6180CECFB006894D5 /* HelloWorldController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelloWorldController.h; path = ../Classes/HelloWorldController.h; sourceTree = "<group>"; };
+		5797A59F180E67EE00BA5455 /* ControllerDirector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ControllerDirector.cpp; sourceTree = "<group>"; };
+		5797A5A0180E67EE00BA5455 /* ControllerDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerDirector.h; sourceTree = "<group>"; };
+		5797A5B6180E8DBD00BA5455 /* BaseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseScene.cpp; sourceTree = "<group>"; };
+		5797A5B7180E8DBD00BA5455 /* BaseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseScene.h; sourceTree = "<group>"; };
+		5797A5BD180E917100BA5455 /* HelloLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloLayer.cpp; sourceTree = "<group>"; };
+		5797A5BE180E917100BA5455 /* HelloLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloLayer.h; sourceTree = "<group>"; };
+		57EA398C1823958E001A0E96 /* SceneRegisterData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneRegisterData.h; sourceTree = "<group>"; };
+		57EA398D1823A10B001A0E96 /* ShopController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopController.cpp; sourceTree = "<group>"; };
+		57EA398E1823A10B001A0E96 /* ShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopController.h; sourceTree = "<group>"; };
+		57EA39901823A110001A0E96 /* ShopScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopScene.cpp; sourceTree = "<group>"; };
+		57EA39911823A110001A0E96 /* ShopScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopScene.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -572,14 +599,14 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5797A5B1180E8DBD00BA5455 /* Controllers */,
+				5797A5B4180E8DBD00BA5455 /* Layers */,
+				5797A5B5180E8DBD00BA5455 /* Scenes */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
-				578A54E3180CECFB006894D5 /* BaseScene.cpp */,
-				578A54E4180CECFB006894D5 /* BaseScene.h */,
-				578A54E5180CECFB006894D5 /* HelloWorldController.cpp */,
-				578A54E6180CECFB006894D5 /* HelloWorldController.h */,
-				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
-				1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */,
+				574619E118238B2400B44F4F /* Game.cpp */,
+				574619E218238B2400B44F4F /* Game.h */,
+				574619E418238B6000B44F4F /* GameMacros.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -696,10 +723,56 @@
 		578A54CF180CEB8F006894D5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5797A59F180E67EE00BA5455 /* ControllerDirector.cpp */,
+				5797A5A0180E67EE00BA5455 /* ControllerDirector.h */,
 				578A54D0180CEB8F006894D5 /* NavigateController.cpp */,
 				578A54D1180CEB8F006894D5 /* NavigateController.h */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5797A5B1180E8DBD00BA5455 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57EA398D1823A10B001A0E96 /* ShopController.cpp */,
+				57EA398E1823A10B001A0E96 /* ShopController.h */,
+				574619D818237D7200B44F4F /* MainController.cpp */,
+				574619D918237D7200B44F4F /* MainController.h */,
+				5765D8ED18112B190032D0F1 /* InitializeController.cpp */,
+				5765D8EE18112B190032D0F1 /* InitializeController.h */,
+			);
+			name = Controllers;
+			path = ../Classes/Controllers;
+			sourceTree = "<group>";
+		};
+		5797A5B4180E8DBD00BA5455 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				5797A5BD180E917100BA5455 /* HelloLayer.cpp */,
+				5797A5BE180E917100BA5455 /* HelloLayer.h */,
+			);
+			name = Layers;
+			path = ../Classes/Layers;
+			sourceTree = "<group>";
+		};
+		5797A5B5180E8DBD00BA5455 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				57EA39901823A110001A0E96 /* ShopScene.cpp */,
+				57EA39911823A110001A0E96 /* ShopScene.h */,
+				574619DB18237D8A00B44F4F /* MainScene.cpp */,
+				574619DC18237D8A00B44F4F /* MainScene.h */,
+				5765D8EA18112A960032D0F1 /* InitializeScene.cpp */,
+				5765D8EB18112A960032D0F1 /* InitializeScene.h */,
+				5797A5B6180E8DBD00BA5455 /* BaseScene.cpp */,
+				5797A5B7180E8DBD00BA5455 /* BaseScene.h */,
+				574619E51823919800B44F4F /* GameSceneDirector.cpp */,
+				574619E61823919800B44F4F /* GameSceneDirector.h */,
+				574619E8182392CD00B44F4F /* SceneDefine.h */,
+				57EA398C1823958E001A0E96 /* SceneRegisterData.h */,
+			);
+			name = Scenes;
+			path = ../Classes/Scenes;
 			sourceTree = "<group>";
 		};
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
@@ -811,7 +884,9 @@
 			files = (
 				15A3DA311682F826002FB0C5 /* CCBAnimationManager.cpp in Sources */,
 				15A3DA321682F826002FB0C5 /* CCBFileLoader.cpp in Sources */,
+				574619DD18237D8A00B44F4F /* MainScene.cpp in Sources */,
 				15A3DA331682F826002FB0C5 /* CCBKeyframe.cpp in Sources */,
+				5797A5A1180E67EE00BA5455 /* ControllerDirector.cpp in Sources */,
 				15A3DA341682F826002FB0C5 /* CCBReader.cpp in Sources */,
 				15A3DA351682F826002FB0C5 /* CCBSequence.cpp in Sources */,
 				15A3DA361682F826002FB0C5 /* CCBSequenceProperty.cpp in Sources */,
@@ -840,6 +915,7 @@
 				578A54DE180CEB8F006894D5 /* Layer.cpp in Sources */,
 				15A3DA4B1682F826002FB0C5 /* CCControlColourPicker.cpp in Sources */,
 				15A3DA4C1682F826002FB0C5 /* CCControlHuePicker.cpp in Sources */,
+				5797A5BB180E8DBD00BA5455 /* BaseScene.cpp in Sources */,
 				15A3DA4D1682F826002FB0C5 /* CCControlPotentiometer.cpp in Sources */,
 				15A3DA4E1682F826002FB0C5 /* CCControlSaturationBrightnessPicker.cpp in Sources */,
 				578A54DD180CEB8F006894D5 /* NavigateController.cpp in Sources */,
@@ -848,25 +924,27 @@
 				15A3DA511682F826002FB0C5 /* CCControlSwitch.cpp in Sources */,
 				15A3DA521682F826002FB0C5 /* CCControlUtils.cpp in Sources */,
 				15A3DA531682F826002FB0C5 /* CCInvocation.cpp in Sources */,
-				578A54E7180CECFB006894D5 /* BaseScene.cpp in Sources */,
 				15A3DA541682F826002FB0C5 /* CCScale9Sprite.cpp in Sources */,
 				15A3DA551682F826002FB0C5 /* CCEditBox.cpp in Sources */,
+				57EA39921823A110001A0E96 /* ShopScene.cpp in Sources */,
 				15A3DA571682F826002FB0C5 /* CCEditBoxImplIOS.mm in Sources */,
 				15A3DA591682F826002FB0C5 /* CCScrollView.cpp in Sources */,
 				15A3DA5A1682F826002FB0C5 /* CCSorting.cpp in Sources */,
 				578A54E1180CEB8F006894D5 /* SceneDirector.cpp in Sources */,
 				15A3DA5B1682F826002FB0C5 /* CCTableView.cpp in Sources */,
+				574619E318238B2400B44F4F /* Game.cpp in Sources */,
 				15A3DA5C1682F826002FB0C5 /* CCTableViewCell.cpp in Sources */,
 				15A3DA5D1682F826002FB0C5 /* HttpClient.cpp in Sources */,
 				15A3DAEB1682F8A6002FB0C5 /* CDAudioManager.m in Sources */,
-				578A54E8180CECFB006894D5 /* HelloWorldController.cpp in Sources */,
 				15A3DAEC1682F8A6002FB0C5 /* CDOpenALSupport.m in Sources */,
 				15A3DAED1682F8A6002FB0C5 /* CocosDenshion.m in Sources */,
 				15A3DAEE1682F8A6002FB0C5 /* SimpleAudioEngine.mm in Sources */,
+				5765D8EF18112B190032D0F1 /* InitializeController.cpp in Sources */,
+				57EA398F1823A10B001A0E96 /* ShopController.cpp in Sources */,
 				15A3DAEF1682F8A6002FB0C5 /* SimpleAudioEngine_objc.m in Sources */,
 				1A27573F1697CF2B00504026 /* CCEditBoxImplAndroid.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
-				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
+				5797A5BF180E917100BA5455 /* HelloLayer.cpp in Sources */,
 				1AC3624916D4A1E8000847F2 /* AppController.mm in Sources */,
 				1AC3624B16D4A1E8000847F2 /* main.m in Sources */,
 				1AFCDA8216D4A25900906EA6 /* RootViewController.mm in Sources */,
@@ -874,17 +952,20 @@
 				1A40E7201727BF49006D4861 /* AnimationState.cpp in Sources */,
 				1A40E7211727BF49006D4861 /* AnimationStateData.cpp in Sources */,
 				1A40E7221727BF49006D4861 /* Atlas.cpp in Sources */,
+				574619DA18237D7200B44F4F /* MainController.cpp in Sources */,
 				1A40E7231727BF49006D4861 /* AtlasAttachmentLoader.cpp in Sources */,
 				1A40E7241727BF49006D4861 /* Attachment.cpp in Sources */,
 				1A40E7251727BF49006D4861 /* AttachmentLoader.cpp in Sources */,
 				1A40E7261727BF49006D4861 /* Bone.cpp in Sources */,
 				1A40E7271727BF49006D4861 /* BoneData.cpp in Sources */,
+				5765D8EC18112A960032D0F1 /* InitializeScene.cpp in Sources */,
 				1A40E7281727BF49006D4861 /* extension.cpp in Sources */,
 				1A40E7291727BF49006D4861 /* Json.cpp in Sources */,
 				1A40E72A1727BF49006D4861 /* RegionAttachment.cpp in Sources */,
 				1A40E72B1727BF49006D4861 /* Skeleton.cpp in Sources */,
 				1A40E72C1727BF49006D4861 /* SkeletonData.cpp in Sources */,
 				1A40E72D1727BF49006D4861 /* SkeletonJson.cpp in Sources */,
+				574619E71823919800B44F4F /* GameSceneDirector.cpp in Sources */,
 				578A54E2180CEB8F006894D5 /* Window.cpp in Sources */,
 				1A40E72E1727BF49006D4861 /* Skin.cpp in Sources */,
 				1A40E72F1727BF49006D4861 /* Slot.cpp in Sources */,
@@ -936,6 +1017,7 @@
 					"\"$(SRCROOT)/../../../cocos2dx/platform/ios\"",
 					"\"$(SRCROOT)/../../../cocos2dx/platform/ios/Simulation\"",
 					../,
+					../Classes,
 				);
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
@@ -981,6 +1063,7 @@
 					"\"$(SRCROOT)/../../../cocos2dx/platform/ios\"",
 					"\"$(SRCROOT)/../../../cocos2dx/platform/ios/Simulation\"",
 					../,
+					../Classes,
 				);
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;

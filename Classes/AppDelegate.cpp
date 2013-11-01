@@ -1,11 +1,13 @@
 #include "AppDelegate.h"
 
 #include "cocos2d.h"
-#include "HelloWorldScene.h"
 #include "mvc/Window.h"
-#include "HelloWorldController.h"
+#include "Game.h"
+#include "Scenes/GameSceneDirector.h"
 
 USING_NS_CC;
+USING_NS_CC_YHMVC;
+USING_NS_MYGAME;
 
 AppDelegate::AppDelegate()
 {
@@ -31,16 +33,19 @@ bool AppDelegate::applicationDidFinishLaunching()
     // set FPS. the default value is 1.0/60 if you don't call this
     pDirector->setAnimationInterval(1.0 / 60);
 
-	yhmvc::Window* window=yhmvc::Window::create();
-	HelloWorldController* helloWorldController=new HelloWorldController();
-	window->setRootLayerController(helloWorldController);
-	helloWorldController->release();
+	//yhmvc::Window* window=yhmvc::Window::create();
+	//HelloWorldController* helloWorldController=new HelloWorldController();
+	//window->setRootLayerController(helloWorldController);
+	//helloWorldController->release();
 
-    // create a scene. it's an autorelease object
-    //CCScene *pScene = HelloWorld::create();
-
-    // run
-    pDirector->runWithScene(window);
+    Game::getInstance()->setupSceneDirector();
+    
+    GameSceneDirector::getInstance()->runWithScene(kInitializeScene);
+    
+//    // create a scene. it's an autorelease object
+//    CCScene *pScene = InitializeScene::create();
+//    // run
+//    pDirector->runWithScene(pScene);
 
     return true;
 }

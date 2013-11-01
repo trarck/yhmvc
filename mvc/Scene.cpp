@@ -1,4 +1,4 @@
-#include "Scene.h"
+﻿#include "Scene.h"
 #include "LayerController.h"
 
 NS_CC_YHMVC_BEGIN
