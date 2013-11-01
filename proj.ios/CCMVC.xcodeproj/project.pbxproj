@@ -102,6 +102,8 @@
 		5797A5A1180E67EE00BA5455 /* ControllerDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5797A59F180E67EE00BA5455 /* ControllerDirector.cpp */; };
 		5797A5BB180E8DBD00BA5455 /* BaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5797A5B6180E8DBD00BA5455 /* BaseScene.cpp */; };
 		5797A5BF180E917100BA5455 /* HelloLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5797A5BD180E917100BA5455 /* HelloLayer.cpp */; };
+		57EA398F1823A10B001A0E96 /* ShopController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57EA398D1823A10B001A0E96 /* ShopController.cpp */; };
+		57EA39921823A110001A0E96 /* ShopScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57EA39901823A110001A0E96 /* ShopScene.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
@@ -336,6 +338,10 @@
 		5797A5BD180E917100BA5455 /* HelloLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloLayer.cpp; sourceTree = "<group>"; };
 		5797A5BE180E917100BA5455 /* HelloLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloLayer.h; sourceTree = "<group>"; };
 		57EA398C1823958E001A0E96 /* SceneRegisterData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneRegisterData.h; sourceTree = "<group>"; };
+		57EA398D1823A10B001A0E96 /* ShopController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopController.cpp; sourceTree = "<group>"; };
+		57EA398E1823A10B001A0E96 /* ShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopController.h; sourceTree = "<group>"; };
+		57EA39901823A110001A0E96 /* ShopScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopScene.cpp; sourceTree = "<group>"; };
+		57EA39911823A110001A0E96 /* ShopScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopScene.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -728,6 +734,8 @@
 		5797A5B1180E8DBD00BA5455 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				57EA398D1823A10B001A0E96 /* ShopController.cpp */,
+				57EA398E1823A10B001A0E96 /* ShopController.h */,
 				574619D818237D7200B44F4F /* MainController.cpp */,
 				574619D918237D7200B44F4F /* MainController.h */,
 				5765D8ED18112B190032D0F1 /* InitializeController.cpp */,
@@ -750,6 +758,8 @@
 		5797A5B5180E8DBD00BA5455 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				57EA39901823A110001A0E96 /* ShopScene.cpp */,
+				57EA39911823A110001A0E96 /* ShopScene.h */,
 				574619DB18237D8A00B44F4F /* MainScene.cpp */,
 				574619DC18237D8A00B44F4F /* MainScene.h */,
 				5765D8EA18112A960032D0F1 /* InitializeScene.cpp */,
@@ -916,6 +926,7 @@
 				15A3DA531682F826002FB0C5 /* CCInvocation.cpp in Sources */,
 				15A3DA541682F826002FB0C5 /* CCScale9Sprite.cpp in Sources */,
 				15A3DA551682F826002FB0C5 /* CCEditBox.cpp in Sources */,
+				57EA39921823A110001A0E96 /* ShopScene.cpp in Sources */,
 				15A3DA571682F826002FB0C5 /* CCEditBoxImplIOS.mm in Sources */,
 				15A3DA591682F826002FB0C5 /* CCScrollView.cpp in Sources */,
 				15A3DA5A1682F826002FB0C5 /* CCSorting.cpp in Sources */,
@@ -929,6 +940,7 @@
 				15A3DAED1682F8A6002FB0C5 /* CocosDenshion.m in Sources */,
 				15A3DAEE1682F8A6002FB0C5 /* SimpleAudioEngine.mm in Sources */,
 				5765D8EF18112B190032D0F1 /* InitializeController.cpp in Sources */,
+				57EA398F1823A10B001A0E96 /* ShopController.cpp in Sources */,
 				15A3DAEF1682F8A6002FB0C5 /* SimpleAudioEngine_objc.m in Sources */,
 				1A27573F1697CF2B00504026 /* CCEditBoxImplAndroid.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,

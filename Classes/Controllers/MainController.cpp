@@ -1,6 +1,7 @@
 #include "MainController.h"
 #include "mvc/Layer.h"
 #include "Layers/HelloLayer.h"
+#include "Scenes/GameSceneDirector.h"
 
 using namespace cocos2d;
 using namespace cocos2d::yhmvc;
@@ -40,7 +41,7 @@ void MainController::loadLayer()
                                         menu_selector(MainController::menuCloseCallback) );
     pCloseItem->setPosition( ccp(screenSize.width - 20, 20) );
     
-    CCMenuItemLabel *pRunItem=CCMenuItemLabel::create(CCLabelTTF::create("run", "Arial", 20),
+    CCMenuItemLabel *pRunItem=CCMenuItemLabel::create(CCLabelTTF::create("shop", "Arial", 20),
                                                       this, 
                                                       menu_selector(MainController::menuRunCallback));
     pRunItem->setPosition(ccp(screenSize.width-100,20));
@@ -77,14 +78,7 @@ void MainController::menuCloseCallback(CCObject* pSender)
 
 void MainController::menuRunCallback(CCObject* pSender)
 {
-//    CCDictionary* data=new CCDictionary();
-//    data->setObject(CCString::create("move"), "name");
-//    data->setObject(CCInteger::create(3), "direction");
-//    
-//    CCLOG("set begin action");
-//    CCMessageManager::defaultManager()->dispatchMessageWithType(CHANGE_ANIMATION, NULL, m_player,data);
-//    CCLOG("set begin action after");
-    
+    GameSceneDirector::getInstance()->pushScene(kShopScene);
 }
 
 void MainController::menuStopCallback(CCObject* pSender)

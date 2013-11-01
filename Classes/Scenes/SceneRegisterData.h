@@ -22,13 +22,15 @@ typedef struct SceneRegisterItem
 #include "SceneDefine.h"
 #include "Scenes/InitializeScene.h"
 #include "Scenes/MainScene.h"
+#include "Scenes/ShopScene.h"
 
 NS_MYGAME_BEGIN
 
 static SceneRegisterItem kSceneRegisterData[]=
 {
     {kInitializeScene,SCENE_CREATE_SELECTOR(InitializeScene::create)},
-    {kMainScene,SCENE_CREATE_SELECTOR(MainScene::create)}
+    {kMainScene,SCENE_CREATE_SELECTOR(MainScene::create)},
+    {kShopScene,SCENE_CREATE_SELECTOR(ShopScene::create)}
 };
 
 NS_MYGAME_END
