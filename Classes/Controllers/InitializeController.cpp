@@ -1,5 +1,6 @@
 #include "InitializeController.h"
 #include "mvc/Layer.h"
+#include "mvc/SceneDirector.h"
 
 using namespace cocos2d;
 using namespace cocos2d::yhmvc;
@@ -30,7 +31,8 @@ void InitializeController::loadLayer()
                                                       menu_selector(InitializeController::startGameCallback));
     startGameItem->setPosition(ccp(screenSize.width-100,screenSize.height/2));
     
-    CCMenu* menu=CCMenu::createWithItems(startGameItem, NULL);
+    CCMenu* menu=CCMenu::create(startGameItem, NULL);
+    menu->setPosition( CCPointZero );
     
     layer->addChild(menu);
 
@@ -38,5 +40,5 @@ void InitializeController::loadLayer()
 
 void InitializeController::startGameCallback(CCObject* pSender)
 {
-    
+    SceneDirector::getInstance()->replaceScene("main");
 }

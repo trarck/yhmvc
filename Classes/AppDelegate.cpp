@@ -2,10 +2,14 @@
 
 #include "cocos2d.h"
 #include "mvc/Window.h"
+#include "mvc/SceneDirector.h"
+#include "Game.h"
+
 #include "Scenes/InitializeScene.h"
 
 USING_NS_CC;
 USING_NS_CC_YHMVC;
+USING_NS_MYGAME;
 
 AppDelegate::AppDelegate()
 {
@@ -36,11 +40,14 @@ bool AppDelegate::applicationDidFinishLaunching()
 	//window->setRootLayerController(helloWorldController);
 	//helloWorldController->release();
 
-    // create a scene. it's an autorelease object
-    CCScene *pScene = InitializeScene::create();
-
-    // run
-    pDirector->runWithScene(pScene);
+    Game::getInstance()->setupSceneDirector();
+    
+    SceneDirector::getInstance()->runWithScene("initialize");
+    
+//    // create a scene. it's an autorelease object
+//    CCScene *pScene = InitializeScene::create();
+//    // run
+//    pDirector->runWithScene(pScene);
 
     return true;
 }

@@ -87,6 +87,9 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		574619DA18237D7200B44F4F /* MainController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574619D818237D7200B44F4F /* MainController.cpp */; };
+		574619DD18237D8A00B44F4F /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574619DB18237D8A00B44F4F /* MainScene.cpp */; };
+		574619E318238B2400B44F4F /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574619E118238B2400B44F4F /* Game.cpp */; };
 		5765D8EC18112A960032D0F1 /* InitializeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5765D8EA18112A960032D0F1 /* InitializeScene.cpp */; };
 		5765D8EF18112B190032D0F1 /* InitializeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5765D8ED18112B190032D0F1 /* InitializeController.cpp */; };
 		578A54DD180CEB8F006894D5 /* NavigateController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 578A54D0180CEB8F006894D5 /* NavigateController.cpp */; };
@@ -300,6 +303,13 @@
 		1D6058910D05DD3D006BFB54 /* CCMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		574619D818237D7200B44F4F /* MainController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainController.cpp; sourceTree = "<group>"; };
+		574619D918237D7200B44F4F /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		574619DB18237D8A00B44F4F /* MainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainScene.cpp; sourceTree = "<group>"; };
+		574619DC18237D8A00B44F4F /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
+		574619E118238B2400B44F4F /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = ../Classes/Game.cpp; sourceTree = "<group>"; };
+		574619E218238B2400B44F4F /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../Classes/Game.h; sourceTree = "<group>"; };
+		574619E418238B6000B44F4F /* GameMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameMacros.h; path = ../Classes/GameMacros.h; sourceTree = "<group>"; };
 		5765D8EA18112A960032D0F1 /* InitializeScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InitializeScene.cpp; sourceTree = "<group>"; };
 		5765D8EB18112A960032D0F1 /* InitializeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitializeScene.h; sourceTree = "<group>"; };
 		5765D8ED18112B190032D0F1 /* InitializeController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InitializeController.cpp; sourceTree = "<group>"; };
@@ -589,6 +599,9 @@
 				5797A5B5180E8DBD00BA5455 /* Scenes */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
+				574619E118238B2400B44F4F /* Game.cpp */,
+				574619E218238B2400B44F4F /* Game.h */,
+				574619E418238B6000B44F4F /* GameMacros.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -716,6 +729,8 @@
 		5797A5B1180E8DBD00BA5455 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				574619D818237D7200B44F4F /* MainController.cpp */,
+				574619D918237D7200B44F4F /* MainController.h */,
 				5765D8ED18112B190032D0F1 /* InitializeController.cpp */,
 				5765D8EE18112B190032D0F1 /* InitializeController.h */,
 				5797A5B2180E8DBD00BA5455 /* HelloWorldController.cpp */,
@@ -738,6 +753,8 @@
 		5797A5B5180E8DBD00BA5455 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				574619DB18237D8A00B44F4F /* MainScene.cpp */,
+				574619DC18237D8A00B44F4F /* MainScene.h */,
 				5765D8EA18112A960032D0F1 /* InitializeScene.cpp */,
 				5765D8EB18112A960032D0F1 /* InitializeScene.h */,
 				5797A5B6180E8DBD00BA5455 /* BaseScene.cpp */,
@@ -858,6 +875,7 @@
 			files = (
 				15A3DA311682F826002FB0C5 /* CCBAnimationManager.cpp in Sources */,
 				15A3DA321682F826002FB0C5 /* CCBFileLoader.cpp in Sources */,
+				574619DD18237D8A00B44F4F /* MainScene.cpp in Sources */,
 				15A3DA331682F826002FB0C5 /* CCBKeyframe.cpp in Sources */,
 				5797A5A1180E67EE00BA5455 /* ControllerDirector.cpp in Sources */,
 				15A3DA341682F826002FB0C5 /* CCBReader.cpp in Sources */,
@@ -906,6 +924,7 @@
 				15A3DA5A1682F826002FB0C5 /* CCSorting.cpp in Sources */,
 				578A54E1180CEB8F006894D5 /* SceneDirector.cpp in Sources */,
 				15A3DA5B1682F826002FB0C5 /* CCTableView.cpp in Sources */,
+				574619E318238B2400B44F4F /* Game.cpp in Sources */,
 				15A3DA5C1682F826002FB0C5 /* CCTableViewCell.cpp in Sources */,
 				15A3DA5D1682F826002FB0C5 /* HttpClient.cpp in Sources */,
 				15A3DAEB1682F8A6002FB0C5 /* CDAudioManager.m in Sources */,
@@ -924,6 +943,7 @@
 				1A40E7201727BF49006D4861 /* AnimationState.cpp in Sources */,
 				1A40E7211727BF49006D4861 /* AnimationStateData.cpp in Sources */,
 				1A40E7221727BF49006D4861 /* Atlas.cpp in Sources */,
+				574619DA18237D7200B44F4F /* MainController.cpp in Sources */,
 				1A40E7231727BF49006D4861 /* AtlasAttachmentLoader.cpp in Sources */,
 				1A40E7241727BF49006D4861 /* Attachment.cpp in Sources */,
 				1A40E7251727BF49006D4861 /* AttachmentLoader.cpp in Sources */,

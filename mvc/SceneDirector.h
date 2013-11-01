@@ -8,6 +8,7 @@
 NS_CC_YHMVC_BEGIN
 
 typedef yhmvc::Scene* (*SceneCreate)() ;
+#define SCENE_CREATE_SELECTOR(_SELECTOR) (SceneCreate)(&_SELECTOR)
 
 class SceneDirector : public CCObject
 {
@@ -50,21 +51,6 @@ public:
     void replaceScene(const std::string& name);
     
     /**
-     * 开始运行一个Scene
-     */
-    void runWithScene(yhmvc::Scene *pScene);
-    
-    /**
-     * 叠加一个Scene。
-     */
-    void pushScene(yhmvc::Scene* scene);
-    
-    /**
-     * 替换一个Scene。
-     */
-    void replaceScene(yhmvc::Scene *pScene);
-    
-    /**
      * 退出当前Scene栈上的最上面的Scene,并把下面的显示出来
      */
     void popScene();
@@ -78,6 +64,39 @@ public:
      * 弹出栈元素，直到栈还个level个元素,并把栈顶的Scene显示出来
      */
 	void popToSceneStackLevel(int level);
+    
+    
+    //=====================以下直接操作Scene==============//
+    
+    /**
+     * 开始运行一个Scene
+     */
+    void runWithSceneDirectly(yhmvc::Scene *scene);
+    
+    /**
+     * 叠加一个Scene。
+     */
+    void pushSceneDirectly(yhmvc::Scene* scene);
+    
+    /**
+     * 替换一个Scene。
+     */
+    void replaceSceneDirectly(yhmvc::Scene *scene);
+    
+    /**
+     * 退出当前Scene栈上的最上面的Scene,并把下面的显示出来
+     */
+    void popSceneDirectly();
+    
+    /**
+     * 退出到栈底,并把栈底的Scene显示出来
+     */
+    void popToRootSceneDirectly();
+    
+    /**
+     * 弹出栈元素，直到栈还个level个元素,并把栈顶的Scene显示出来
+     */
+	void popToSceneStackLevelDirectly(int level);
 
 protected:
     
@@ -86,9 +105,13 @@ protected:
      */
     yhmvc::Scene* createScene(const std::string& name);
     
+    yhmvc::Scene* createScene(const std::string& name,CCObject* parameter);
+    
 protected:
     
     CCArray* m_scenesStack;
+    
+    std::vector<std::string> m_scenes;
     
     std::map<std::string, SceneCreate> m_sceneCreateMap;
 };
