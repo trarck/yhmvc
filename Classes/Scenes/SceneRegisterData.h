@@ -10,6 +10,7 @@
 #define CCMVC_SceneRegisterData_h
 
 #include "mvc/SceneDirector.h"
+#include "GameMacros.h"
 
 typedef struct SceneRegisterItem
 {
@@ -22,11 +23,14 @@ typedef struct SceneRegisterItem
 #include "Scenes/InitializeScene.h"
 #include "Scenes/MainScene.h"
 
+NS_MYGAME_BEGIN
+
 static SceneRegisterItem kSceneRegisterData[]=
 {
     {kInitializeScene,SCENE_CREATE_SELECTOR(InitializeScene::create)},
     {kMainScene,SCENE_CREATE_SELECTOR(MainScene::create)}
 };
 
+NS_MYGAME_END
 
 #endif

@@ -13,6 +13,8 @@ using namespace cocos2d;
 
 USING_NS_CC;
 
+NS_MYGAME_BEGIN
+
 HelloLayer::HelloLayer()
 {
     
@@ -44,3 +46,5 @@ void HelloLayer::createBody()
     
     helloLabel->release();
 }
+
+NS_MYGAME_END

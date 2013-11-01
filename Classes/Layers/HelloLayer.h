@@ -10,7 +10,9 @@
 #define __CCMVC__HelloLayer__
 
 #include "mvc/Layer.h"
+#include "GameMacros.h"
 
+NS_MYGAME_BEGIN
 class HelloLayer:public cocos2d::yhmvc::Layer
 {
     
@@ -25,5 +27,6 @@ public:
     void createBody();
 };
 
+NS_MYGAME_END
 
 #endif /* defined(__CCMVC__HelloLayer__) */

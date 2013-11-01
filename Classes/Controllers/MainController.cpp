@@ -5,6 +5,8 @@
 using namespace cocos2d;
 using namespace cocos2d::yhmvc;
 
+NS_MYGAME_BEGIN
+
 MainController::MainController(void)
 {
 
@@ -102,3 +104,4 @@ void MainController::menuMoveToCallback(CCObject* pSender)
     CCPoint to=ccp(screenSize.width/2+50,screenSize.height/2+50);
 }
 
+NS_MYGAME_END

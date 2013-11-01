@@ -100,9 +100,7 @@
 		578A54E1180CEB8F006894D5 /* SceneDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 578A54D8180CEB8F006894D5 /* SceneDirector.cpp */; };
 		578A54E2180CEB8F006894D5 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 578A54DA180CEB8F006894D5 /* Window.cpp */; };
 		5797A5A1180E67EE00BA5455 /* ControllerDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5797A59F180E67EE00BA5455 /* ControllerDirector.cpp */; };
-		5797A5BA180E8DBD00BA5455 /* HelloWorldController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5797A5B2180E8DBD00BA5455 /* HelloWorldController.cpp */; };
 		5797A5BB180E8DBD00BA5455 /* BaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5797A5B6180E8DBD00BA5455 /* BaseScene.cpp */; };
-		5797A5BC180E8DBD00BA5455 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5797A5B8180E8DBD00BA5455 /* HelloWorldScene.cpp */; };
 		5797A5BF180E917100BA5455 /* HelloLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5797A5BD180E917100BA5455 /* HelloLayer.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
@@ -333,12 +331,8 @@
 		578A54DC180CEB8F006894D5 /* YHMVCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHMVCMacros.h; sourceTree = "<group>"; };
 		5797A59F180E67EE00BA5455 /* ControllerDirector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ControllerDirector.cpp; sourceTree = "<group>"; };
 		5797A5A0180E67EE00BA5455 /* ControllerDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerDirector.h; sourceTree = "<group>"; };
-		5797A5B2180E8DBD00BA5455 /* HelloWorldController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldController.cpp; sourceTree = "<group>"; };
-		5797A5B3180E8DBD00BA5455 /* HelloWorldController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldController.h; sourceTree = "<group>"; };
 		5797A5B6180E8DBD00BA5455 /* BaseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseScene.cpp; sourceTree = "<group>"; };
 		5797A5B7180E8DBD00BA5455 /* BaseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseScene.h; sourceTree = "<group>"; };
-		5797A5B8180E8DBD00BA5455 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
-		5797A5B9180E8DBD00BA5455 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
 		5797A5BD180E917100BA5455 /* HelloLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloLayer.cpp; sourceTree = "<group>"; };
 		5797A5BE180E917100BA5455 /* HelloLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloLayer.h; sourceTree = "<group>"; };
 		57EA398C1823958E001A0E96 /* SceneRegisterData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneRegisterData.h; sourceTree = "<group>"; };
@@ -738,8 +732,6 @@
 				574619D918237D7200B44F4F /* MainController.h */,
 				5765D8ED18112B190032D0F1 /* InitializeController.cpp */,
 				5765D8EE18112B190032D0F1 /* InitializeController.h */,
-				5797A5B2180E8DBD00BA5455 /* HelloWorldController.cpp */,
-				5797A5B3180E8DBD00BA5455 /* HelloWorldController.h */,
 			);
 			name = Controllers;
 			path = ../Classes/Controllers;
@@ -764,8 +756,6 @@
 				5765D8EB18112A960032D0F1 /* InitializeScene.h */,
 				5797A5B6180E8DBD00BA5455 /* BaseScene.cpp */,
 				5797A5B7180E8DBD00BA5455 /* BaseScene.h */,
-				5797A5B8180E8DBD00BA5455 /* HelloWorldScene.cpp */,
-				5797A5B9180E8DBD00BA5455 /* HelloWorldScene.h */,
 				574619E51823919800B44F4F /* GameSceneDirector.cpp */,
 				574619E61823919800B44F4F /* GameSceneDirector.h */,
 				574619E8182392CD00B44F4F /* SceneDefine.h */,
@@ -899,7 +889,6 @@
 				15A3DA3D1682F826002FB0C5 /* CCLayerColorLoader.cpp in Sources */,
 				15A3DA3E1682F826002FB0C5 /* CCLayerGradientLoader.cpp in Sources */,
 				15A3DA3F1682F826002FB0C5 /* CCLayerLoader.cpp in Sources */,
-				5797A5BC180E8DBD00BA5455 /* HelloWorldScene.cpp in Sources */,
 				15A3DA401682F826002FB0C5 /* CCMenuItemImageLoader.cpp in Sources */,
 				15A3DA411682F826002FB0C5 /* CCMenuItemLoader.cpp in Sources */,
 				578A54E0180CEB8F006894D5 /* Scene.cpp in Sources */,
@@ -909,7 +898,6 @@
 				15A3DA451682F826002FB0C5 /* CCParticleSystemQuadLoader.cpp in Sources */,
 				15A3DA461682F826002FB0C5 /* CCScale9SpriteLoader.cpp in Sources */,
 				15A3DA471682F826002FB0C5 /* CCScrollViewLoader.cpp in Sources */,
-				5797A5BA180E8DBD00BA5455 /* HelloWorldController.cpp in Sources */,
 				578A54DF180CEB8F006894D5 /* LayerController.cpp in Sources */,
 				15A3DA481682F826002FB0C5 /* CCSpriteLoader.cpp in Sources */,
 				15A3DA491682F826002FB0C5 /* CCControl.cpp in Sources */,

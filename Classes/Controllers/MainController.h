@@ -3,6 +3,9 @@
 
 #include "mvc/LayerController.h"
 #include "mvc/Layer.h"
+#include "GameMacros.h"
+
+NS_MYGAME_BEGIN
 
 class MainController:public cocos2d::yhmvc::LayerController
 {
@@ -18,4 +21,7 @@ public:
     void menuStopCallback(cocos2d::CCObject* pSender);
     void menuMoveToCallback(cocos2d::CCObject* pSender);
 };
+
+NS_MYGAME_END
+
 #endif //__HELLOWORLD_MainController_H__

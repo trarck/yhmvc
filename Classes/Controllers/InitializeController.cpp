@@ -5,6 +5,8 @@
 using namespace cocos2d;
 using namespace cocos2d::yhmvc;
 
+NS_MYGAME_BEGIN
+
 InitializeController::InitializeController(void)
 {
     
@@ -42,3 +44,5 @@ void InitializeController::startGameCallback(CCObject* pSender)
 {
     cocos2d::mygame::GameSceneDirector::getInstance()->replaceScene(kMainScene);
 }
+
+NS_MYGAME_END

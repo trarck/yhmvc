@@ -3,6 +3,7 @@
 
 #include "BaseScene.h"
 
+NS_MYGAME_BEGIN
 class InitializeScene : public BaseScene
 {
 public:
@@ -14,5 +15,6 @@ public:
 private:
     
 };
+NS_MYGAME_END
 
 #endif // __HELLOWORLD_SCENE_H__
