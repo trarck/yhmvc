@@ -94,8 +94,7 @@ void MainController::menuStopCallback(CCObject* pSender)
 
 void MainController::menuMoveToCallback(CCObject* pSender)
 {
-    CCSize screenSize= CCDirector::sharedDirector()->getWinSize();
-    CCPoint to=ccp(screenSize.width/2+50,screenSize.height/2+50);
+    
 }
 
 NS_MYGAME_END
