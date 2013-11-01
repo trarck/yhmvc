@@ -1,5 +1,5 @@
-﻿#ifndef COCOS_YHMVC_CONTROLLERS_NAVIGATECONTROLLER_H_
-#define COCOS_YHMVC_CONTROLLERS_NAVIGATECONTROLLER_H_
+﻿#ifndef COCOS_YHMVC_CONTROLLERS_ControllerDirector_H_
+#define COCOS_YHMVC_CONTROLLERS_ControllerDirector_H_
 
 #include "cocos2d.h"
 #include "../LayerController.h"
@@ -8,16 +8,16 @@ NS_CC_YHMVC_BEGIN
 
 /**
  * controller切换
- * 用于任意controller切换
- * 可被扩展带有nav bar.
+ * 主要用于场景级别的controller切换
+ * 可能会被具体使用扩展
  */
-class NavigateController : public LayerController
+class ControllerDirector : public LayerController
 {
 public:
     
-    NavigateController();
+    ControllerDirector();
     
-    ~NavigateController();
+    ~ControllerDirector();
 
 	bool init();
 
@@ -41,4 +41,4 @@ private:
 
 NS_CC_YHMVC_END
 
-#endif // COCOS_YHMVC_CONTROLLERS_NAVIGATECONTROLLER_H_
+#endif // COCOS_YHMVC_CONTROLLERS_ControllerDirector_H_

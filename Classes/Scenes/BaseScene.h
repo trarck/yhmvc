@@ -11,11 +11,15 @@
 
 #include "cocos2d.h"
 #include "mvc/Scene.h"
+#include "GameMacros.h"
 
+NS_MYGAME_BEGIN
 class BaseScene:public cocos2d::yhmvc::Scene
 {
 public:
     
 };
+
+NS_MYGAME_END
 
 #endif /* defined(__CCUI__BaseScene__) */

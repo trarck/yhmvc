@@ -3,3 +3,6 @@
 /proj.win32/ipch
 
 /proj.win32/CCMVC.opensdf
+
+/proj.ios/CCMVC.xcodeproj/xcuserdata/
+/proj.ios/CCMVC.xcodeproj/project.xcworkspace/xcuserdata
