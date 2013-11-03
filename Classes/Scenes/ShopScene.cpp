@@ -11,6 +11,7 @@ void ShopScene::loadContents()
     BaseScene::loadContents();
     
 	ShopController* shopController=new ShopController();
+	shopController->init();
 	this->addChild(shopController->getLayer());
     
 }

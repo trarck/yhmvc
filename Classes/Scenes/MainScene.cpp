@@ -11,6 +11,7 @@ void MainScene::loadContents()
     BaseScene::loadContents();
     
 	MainController* mainController=new MainController();
+	mainController->init();
 	this->addChild(mainController->getLayer());
 }
 
