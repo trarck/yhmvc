@@ -68,14 +68,17 @@ void NavigateController::replaceController(LayerController *controller)
 
 void NavigateController::setNextController()
 {
-	m_currentController->layerWillDisappear();
+	if(m_currentController) m_currentController->layerWillDisappear();
 	m_nextController->layerWillAppear();
 
-	m_pLayer->removeChild(m_currentController->getLayer());
-	m_pLayer->addChild(m_nextController->getLayer());
+	//can't use m_pLayer，becase m_pLayer may be non't create
+	Layer* selfLayer=getLayer();
+	
+	if(m_currentController) selfLayer->removeChild(m_currentController->getLayer());
+	selfLayer->addChild(m_nextController->getLayer());
 
-	m_nextController->layerDidDisappear();
-	m_currentController->layerDidAppear();
+	if(m_currentController) m_currentController->layerDidDisappear();
+	m_nextController->layerDidAppear();
 
 	m_currentController=m_nextController;
 	m_currentController->retain();
