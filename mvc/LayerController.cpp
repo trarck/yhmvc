@@ -111,6 +111,9 @@ void LayerController::layerDidDisappear()
 
 //==================child layer controller=================//
 
+/**
+ * 添加一个子controller
+ */
 void LayerController::addChildLayerController(LayerController* layerController)
 {
     layerController->willAddToParentLayerController(this);
@@ -119,6 +122,9 @@ void LayerController::addChildLayerController(LayerController* layerController)
     layerController->didAddToParentLayerController(this);
 }
 
+/**
+ * 移除一个子controller
+ */
 void LayerController::removeChildLayerController(LayerController* layerController)
 {
     layerController->willRemoveFromParentLayerController();
@@ -127,6 +133,9 @@ void LayerController::removeChildLayerController(LayerController* layerControlle
     layerController->didRemoveFromParentLayerController();
 }
 
+/**
+ * 把自己从父controller中去除
+ */
 void LayerController::removeFromParentLayerController()
 {
     if (m_parent!=NULL){
@@ -134,6 +143,9 @@ void LayerController::removeFromParentLayerController()
     }
 }
 
+/**
+ * 按名子取得一个子controller
+ */
 LayerController* LayerController::getLayerControllerByName(const std::string& name)
 {
     CCObject* pObj=NULL;
@@ -145,6 +157,77 @@ LayerController* LayerController::getLayerControllerByName(const std::string& na
         }
     }
     return NULL;
+}
+
+/**
+ * 按名子取得一个后代controller
+ */
+LayerController* LayerController::getDescendantLayerControllerByName(const std::string& name)
+{
+    CCArray* controllers=CCArray::create();
+    controllers->addObjectsFromArray(m_childLayerControllers);
+    
+    LayerController* layerController=NULL;
+    
+    int i=0;
+    for (; i<controllers->count(); ++i) {
+        layerController=static_cast<LayerController*>(controllers->objectAtIndex(i));
+        if (name.compare(layerController->getName())==0) {
+            break;
+        }
+        
+        if (layerController->getChildLayerControllers()) {
+            controllers->addObjectsFromArray(layerController->getChildLayerControllers());
+        }
+    }
+    
+    return i < controllers->count() ? layerController:NULL;
+}
+
+/**
+ * 按名子取得子controller
+ */
+CCArray* LayerController::getLayerControllersByName(const std::string& name)
+{
+    CCArray* controllers=CCArray::create();
+    
+    CCObject* pObj=NULL;
+    LayerController* layerController=NULL;
+    CCARRAY_FOREACH(m_childLayerControllers, pObj){
+        layerController=static_cast<LayerController*>(pObj);
+        if (name.compare(layerController->getName())==0) {
+            controllers->addObject(layerController);
+        }
+    }
+    return controllers;
+}
+
+/**
+ * 按名子取得后代controller
+ */
+CCArray* LayerController::getDescendantLayerControllersByName(const std::string& name)
+{
+    CCArray* findControllers=CCArray::create();
+    
+    
+    CCArray* controllers=CCArray::create();
+    controllers->addObjectsFromArray(m_childLayerControllers);
+
+    LayerController* layerController=NULL;
+    
+    int i=0;
+    for (; i<controllers->count(); ++i) {
+        layerController=static_cast<LayerController*>(controllers->objectAtIndex(i));
+        if (name.compare(layerController->getName())==0) {
+            findControllers->addObject(layerController);
+        }
+        
+        if (layerController->getChildLayerControllers()) {
+            controllers->addObjectsFromArray(layerController->getChildLayerControllers());
+        }
+    }
+    
+    return findControllers;
 }
 
 void LayerController::willAddToParentLayerController(LayerController* parent)
