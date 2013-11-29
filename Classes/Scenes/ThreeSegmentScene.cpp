@@ -1,5 +1,4 @@
-﻿#include "MainScene.h"
-#include "Controllers/MainController.h"
+﻿#include "ThreeSegmentScene.h"
 #include "Controllers/HeaderController.h"
 #include "Controllers/FooterController.h"
 
@@ -7,14 +6,9 @@ using namespace cocos2d;
 
 NS_MYGAME_BEGIN
 
-// on "init" you need to initialize your instance
-void MainScene::loadContents()
+void ThreeSegmentScene::loadContents()
 {
     BaseScene::loadContents();
-    
-	MainController* mainController=new MainController();
-	mainController->init();
-	this->addChild(mainController->getLayer());
     
     HeaderController* headerController=new HeaderController();
 	headerController->init();

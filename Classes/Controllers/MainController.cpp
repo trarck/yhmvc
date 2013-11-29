@@ -3,8 +3,8 @@
 #include "Layers/HelloLayer.h"
 #include "Scenes/GameSceneDirector.h"
 
-using namespace cocos2d;
-using namespace cocos2d::yhmvc;
+USING_NS_CC;
+USING_NS_CC_YHMVC;
 
 NS_MYGAME_BEGIN
 
@@ -39,22 +39,22 @@ void MainController::loadLayer()
                                         "CloseSelected.png",
                                         this,
                                         menu_selector(MainController::menuCloseCallback) );
-    pCloseItem->setPosition( ccp(screenSize.width - 20, 20) );
+    pCloseItem->setPosition( ccp(screenSize.width - 20, screenSize.height/2) );
     
     CCMenuItemLabel *pRunItem=CCMenuItemLabel::create(CCLabelTTF::create("shop", "Arial", 20),
                                                       this, 
                                                       menu_selector(MainController::menuRunCallback));
-    pRunItem->setPosition(ccp(screenSize.width-100,20));
+    pRunItem->setPosition(ccp(screenSize.width-100,screenSize.height/2));
     
     CCMenuItemLabel *pStopItem=CCMenuItemLabel::create(CCLabelTTF::create("stop", "Arial", 20),
                                                       this, 
                                                       menu_selector(MainController::menuStopCallback));
-    pStopItem->setPosition(ccp(screenSize.width-200,20));
+    pStopItem->setPosition(ccp(screenSize.width-200,screenSize.height/2));
     
     CCMenuItemLabel *pMoveToItem=CCMenuItemLabel::create(CCLabelTTF::create("moveTo", "Arial", 20),
                                                        this, 
                                                        menu_selector(MainController::menuMoveToCallback));
-    pMoveToItem->setPosition(ccp(screenSize.width-300,20));
+    pMoveToItem->setPosition(ccp(screenSize.width-300,screenSize.height/2));
     
     // create menu, it's an autorelease object
     CCMenu* pMenu = CCMenu::create(pCloseItem,pRunItem,pStopItem,pMoveToItem, NULL);

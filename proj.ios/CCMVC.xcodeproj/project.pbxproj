@@ -87,6 +87,9 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		573FEB1D1848726100E7C69E /* FooterController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 573FEB191848726100E7C69E /* FooterController.cpp */; };
+		573FEB1E1848726100E7C69E /* HeaderController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 573FEB1B1848726100E7C69E /* HeaderController.cpp */; };
+		573FEB2118487B1D00E7C69E /* ThreeSegmentScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 573FEB1F18487B1D00E7C69E /* ThreeSegmentScene.cpp */; };
 		574619DA18237D7200B44F4F /* MainController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574619D818237D7200B44F4F /* MainController.cpp */; };
 		574619DD18237D8A00B44F4F /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574619DB18237D8A00B44F4F /* MainScene.cpp */; };
 		574619E318238B2400B44F4F /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574619E118238B2400B44F4F /* Game.cpp */; };
@@ -307,6 +310,12 @@
 		1D6058910D05DD3D006BFB54 /* CCMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		573FEB191848726100E7C69E /* FooterController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FooterController.cpp; sourceTree = "<group>"; };
+		573FEB1A1848726100E7C69E /* FooterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooterController.h; sourceTree = "<group>"; };
+		573FEB1B1848726100E7C69E /* HeaderController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HeaderController.cpp; sourceTree = "<group>"; };
+		573FEB1C1848726100E7C69E /* HeaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderController.h; sourceTree = "<group>"; };
+		573FEB1F18487B1D00E7C69E /* ThreeSegmentScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ThreeSegmentScene.cpp; sourceTree = "<group>"; };
+		573FEB2018487B1D00E7C69E /* ThreeSegmentScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeSegmentScene.h; sourceTree = "<group>"; };
 		574619D818237D7200B44F4F /* MainController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainController.cpp; sourceTree = "<group>"; };
 		574619D918237D7200B44F4F /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		574619DB18237D8A00B44F4F /* MainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainScene.cpp; sourceTree = "<group>"; };
@@ -757,12 +766,16 @@
 		5797A5B1180E8DBD00BA5455 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				57EA398D1823A10B001A0E96 /* ShopController.cpp */,
-				57EA398E1823A10B001A0E96 /* ShopController.h */,
-				574619D818237D7200B44F4F /* MainController.cpp */,
-				574619D918237D7200B44F4F /* MainController.h */,
+				573FEB191848726100E7C69E /* FooterController.cpp */,
+				573FEB1A1848726100E7C69E /* FooterController.h */,
+				573FEB1B1848726100E7C69E /* HeaderController.cpp */,
+				573FEB1C1848726100E7C69E /* HeaderController.h */,
 				5765D8ED18112B190032D0F1 /* InitializeController.cpp */,
 				5765D8EE18112B190032D0F1 /* InitializeController.h */,
+				574619D818237D7200B44F4F /* MainController.cpp */,
+				574619D918237D7200B44F4F /* MainController.h */,
+				57EA398D1823A10B001A0E96 /* ShopController.cpp */,
+				57EA398E1823A10B001A0E96 /* ShopController.h */,
 			);
 			name = Controllers;
 			path = ../Classes/Controllers;
@@ -781,18 +794,20 @@
 		5797A5B5180E8DBD00BA5455 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				57EA39901823A110001A0E96 /* ShopScene.cpp */,
-				57EA39911823A110001A0E96 /* ShopScene.h */,
-				574619DB18237D8A00B44F4F /* MainScene.cpp */,
-				574619DC18237D8A00B44F4F /* MainScene.h */,
-				5765D8EA18112A960032D0F1 /* InitializeScene.cpp */,
-				5765D8EB18112A960032D0F1 /* InitializeScene.h */,
 				5797A5B6180E8DBD00BA5455 /* BaseScene.cpp */,
 				5797A5B7180E8DBD00BA5455 /* BaseScene.h */,
 				574619E51823919800B44F4F /* GameSceneDirector.cpp */,
 				574619E61823919800B44F4F /* GameSceneDirector.h */,
+				5765D8EA18112A960032D0F1 /* InitializeScene.cpp */,
+				5765D8EB18112A960032D0F1 /* InitializeScene.h */,
+				574619DB18237D8A00B44F4F /* MainScene.cpp */,
+				574619DC18237D8A00B44F4F /* MainScene.h */,
 				574619E8182392CD00B44F4F /* SceneDefine.h */,
 				57EA398C1823958E001A0E96 /* SceneRegisterData.h */,
+				57EA39901823A110001A0E96 /* ShopScene.cpp */,
+				57EA39911823A110001A0E96 /* ShopScene.h */,
+				573FEB1F18487B1D00E7C69E /* ThreeSegmentScene.cpp */,
+				573FEB2018487B1D00E7C69E /* ThreeSegmentScene.h */,
 			);
 			name = Scenes;
 			path = ../Classes/Scenes;
@@ -905,6 +920,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				573FEB1E1848726100E7C69E /* HeaderController.cpp in Sources */,
 				15A3DA311682F826002FB0C5 /* CCBAnimationManager.cpp in Sources */,
 				15A3DA321682F826002FB0C5 /* CCBFileLoader.cpp in Sources */,
 				574619DD18237D8A00B44F4F /* MainScene.cpp in Sources */,
@@ -926,6 +942,7 @@
 				15A3DA401682F826002FB0C5 /* CCMenuItemImageLoader.cpp in Sources */,
 				15A3DA411682F826002FB0C5 /* CCMenuItemLoader.cpp in Sources */,
 				578A54E0180CEB8F006894D5 /* Scene.cpp in Sources */,
+				573FEB2118487B1D00E7C69E /* ThreeSegmentScene.cpp in Sources */,
 				15A3DA421682F826002FB0C5 /* CCNode+CCBRelativePositioning.cpp in Sources */,
 				15A3DA431682F826002FB0C5 /* CCNodeLoader.cpp in Sources */,
 				15A3DA441682F826002FB0C5 /* CCNodeLoaderLibrary.cpp in Sources */,
@@ -940,6 +957,7 @@
 				15A3DA4B1682F826002FB0C5 /* CCControlColourPicker.cpp in Sources */,
 				15A3DA4C1682F826002FB0C5 /* CCControlHuePicker.cpp in Sources */,
 				5797A5BB180E8DBD00BA5455 /* BaseScene.cpp in Sources */,
+				573FEB1D1848726100E7C69E /* FooterController.cpp in Sources */,
 				15A3DA4D1682F826002FB0C5 /* CCControlPotentiometer.cpp in Sources */,
 				15A3DA4E1682F826002FB0C5 /* CCControlSaturationBrightnessPicker.cpp in Sources */,
 				578A54DD180CEB8F006894D5 /* NavigateController.cpp in Sources */,

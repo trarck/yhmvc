@@ -2,8 +2,8 @@
 #include "mvc/Layer.h"
 #include "Scenes/GameSceneDirector.h"
 
-using namespace cocos2d;
-using namespace cocos2d::yhmvc;
+USING_NS_CC;
+USING_NS_CC_YHMVC;
 
 NS_MYGAME_BEGIN
 
