@@ -5,7 +5,7 @@ NS_CC_YHMVC_BEGIN
 
 LayerController::LayerController()
 :m_sDefineDataName("")
-,m_pLayer(NULL)
+,m_layer(NULL)
 ,m_childLayerControllers(NULL)
 ,m_parent(NULL)
 {
@@ -14,7 +14,7 @@ LayerController::LayerController()
 
 LayerController::~LayerController()
 {
-    CC_SAFE_RELEASE_NULL(m_pLayer);
+    CC_SAFE_RELEASE_NULL(m_layer);
     CC_SAFE_RELEASE_NULL(m_childLayerControllers);
     m_parent=NULL;
 }
@@ -50,20 +50,20 @@ bool LayerController::isLayerLoaded()
 void LayerController::setLayer(Layer* layer)
 {
     CC_SAFE_RETAIN(layer);
-	if(m_pLayer) m_pLayer->setLayerController(NULL);
-    CC_SAFE_RELEASE(m_pLayer);
-    m_pLayer = layer;
-	if(m_pLayer) m_pLayer->setLayerController(this);
+	if(m_layer) m_layer->setLayerController(NULL);
+    CC_SAFE_RELEASE(m_layer);
+    m_layer = layer;
+	if(m_layer) m_layer->setLayerController(this);
 }
 
 Layer* LayerController::getLayer()
 {
-    if (!m_pLayer) {
+    if (!m_layer) {
         this->loadLayer();
         m_tState.isLoaded=true;
         this->layerDidLoad();
     }
-    return m_pLayer;
+    return m_layer;
 }
 
 //layer.已经加载。如果是从配置文件中加载。此处提供而外操作

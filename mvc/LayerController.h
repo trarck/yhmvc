@@ -178,7 +178,7 @@ protected:
 
 	std::string m_sName;
     
-    Layer* m_pLayer;
+    Layer* m_layer;
 
     CCArray* m_childLayerControllers;
     
