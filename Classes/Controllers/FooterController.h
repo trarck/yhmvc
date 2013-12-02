@@ -14,7 +14,7 @@ public:
     
 	~FooterController(void);
 
-	void loadLayer();
+	void layerDidLoad();
 
 	void homeCallback(cocos2d::CCObject* pSender);
     

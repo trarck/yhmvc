@@ -15,16 +15,11 @@ ShopController::ShopController(void)
 
 ShopController::~ShopController(void)
 {
-    
+    CCLOG("ShopController destroy");
 }
 
-void ShopController::loadLayer()
+void ShopController::layerDidLoad()
 {
-	yhmvc::Layer* layer=new yhmvc::Layer();
-    layer->init();
-    
-	setLayer(layer);
-	layer->release();
     
     CCSize screenSize=CCDirector::sharedDirector()->getWinSize();
     
@@ -36,7 +31,7 @@ void ShopController::loadLayer()
     CCMenu* menu=CCMenu::create(startGameItem, NULL);
     menu->setPosition( CCPointZero );
     
-    layer->addChild(menu);
+    m_layer->addChild(menu);
 
 }
 

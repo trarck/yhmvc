@@ -18,25 +18,19 @@ HeaderController::~HeaderController(void)
     
 }
 
-void HeaderController::loadLayer()
+void HeaderController::layerDidLoad()
 {
-	yhmvc::Layer* layer=new yhmvc::Layer();
-    layer->init();
-    
-	setLayer(layer);
-	layer->release();
-    
     CCSize screenSize=CCDirector::sharedDirector()->getWinSize();
     
     CCMenuItemLabel *startGameItem=CCMenuItemLabel::create(CCLabelTTF::create("user", "Arial", 20),
                                                       this,
                                                       menu_selector(HeaderController::showUserInfoCallback));
-    startGameItem->setPosition(ccp(20,screenSize.height-20));
+    startGameItem->setPosition(ccp(20,0));
     
     CCMenu* menu=CCMenu::create(startGameItem, NULL);
     menu->setPosition( CCPointZero );
     
-    layer->addChild(menu);
+    m_layer->addChild(menu);
 
 }
 

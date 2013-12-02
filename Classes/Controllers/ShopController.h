@@ -14,7 +14,7 @@ public:
     
 	~ShopController(void);
 
-	void loadLayer();
+	void layerDidLoad();
 
 	void backCallback(cocos2d::CCObject* pSender);
 };

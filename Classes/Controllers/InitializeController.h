@@ -14,7 +14,7 @@ public:
     
 	~InitializeController(void);
 
-	void loadLayer();
+	void layerDidLoad();
 
 	void startGameCallback(cocos2d::CCObject* pSender);
 };

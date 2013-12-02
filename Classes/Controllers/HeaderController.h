@@ -14,7 +14,7 @@ public:
     
 	~HeaderController(void);
 
-	void loadLayer();
+	void layerDidLoad();
 
 	void showUserInfoCallback(cocos2d::CCObject* pSender);
 };

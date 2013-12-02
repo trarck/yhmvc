@@ -18,13 +18,8 @@ FooterController::~FooterController(void)
     
 }
 
-void FooterController::loadLayer()
+void FooterController::layerDidLoad()
 {
-	yhmvc::Layer* layer=new yhmvc::Layer();
-    layer->init();
-    
-	setLayer(layer);
-	layer->release();
     
     CCSize screenSize=CCDirector::sharedDirector()->getWinSize();
     
@@ -48,8 +43,7 @@ void FooterController::loadLayer()
     
     menu->setPosition( CCPointZero );
     
-    layer->addChild(menu);
-
+    m_layer->addChild(menu);
 }
 
 void FooterController::homeCallback(CCObject* pSender)
