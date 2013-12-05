@@ -40,4 +40,17 @@ CCNode* Builder::buildFromData(CCDictionary* data,CCObject* parameter)
     return NULL;
 }
 
+
+CCNode* Builder::buildFromJson(void* jsonData)
+{
+    CCAssert(false, "CCBBuilder::buildFromJson not support");
+    return NULL;
+}
+
+CCNode* Builder::buildFromJson(void* jsonData,CCObject* parameter)
+{
+    CCAssert(false, "CCBBuilder::buildFromJson not support");
+    return NULL;
+}
+
 NS_CC_YHMVC_END
