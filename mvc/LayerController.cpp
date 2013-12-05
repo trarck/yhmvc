@@ -3,11 +3,16 @@
 
 NS_CC_YHMVC_BEGIN
 
+static const LayerControllerFlag kDefaultLayerControllerFlag={0};
+
 LayerController::LayerController()
 :m_sDefineDataName("")
 ,m_layer(NULL)
 ,m_childLayerControllers(NULL)
 ,m_parent(NULL)
+,m_sName("")
+,m_tState(kDefaultLayerControllerFlag)
+,m_preferredContentSize(CCSizeZero)
 {
     
 }
@@ -24,6 +29,15 @@ bool LayerController::init()
 {
     m_childLayerControllers=new CCArray();
     m_childLayerControllers->init();
+    return true;
+}
+
+bool LayerController::init(const std::string& name)
+{
+    m_sName=name;
+    
+    this->init();
+    
     return true;
 }
 

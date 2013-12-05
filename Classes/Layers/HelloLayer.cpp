@@ -22,7 +22,7 @@ HelloLayer::HelloLayer()
 
 HelloLayer::~HelloLayer()
 {
-    
+    CCLOG("HelloLayer destroy");
 }
 
 bool HelloLayer::init()

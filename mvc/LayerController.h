@@ -29,6 +29,8 @@ public:
     ~LayerController();
     
     virtual bool init();
+    
+    virtual bool init(const std::string& name);
      
    	/**
 	 * 默认从描述文件中加载
@@ -169,6 +171,16 @@ public:
     {
         return m_childLayerControllers;
     }
+    
+    inline void setPreferredContentSize(CCSize preferredContentSize)
+    {
+        m_preferredContentSize = preferredContentSize;
+    }
+    
+    inline CCSize getPreferredContentSize()
+    {
+        return m_preferredContentSize;
+    }
 
 protected:
     
@@ -183,6 +195,9 @@ protected:
     CCArray* m_childLayerControllers;
     
     LayerController* m_parent;
+    
+    //controller希望的大小。主要用于controller相关联的layer的大小。
+    CCSize m_preferredContentSize;
 };
 
 NS_CC_YHMVC_END

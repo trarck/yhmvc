@@ -46,6 +46,7 @@
 	使用cocos2d的director进行界面管理。
 	每个界面一个Scene,Scene组织管理Contorller.
 	Controller负责创建Layer，来完成显示功能。
+	Controller不要使用继承，而是使用组合。使用继承可能会导致m_layer乱用。
    
 2、以Layer为主
 	自己进行界面管理。
