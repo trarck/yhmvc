@@ -6,7 +6,11 @@
 
 NS_CC_YHMVC_BEGIN
 
-
+/**
+ * 
+ * 由于没有支持controller,目前只适用分离View的管理方式
+ */
+ 
 class CCBBuilder : public yhmvc::Builder
 {
     
