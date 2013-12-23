@@ -2,8 +2,8 @@
 #include "mvc/Layer.h"
 #include "Scenes/GameSceneDirector.h"
 
-using namespace cocos2d;
-using namespace cocos2d::yhmvc;
+USING_NS_CC;
+USING_NS_CC_YHMVC;
 
 NS_MYGAME_BEGIN
 
@@ -15,16 +15,11 @@ InitializeController::InitializeController(void)
 
 InitializeController::~InitializeController(void)
 {
-    
+    CCLOG("InitializeController destroy");
 }
 
-void InitializeController::loadLayer()
+void InitializeController::layerDidLoad()
 {
-	yhmvc::Layer* layer=new yhmvc::Layer();
-    layer->init();
-    
-	setLayer(layer);
-	layer->release();
     
     CCSize screenSize=CCDirector::sharedDirector()->getWinSize();
     
@@ -36,7 +31,7 @@ void InitializeController::loadLayer()
     CCMenu* menu=CCMenu::create(startGameItem, NULL);
     menu->setPosition( CCPointZero );
     
-    layer->addChild(menu);
+    m_layer->addChild(menu);
 
 }
 

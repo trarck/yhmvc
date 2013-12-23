@@ -42,12 +42,31 @@
    Modles			----	游戏逻辑的主要处理地方。不要直接操作Layer里的东西，可以发送事件通知数据改变。
    Datas			----	游戏数据存放地。包括，持久化数据，内存数据。
    
-1、以Scene为主导
-	使用cocos2d的director进行界面管理。
-	每个界面一个Scene,Scene组织管理Contorller.
-	Controller负责创建Layer，来完成显示功能。
+View的组织方式：
+	1、分离式
+		一个View由几个部分组成，在controller里用代码把每个部分合并起来。
+		灵活性低，由于使用硬代码适应性强。没办法做到所见即所得。
+		适用中小型项目。
+	2、组合式
+		一个View由几个部分组成，使用描述文件来组合这些部分，最后builder生成组合后的View
+		各方面都好，需要一个build系统和编辑器的支持。
+		适用大中小型项目。
+	3、一体式
+		一个View只有一部分。
+		重复元素多，灵活性差。
+		只适用小型项目。
+	
+Scene的组织方式：   
+	1、以Scene为主导
+		使用cocos2d的director进行界面管理。
+		每个界面一个Scene,Scene组织管理Contorller.
+		Controller负责创建Layer，来完成显示功能。
+		Controller不要使用继承，而是使用组合。使用继承可能会导致m_layer乱用。
    
-2、以Layer为主
-	自己进行界面管理。
-	整个游戏期间只使用一个Scene(特殊情况下可以使用多个，但Scene只做容器)，Scene基本没有逻辑，通常创建几个Layer，比如Dialog层，这层专门放置对话框，其zIndex值比别的高。
-    
+	2、以Layer为主
+		自己进行界面管理。
+		整个游戏期间只使用一个Scene(特殊情况下可以使用多个，但Scene只做容器)，Scene基本没有逻辑，通常创建几个Layer，比如Dialog层，这层专门放置对话框，其zIndex值比别的高。
+    	某些时候Controller可以使用继承，但尽量少用，而是使用view的组合方式，即使用builder。
+	
+	总结：由于要避免使用Controller的继承，以layer为主的模式中，只有使用组合式的View才是最佳的选择。
+	

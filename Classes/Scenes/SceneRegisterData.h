@@ -23,6 +23,9 @@ typedef struct SceneRegisterItem
 #include "Scenes/InitializeScene.h"
 #include "Scenes/MainScene.h"
 #include "Scenes/ShopScene.h"
+#include "Scenes/OneScene.h"
+#include "Scenes/TwoScene.h"
+#include "Scenes/ThreeScene.h"
 
 NS_MYGAME_BEGIN
 
@@ -30,7 +33,10 @@ static SceneRegisterItem kSceneRegisterData[]=
 {
     {kInitializeScene,SCENE_CREATE_SELECTOR(InitializeScene::create)},
     {kMainScene,SCENE_CREATE_SELECTOR(MainScene::create)},
-    {kShopScene,SCENE_CREATE_SELECTOR(ShopScene::create)}
+    {kShopScene,SCENE_CREATE_SELECTOR(ShopScene::create)},
+    {kOneScene,SCENE_CREATE_SELECTOR(OneScene::create)},
+    {kTwoScene,SCENE_CREATE_SELECTOR(TwoScene::create)},
+    {kThreeScene,SCENE_CREATE_SELECTOR(ThreeScene::create)}
 };
 
 NS_MYGAME_END

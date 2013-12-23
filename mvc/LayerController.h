@@ -29,6 +29,8 @@ public:
     ~LayerController();
     
     virtual bool init();
+    
+    virtual bool init(const std::string& name);
      
    	/**
 	 * 默认从描述文件中加载
@@ -89,13 +91,41 @@ public:
     virtual void layerDidDisappear();
 
     //==================child layer controller=================//
+    
+    /**
+     * 添加一个子controller
+     */
     virtual void addChildLayerController(LayerController* layerController);
 
+    /**
+     * 移除一个子controller
+     */
     virtual void removeChildLayerController(LayerController* layerController);
     
+    /**
+     * 把自己从父controller中去除
+     */
     virtual void removeFromParentLayerController();
     
+    /**
+     * 按名子取得一个子controller
+     */
     virtual LayerController* getLayerControllerByName(const std::string& name);
+    
+    /**
+     * 按名子取得一个后代controller
+     */
+    virtual LayerController* getDescendantLayerControllerByName(const std::string& name);
+    
+    /**
+     * 按名子取得子controller
+     */
+    virtual CCArray* getLayerControllersByName(const std::string& name);
+    
+    /**
+     * 按名子取得后代controller
+     */
+    virtual CCArray* getDescendantLayerControllersByName(const std::string& name);
 
     virtual void willAddToParentLayerController(LayerController* parent);
 
@@ -104,6 +134,8 @@ public:
     virtual void willRemoveFromParentLayerController();
     
     virtual void didRemoveFromParentLayerController();
+    
+    //==================get set=================//
     
 	inline void setDefineDataName(const std::string& defineDataName)
 	{
@@ -134,6 +166,21 @@ public:
     {
         return m_parent;
     }
+    
+    inline CCArray* getChildLayerControllers()
+    {
+        return m_childLayerControllers;
+    }
+    
+    inline void setPreferredContentSize(CCSize preferredContentSize)
+    {
+        m_preferredContentSize = preferredContentSize;
+    }
+    
+    inline CCSize getPreferredContentSize()
+    {
+        return m_preferredContentSize;
+    }
 
 protected:
     
@@ -143,11 +190,14 @@ protected:
 
 	std::string m_sName;
     
-    Layer* m_pLayer;
+    Layer* m_layer;
 
     CCArray* m_childLayerControllers;
     
     LayerController* m_parent;
+    
+    //controller希望的大小。主要用于controller相关联的layer的大小。
+    CCSize m_preferredContentSize;
 };
 
 NS_CC_YHMVC_END

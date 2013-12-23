@@ -32,19 +32,53 @@ public:
      */
     virtual void loadContents();
 
+    //==================child layer controller=================//
+    
+    /**
+     * 添加一个controller
+     * 没有事件仅仅作为以后用到controller做个容器
+     */
     void addLayerController(LayerController* layerController);
     
+    /**
+     * 添加一个controller
+     * 没有事件仅仅作为以后用到controller做个容器
+     */
 	void addLayerController(LayerController* layerController,const std::string& name);
 
+    /**
+     * 移除一个controller
+     */
     void removeLayerController(LayerController* layerController);
 
+    /**
+     * 移除所有controller名子和name相同
+     */
 	void removeLayerControllerByName(const std::string& name);
     
+    /**
+     * 按名子取得一个controller
+     */
     LayerController* getLayerControllerByName(const std::string& name);
 
+    /**
+     * 按名子取得一个后代controller
+     */
+    LayerController* getDescendantLayerControllerByName(const std::string& name);
+    
+    /**
+     * 按名子取得controller
+     */
+    CCArray* getLayerControllersByName(const std::string& name);
+    
+    /**
+     * 按名子取得后代controller
+     */
+    CCArray* getDescendantLayerControllersByName(const std::string& name);
+    
 private:
         
-    CCDictionary* m_layerControllers;
+    CCArray* m_layerControllers;
 };
 
 NS_CC_YHMVC_END
