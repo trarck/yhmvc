@@ -1,5 +1,5 @@
 ﻿#include "CCBBuilder.h"
-#include "LayerController.h"
+#include "../Core/LayerController.h"
 #include "cocos-ext.h"
 
 USING_NS_CC;

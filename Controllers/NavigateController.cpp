@@ -1,5 +1,5 @@
 ﻿#include "NavigateController.h"
-#include "../Layer.h"
+#include "../Core/Layer.h"
 
 NS_CC_YHMVC_BEGIN
 

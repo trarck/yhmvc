@@ -2,7 +2,7 @@
 #define COCOS_YHMVC_CONTROLLERS_NAVIGATECONTROLLER_H_
 
 #include "cocos2d.h"
-#include "../LayerController.h"
+#include "../Core/LayerController.h"
 
 NS_CC_YHMVC_BEGIN
 

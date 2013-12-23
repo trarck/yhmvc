@@ -1,6 +1,6 @@
 ﻿#include "ControllerDirector.h"
-#include "../Layer.h"
-#include "../Window.h"
+#include "../Core/Layer.h"
+#include "../Core/Window.h"
 
 NS_CC_YHMVC_BEGIN
 
