@@ -1,12 +1,11 @@
 ﻿#ifndef COCOS_YHMVC_YHBuilder_H_
 #define COCOS_YHMVC_YHBuilder_H_
 
-#include "cocos2d.h"
-#include "YHMVCMacros.h"
+#include "Builder.h"
 
 NS_CC_YHMVC_BEGIN
 
-class YHBuilder : public cocos2d::CCObject
+class YHBuilder : public yhmvc::Builder
 {
     
 public:
