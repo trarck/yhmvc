@@ -2,7 +2,6 @@
 #define COCOS_YHMVC_SCENEDIRECTOR_H_
 
 #include "cocos2d.h"
-#include "YHMVCMacros.h"
 #include "Scene.h"
 
 NS_CC_YHMVC_BEGIN

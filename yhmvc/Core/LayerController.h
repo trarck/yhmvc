@@ -2,7 +2,7 @@
 #define COCOS_YHMVC_LAYERCONTROLLER_H_
 
 #include "cocos2d.h"
-#include "YHMVCMacros.h"
+#include "../YHMVCMacros.h"
 
 NS_CC_YHMVC_BEGIN
 
