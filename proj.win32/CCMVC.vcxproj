@@ -14,6 +14,7 @@
     <ProjectGuid>{76A39BB2-9B84-4C65-98A5-654D86B86F2A}</ProjectGuid>
     <RootNamespace>test_win32</RootNamespace>
     <Keyword>Win32Proj</Keyword>
+    <ProjectName>yhge</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -25,7 +26,7 @@
     <PlatformToolset Condition="'$(VisualStudioVersion)' == '11.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v110_xp</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset Condition="'$(VisualStudioVersion)' == '10.0'">v100</PlatformToolset>
     <PlatformToolset Condition="'$(VisualStudioVersion)' == '11.0'">v110</PlatformToolset>
@@ -65,7 +66,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\cocos2dx;$(ProjectDir)..\..\..\cocos2dx\include;$(ProjectDir)..\..\..\cocos2dx\kazmath\include;$(ProjectDir)..\..\..\cocos2dx\platform\win32;$(ProjectDir)..\..\..\cocos2dx\platform\third_party\win32;$(ProjectDir)..\..\..\cocos2dx\platform\third_party\win32\OGLES;$(ProjectDir)..\..\..\external;$(ProjectDir)..\..\..\external\chipmunk\include\chipmunk;$(ProjectDir)..\..\..\CocosDenshion\include;$(ProjectDir)..\..\..\extensions;..\;..\Classes;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\cocos2dx;$(ProjectDir)..\..\..\cocos2dx\include;$(ProjectDir)..\..\..\cocos2dx\kazmath\include;$(ProjectDir)..\..\..\cocos2dx\platform\win32;$(ProjectDir)..\..\..\cocos2dx\platform\third_party\win32;$(ProjectDir)..\..\..\cocos2dx\platform\third_party\win32\OGLES;$(ProjectDir)..\..\..\external;$(ProjectDir)..\..\..\external\chipmunk\include\chipmunk;$(ProjectDir)..\..\..\CocosDenshion\include;$(ProjectDir)..\..\..\extensions;..\yhmvc;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -119,52 +120,6 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Classes\AppDelegate.cpp" />
-    <ClCompile Include="..\Classes\Controllers\InitializeController.cpp" />
-    <ClCompile Include="..\Classes\Controllers\MainController.cpp" />
-    <ClCompile Include="..\Classes\Controllers\ShopController.cpp" />
-    <ClCompile Include="..\Classes\Game.cpp" />
-    <ClCompile Include="..\Classes\Layers\HelloLayer.cpp" />
-    <ClCompile Include="..\Classes\Scenes\BaseScene.cpp" />
-    <ClCompile Include="..\Classes\Scenes\GameSceneDirector.cpp" />
-    <ClCompile Include="..\Classes\Scenes\InitializeScene.cpp" />
-    <ClCompile Include="..\Classes\Scenes\MainScene.cpp" />
-    <ClCompile Include="..\Classes\Scenes\ShopScene.cpp" />
-    <ClCompile Include="..\mvc\Controllers\ControllerDirector.cpp" />
-    <ClCompile Include="..\mvc\Controllers\NavigateController.cpp" />
-    <ClCompile Include="..\mvc\Layer.cpp" />
-    <ClCompile Include="..\mvc\LayerController.cpp" />
-    <ClCompile Include="..\mvc\Scene.cpp" />
-    <ClCompile Include="..\mvc\SceneDirector.cpp" />
-    <ClCompile Include="..\mvc\Window.cpp" />
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\Classes\AppDelegate.h" />
-    <ClInclude Include="..\Classes\Controllers\InitializeController.h" />
-    <ClInclude Include="..\Classes\Controllers\MainController.h" />
-    <ClInclude Include="..\Classes\Controllers\ShopController.h" />
-    <ClInclude Include="..\Classes\Game.h" />
-    <ClInclude Include="..\Classes\GameMacros.h" />
-    <ClInclude Include="..\Classes\Layers\HelloLayer.h" />
-    <ClInclude Include="..\Classes\Scenes\BaseScene.h" />
-    <ClInclude Include="..\Classes\Scenes\GameSceneDirector.h" />
-    <ClInclude Include="..\Classes\Scenes\InitializeScene.h" />
-    <ClInclude Include="..\Classes\Scenes\MainScene.h" />
-    <ClInclude Include="..\Classes\Scenes\SceneDefine.h" />
-    <ClInclude Include="..\Classes\Scenes\SceneRegisterData.h" />
-    <ClInclude Include="..\Classes\Scenes\ShopScene.h" />
-    <ClInclude Include="..\mvc\Controllers\ControllerDirector.h" />
-    <ClInclude Include="..\mvc\Controllers\NavigateController.h" />
-    <ClInclude Include="..\mvc\Layer.h" />
-    <ClInclude Include="..\mvc\LayerController.h" />
-    <ClInclude Include="..\mvc\Scene.h" />
-    <ClInclude Include="..\mvc\SceneDirector.h" />
-    <ClInclude Include="..\mvc\Window.h" />
-    <ClInclude Include="..\mvc\YHMVCMacros.h" />
-    <ClInclude Include="main.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\..\cocos2dx\proj.win32\cocos2d.vcxproj">
       <Project>{98a51ba8-fc3a-415b-ac8f-8c7bd464e93e}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
@@ -185,6 +140,32 @@
       <Project>{207bc7a9-ccf1-4f2f-a04d-45f72242ae25}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\yhmvc\Builders\Builder.h" />
+    <ClInclude Include="..\yhmvc\Builders\CCBBuilder.h" />
+    <ClInclude Include="..\yhmvc\Builders\YHBuilder.h" />
+    <ClInclude Include="..\yhmvc\Controllers\ControllerDirector.h" />
+    <ClInclude Include="..\yhmvc\Controllers\NavigateController.h" />
+    <ClInclude Include="..\yhmvc\Core\Layer.h" />
+    <ClInclude Include="..\yhmvc\Core\LayerController.h" />
+    <ClInclude Include="..\yhmvc\Core\Scene.h" />
+    <ClInclude Include="..\yhmvc\Core\SceneDirector.h" />
+    <ClInclude Include="..\yhmvc\Core\Window.h" />
+    <ClInclude Include="..\yhmvc\yhmvc.h" />
+    <ClInclude Include="..\yhmvc\YHMVCMacros.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\yhmvc\Builders\Builder.cpp" />
+    <ClCompile Include="..\yhmvc\Builders\CCBBuilder.cpp" />
+    <ClCompile Include="..\yhmvc\Builders\YHBuilder.cpp" />
+    <ClCompile Include="..\yhmvc\Controllers\ControllerDirector.cpp" />
+    <ClCompile Include="..\yhmvc\Controllers\NavigateController.cpp" />
+    <ClCompile Include="..\yhmvc\Core\Layer.cpp" />
+    <ClCompile Include="..\yhmvc\Core\LayerController.cpp" />
+    <ClCompile Include="..\yhmvc\Core\Scene.cpp" />
+    <ClCompile Include="..\yhmvc\Core\SceneDirector.cpp" />
+    <ClCompile Include="..\yhmvc\Core\Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
