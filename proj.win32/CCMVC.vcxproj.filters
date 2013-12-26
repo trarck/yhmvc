@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="yhmvc">
+      <UniqueIdentifier>{3ee0458b-2106-4398-900d-a38c846287e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="yhmvc\Builders">
+      <UniqueIdentifier>{31456fb9-fe66-4513-9074-bde214928e28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="yhmvc\Controllers">
+      <UniqueIdentifier>{3c62a1bf-b50a-4f49-8de1-11c15bb92973}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="yhmvc\Core">
+      <UniqueIdentifier>{6f203b55-2470-4f12-9f0c-251c7b44ddf3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\yhmvc\yhmvc.h">
+      <Filter>yhmvc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\yhmvc\YHMVCMacros.h">
+      <Filter>yhmvc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\yhmvc\Builders\Builder.h">
+      <Filter>yhmvc\Builders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\yhmvc\Builders\CCBBuilder.h">
+      <Filter>yhmvc\Builders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\yhmvc\Builders\YHBuilder.h">
+      <Filter>yhmvc\Builders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\yhmvc\Controllers\ControllerDirector.h">
+      <Filter>yhmvc\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\yhmvc\Controllers\NavigateController.h">
+      <Filter>yhmvc\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\yhmvc\Core\Layer.h">
+      <Filter>yhmvc\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\yhmvc\Core\LayerController.h">
+      <Filter>yhmvc\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\yhmvc\Core\Scene.h">
+      <Filter>yhmvc\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\yhmvc\Core\SceneDirector.h">
+      <Filter>yhmvc\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\yhmvc\Core\Window.h">
+      <Filter>yhmvc\Core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\yhmvc\Builders\Builder.cpp">
+      <Filter>yhmvc\Builders</Filter>
+    </ClCompile>
+    <ClCompile Include="..\yhmvc\Builders\CCBBuilder.cpp">
+      <Filter>yhmvc\Builders</Filter>
+    </ClCompile>
+    <ClCompile Include="..\yhmvc\Builders\YHBuilder.cpp">
+      <Filter>yhmvc\Builders</Filter>
+    </ClCompile>
+    <ClCompile Include="..\yhmvc\Controllers\ControllerDirector.cpp">
+      <Filter>yhmvc\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\yhmvc\Controllers\NavigateController.cpp">
+      <Filter>yhmvc\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\yhmvc\Core\Layer.cpp">
+      <Filter>yhmvc\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\yhmvc\Core\LayerController.cpp">
+      <Filter>yhmvc\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\yhmvc\Core\Scene.cpp">
+      <Filter>yhmvc\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\yhmvc\Core\SceneDirector.cpp">
+      <Filter>yhmvc\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\yhmvc\Core\Window.cpp">
+      <Filter>yhmvc\Core</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
