@@ -7,86 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		576D023018698D8D00766C13 /* Builder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D021818698D8D00766C13 /* Builder.cpp */; };
-		576D023118698D8D00766C13 /* CCBBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D021A18698D8D00766C13 /* CCBBuilder.cpp */; };
-		576D023218698D8D00766C13 /* YHBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D021C18698D8D00766C13 /* YHBuilder.cpp */; };
-		576D023318698D8D00766C13 /* ControllerDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D021F18698D8D00766C13 /* ControllerDirector.cpp */; };
-		576D023418698D8D00766C13 /* NavigateController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022118698D8D00766C13 /* NavigateController.cpp */; };
-		576D023518698D8D00766C13 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022418698D8D00766C13 /* Layer.cpp */; };
-		576D023618698D8D00766C13 /* LayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022618698D8D00766C13 /* LayerController.cpp */; };
-		576D023718698D8D00766C13 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022818698D8D00766C13 /* Scene.cpp */; };
-		576D023818698D8D00766C13 /* SceneDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022A18698D8D00766C13 /* SceneDirector.cpp */; };
-		576D023918698D8D00766C13 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022C18698D8D00766C13 /* Window.cpp */; };
+		577A79DB186D40FB00F1B5D5 /* Builder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D021818698D8D00766C13 /* Builder.cpp */; };
+		577A79DC186D40FB00F1B5D5 /* CCBBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D021A18698D8D00766C13 /* CCBBuilder.cpp */; };
+		577A79DD186D40FB00F1B5D5 /* YHBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D021C18698D8D00766C13 /* YHBuilder.cpp */; };
+		577A79DE186D40FB00F1B5D5 /* ControllerDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D021F18698D8D00766C13 /* ControllerDirector.cpp */; };
+		577A79DF186D40FB00F1B5D5 /* NavigateController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022118698D8D00766C13 /* NavigateController.cpp */; };
+		577A79E0186D40FB00F1B5D5 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022418698D8D00766C13 /* Layer.cpp */; };
+		577A79E1186D40FB00F1B5D5 /* LayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022618698D8D00766C13 /* LayerController.cpp */; };
+		577A79E2186D40FB00F1B5D5 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022818698D8D00766C13 /* Scene.cpp */; };
+		577A79E3186D40FB00F1B5D5 /* SceneDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022A18698D8D00766C13 /* SceneDirector.cpp */; };
+		577A79E4186D40FB00F1B5D5 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022C18698D8D00766C13 /* Window.cpp */; };
 		57C664741867EBE600018691 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		57C666A81867F2D600018691 /* CCBAnimationManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664B21867F2D500018691 /* CCBAnimationManager.cpp */; };
-		57C666A91867F2D600018691 /* CCBFileLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664B41867F2D500018691 /* CCBFileLoader.cpp */; };
-		57C666AA1867F2D600018691 /* CCBKeyframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664B61867F2D500018691 /* CCBKeyframe.cpp */; };
-		57C666AB1867F2D600018691 /* CCBReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664B91867F2D500018691 /* CCBReader.cpp */; };
-		57C666AC1867F2D600018691 /* CCBSequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664BC1867F2D500018691 /* CCBSequence.cpp */; };
-		57C666AD1867F2D600018691 /* CCBSequenceProperty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664BE1867F2D500018691 /* CCBSequenceProperty.cpp */; };
-		57C666AE1867F2D600018691 /* CCBValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664C01867F2D500018691 /* CCBValue.cpp */; };
-		57C666AF1867F2D600018691 /* CCControlButtonLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664C21867F2D500018691 /* CCControlButtonLoader.cpp */; };
-		57C666B01867F2D600018691 /* CCControlLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664C41867F2D500018691 /* CCControlLoader.cpp */; };
-		57C666B11867F2D600018691 /* CCData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664C61867F2D500018691 /* CCData.cpp */; };
-		57C666B21867F2D600018691 /* CCLabelBMFontLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664C81867F2D500018691 /* CCLabelBMFontLoader.cpp */; };
-		57C666B31867F2D600018691 /* CCLabelTTFLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664CA1867F2D500018691 /* CCLabelTTFLoader.cpp */; };
-		57C666B41867F2D600018691 /* CCLayerColorLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664CC1867F2D500018691 /* CCLayerColorLoader.cpp */; };
-		57C666B51867F2D600018691 /* CCLayerGradientLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664CE1867F2D500018691 /* CCLayerGradientLoader.cpp */; };
-		57C666B61867F2D600018691 /* CCLayerLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664D01867F2D500018691 /* CCLayerLoader.cpp */; };
-		57C666B71867F2D600018691 /* CCMenuItemImageLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664D21867F2D500018691 /* CCMenuItemImageLoader.cpp */; };
-		57C666B81867F2D600018691 /* CCMenuItemLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664D41867F2D500018691 /* CCMenuItemLoader.cpp */; };
-		57C666B91867F2D600018691 /* CCNode+CCBRelativePositioning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664D71867F2D500018691 /* CCNode+CCBRelativePositioning.cpp */; };
-		57C666BA1867F2D600018691 /* CCNodeLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664D91867F2D500018691 /* CCNodeLoader.cpp */; };
-		57C666BB1867F2D600018691 /* CCNodeLoaderLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664DB1867F2D500018691 /* CCNodeLoaderLibrary.cpp */; };
-		57C666BC1867F2D600018691 /* CCParticleSystemQuadLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664DE1867F2D500018691 /* CCParticleSystemQuadLoader.cpp */; };
-		57C666BD1867F2D600018691 /* CCScale9SpriteLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664E01867F2D500018691 /* CCScale9SpriteLoader.cpp */; };
-		57C666BE1867F2D600018691 /* CCScrollViewLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664E21867F2D500018691 /* CCScrollViewLoader.cpp */; };
-		57C666BF1867F2D600018691 /* CCSpriteLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C664E41867F2D500018691 /* CCSpriteLoader.cpp */; };
-		57C666FB1867F2D600018691 /* CCControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C665821867F2D500018691 /* CCControl.cpp */; };
-		57C666FC1867F2D600018691 /* CCControlButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C665841867F2D500018691 /* CCControlButton.cpp */; };
-		57C666FD1867F2D600018691 /* CCControlColourPicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C665861867F2D500018691 /* CCControlColourPicker.cpp */; };
-		57C666FE1867F2D600018691 /* CCControlHuePicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C665891867F2D500018691 /* CCControlHuePicker.cpp */; };
-		57C666FF1867F2D600018691 /* CCControlPotentiometer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C6658B1867F2D500018691 /* CCControlPotentiometer.cpp */; };
-		57C667001867F2D600018691 /* CCControlSaturationBrightnessPicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C6658D1867F2D500018691 /* CCControlSaturationBrightnessPicker.cpp */; };
-		57C667011867F2D600018691 /* CCControlSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C6658F1867F2D500018691 /* CCControlSlider.cpp */; };
-		57C667021867F2D600018691 /* CCControlStepper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C665911867F2D500018691 /* CCControlStepper.cpp */; };
-		57C667031867F2D600018691 /* CCControlSwitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C665931867F2D500018691 /* CCControlSwitch.cpp */; };
-		57C667041867F2D600018691 /* CCControlUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C665951867F2D500018691 /* CCControlUtils.cpp */; };
-		57C667051867F2D600018691 /* CCInvocation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C665971867F2D500018691 /* CCInvocation.cpp */; };
-		57C667061867F2D600018691 /* CCScale9Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C665991867F2D500018691 /* CCScale9Sprite.cpp */; };
-		57C667071867F2D600018691 /* CCEditBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C6659C1867F2D500018691 /* CCEditBox.cpp */; };
-		57C667081867F2D600018691 /* CCEditBoxImplAndroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C6659F1867F2D500018691 /* CCEditBoxImplAndroid.cpp */; };
-		57C667091867F2D600018691 /* CCEditBoxImplIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 57C665A21867F2D500018691 /* CCEditBoxImplIOS.mm */; };
-		57C6670E1867F2D600018691 /* CCScrollView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C665AB1867F2D500018691 /* CCScrollView.cpp */; };
-		57C6670F1867F2D600018691 /* CCSorting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C665AD1867F2D500018691 /* CCSorting.cpp */; };
-		57C667101867F2D600018691 /* CCTableView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C665AF1867F2D500018691 /* CCTableView.cpp */; };
-		57C667111867F2D600018691 /* CCTableViewCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C665B11867F2D500018691 /* CCTableViewCell.cpp */; };
-		57C667981867F2D600018691 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C6667C1867F2D600018691 /* Animation.cpp */; };
-		57C667991867F2D600018691 /* AnimationState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C6667E1867F2D600018691 /* AnimationState.cpp */; };
-		57C6679A1867F2D600018691 /* AnimationStateData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C666801867F2D600018691 /* AnimationStateData.cpp */; };
-		57C6679B1867F2D600018691 /* Atlas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C666821867F2D600018691 /* Atlas.cpp */; };
-		57C6679C1867F2D600018691 /* AtlasAttachmentLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C666841867F2D600018691 /* AtlasAttachmentLoader.cpp */; };
-		57C6679D1867F2D600018691 /* Attachment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C666861867F2D600018691 /* Attachment.cpp */; };
-		57C6679E1867F2D600018691 /* AttachmentLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C666881867F2D600018691 /* AttachmentLoader.cpp */; };
-		57C6679F1867F2D600018691 /* Bone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C6668A1867F2D600018691 /* Bone.cpp */; };
-		57C667A01867F2D600018691 /* BoneData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C6668C1867F2D600018691 /* BoneData.cpp */; };
-		57C667A11867F2D600018691 /* CCSkeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C6668E1867F2D600018691 /* CCSkeleton.cpp */; };
-		57C667A21867F2D600018691 /* CCSkeletonAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C666901867F2D600018691 /* CCSkeletonAnimation.cpp */; };
-		57C667A31867F2D600018691 /* extension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C666921867F2D600018691 /* extension.cpp */; };
-		57C667A41867F2D600018691 /* Json.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C666941867F2D600018691 /* Json.cpp */; };
-		57C667A51867F2D600018691 /* RegionAttachment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C666961867F2D600018691 /* RegionAttachment.cpp */; };
-		57C667A61867F2D600018691 /* Skeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C666981867F2D600018691 /* Skeleton.cpp */; };
-		57C667A71867F2D600018691 /* SkeletonData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C6669A1867F2D600018691 /* SkeletonData.cpp */; };
-		57C667A81867F2D600018691 /* SkeletonJson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C6669C1867F2D600018691 /* SkeletonJson.cpp */; };
-		57C667A91867F2D600018691 /* Skin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C6669E1867F2D600018691 /* Skin.cpp */; };
-		57C667AA1867F2D600018691 /* Slot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C666A01867F2D600018691 /* Slot.cpp */; };
-		57C667AB1867F2D600018691 /* SlotData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C666A21867F2D600018691 /* SlotData.cpp */; };
-		57C667AC1867F2D600018691 /* spine-cocos2dx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57C666A41867F2D600018691 /* spine-cocos2dx.cpp */; };
-		57C668711867FA5200018691 /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C667DD1867FA5200018691 /* CDAudioManager.m */; };
-		57C668721867FA5200018691 /* CDOpenALSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C667E01867FA5200018691 /* CDOpenALSupport.m */; };
-		57C668731867FA5200018691 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C667E21867FA5200018691 /* CocosDenshion.m */; };
-		57C668741867FA5200018691 /* SimpleAudioEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 57C667E31867FA5200018691 /* SimpleAudioEngine.mm */; };
-		57C668751867FA5200018691 /* SimpleAudioEngine_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C667E51867FA5200018691 /* SimpleAudioEngine_objc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -711,85 +642,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57C6679A1867F2D600018691 /* AnimationStateData.cpp in Sources */,
-				57C667A01867F2D600018691 /* BoneData.cpp in Sources */,
-				57C666AE1867F2D600018691 /* CCBValue.cpp in Sources */,
-				57C666B51867F2D600018691 /* CCLayerGradientLoader.cpp in Sources */,
-				57C666FC1867F2D600018691 /* CCControlButton.cpp in Sources */,
-				57C667101867F2D600018691 /* CCTableView.cpp in Sources */,
-				57C666B81867F2D600018691 /* CCMenuItemLoader.cpp in Sources */,
-				57C666BB1867F2D600018691 /* CCNodeLoaderLibrary.cpp in Sources */,
-				57C666B31867F2D600018691 /* CCLabelTTFLoader.cpp in Sources */,
-				57C666AF1867F2D600018691 /* CCControlButtonLoader.cpp in Sources */,
-				57C668741867FA5200018691 /* SimpleAudioEngine.mm in Sources */,
-				57C666FB1867F2D600018691 /* CCControl.cpp in Sources */,
-				57C667091867F2D600018691 /* CCEditBoxImplIOS.mm in Sources */,
-				57C667981867F2D600018691 /* Animation.cpp in Sources */,
-				576D023218698D8D00766C13 /* YHBuilder.cpp in Sources */,
-				57C667A21867F2D600018691 /* CCSkeletonAnimation.cpp in Sources */,
-				57C667021867F2D600018691 /* CCControlStepper.cpp in Sources */,
-				57C666B91867F2D600018691 /* CCNode+CCBRelativePositioning.cpp in Sources */,
-				57C666FE1867F2D600018691 /* CCControlHuePicker.cpp in Sources */,
-				57C666AC1867F2D600018691 /* CCBSequence.cpp in Sources */,
-				576D023418698D8D00766C13 /* NavigateController.cpp in Sources */,
-				57C6679E1867F2D600018691 /* AttachmentLoader.cpp in Sources */,
-				57C666B71867F2D600018691 /* CCMenuItemImageLoader.cpp in Sources */,
-				57C667031867F2D600018691 /* CCControlSwitch.cpp in Sources */,
-				57C667071867F2D600018691 /* CCEditBox.cpp in Sources */,
-				57C666FD1867F2D600018691 /* CCControlColourPicker.cpp in Sources */,
-				57C6679F1867F2D600018691 /* Bone.cpp in Sources */,
-				57C666BD1867F2D600018691 /* CCScale9SpriteLoader.cpp in Sources */,
-				57C6679B1867F2D600018691 /* Atlas.cpp in Sources */,
-				57C667A11867F2D600018691 /* CCSkeleton.cpp in Sources */,
-				57C668721867FA5200018691 /* CDOpenALSupport.m in Sources */,
-				57C666B41867F2D600018691 /* CCLayerColorLoader.cpp in Sources */,
-				57C666BF1867F2D600018691 /* CCSpriteLoader.cpp in Sources */,
-				57C6670E1867F2D600018691 /* CCScrollView.cpp in Sources */,
-				57C667051867F2D600018691 /* CCInvocation.cpp in Sources */,
-				57C666AB1867F2D600018691 /* CCBReader.cpp in Sources */,
-				576D023318698D8D00766C13 /* ControllerDirector.cpp in Sources */,
-				576D023618698D8D00766C13 /* LayerController.cpp in Sources */,
-				57C667A81867F2D600018691 /* SkeletonJson.cpp in Sources */,
-				576D023018698D8D00766C13 /* Builder.cpp in Sources */,
-				576D023518698D8D00766C13 /* Layer.cpp in Sources */,
-				57C667041867F2D600018691 /* CCControlUtils.cpp in Sources */,
-				57C666BC1867F2D600018691 /* CCParticleSystemQuadLoader.cpp in Sources */,
-				57C667991867F2D600018691 /* AnimationState.cpp in Sources */,
-				57C667061867F2D600018691 /* CCScale9Sprite.cpp in Sources */,
-				57C667A51867F2D600018691 /* RegionAttachment.cpp in Sources */,
-				57C6679D1867F2D600018691 /* Attachment.cpp in Sources */,
-				57C666B01867F2D600018691 /* CCControlLoader.cpp in Sources */,
-				57C6679C1867F2D600018691 /* AtlasAttachmentLoader.cpp in Sources */,
-				57C6670F1867F2D600018691 /* CCSorting.cpp in Sources */,
-				576D023718698D8D00766C13 /* Scene.cpp in Sources */,
-				57C667A31867F2D600018691 /* extension.cpp in Sources */,
-				57C667001867F2D600018691 /* CCControlSaturationBrightnessPicker.cpp in Sources */,
-				57C666BE1867F2D600018691 /* CCScrollViewLoader.cpp in Sources */,
-				576D023818698D8D00766C13 /* SceneDirector.cpp in Sources */,
-				57C667111867F2D600018691 /* CCTableViewCell.cpp in Sources */,
-				57C667A41867F2D600018691 /* Json.cpp in Sources */,
-				57C667A61867F2D600018691 /* Skeleton.cpp in Sources */,
-				57C666B61867F2D600018691 /* CCLayerLoader.cpp in Sources */,
-				57C666BA1867F2D600018691 /* CCNodeLoader.cpp in Sources */,
-				57C666B21867F2D600018691 /* CCLabelBMFontLoader.cpp in Sources */,
-				57C667AC1867F2D600018691 /* spine-cocos2dx.cpp in Sources */,
-				57C666AA1867F2D600018691 /* CCBKeyframe.cpp in Sources */,
-				576D023918698D8D00766C13 /* Window.cpp in Sources */,
-				57C666A91867F2D600018691 /* CCBFileLoader.cpp in Sources */,
-				57C666B11867F2D600018691 /* CCData.cpp in Sources */,
-				57C666A81867F2D600018691 /* CCBAnimationManager.cpp in Sources */,
-				57C668711867FA5200018691 /* CDAudioManager.m in Sources */,
-				57C667AA1867F2D600018691 /* Slot.cpp in Sources */,
-				57C667081867F2D600018691 /* CCEditBoxImplAndroid.cpp in Sources */,
-				57C666FF1867F2D600018691 /* CCControlPotentiometer.cpp in Sources */,
-				57C668731867FA5200018691 /* CocosDenshion.m in Sources */,
-				57C668751867FA5200018691 /* SimpleAudioEngine_objc.m in Sources */,
-				57C667AB1867F2D600018691 /* SlotData.cpp in Sources */,
-				57C666AD1867F2D600018691 /* CCBSequenceProperty.cpp in Sources */,
-				57C667011867F2D600018691 /* CCControlSlider.cpp in Sources */,
-				576D023118698D8D00766C13 /* CCBBuilder.cpp in Sources */,
-				57C667A71867F2D600018691 /* SkeletonData.cpp in Sources */,
-				57C667A91867F2D600018691 /* Skin.cpp in Sources */,
+				577A79DB186D40FB00F1B5D5 /* Builder.cpp in Sources */,
+				577A79DC186D40FB00F1B5D5 /* CCBBuilder.cpp in Sources */,
+				577A79DD186D40FB00F1B5D5 /* YHBuilder.cpp in Sources */,
+				577A79DE186D40FB00F1B5D5 /* ControllerDirector.cpp in Sources */,
+				577A79DF186D40FB00F1B5D5 /* NavigateController.cpp in Sources */,
+				577A79E0186D40FB00F1B5D5 /* Layer.cpp in Sources */,
+				577A79E1186D40FB00F1B5D5 /* LayerController.cpp in Sources */,
+				577A79E2186D40FB00F1B5D5 /* Scene.cpp in Sources */,
+				577A79E3186D40FB00F1B5D5 /* SceneDirector.cpp in Sources */,
+				577A79E4186D40FB00F1B5D5 /* Window.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
