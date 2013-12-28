@@ -11,11 +11,14 @@ SceneDirector::SceneDirector()
 
 SceneDirector::~SceneDirector()
 {
-
+	CC_SAFE_RELEASE_NULL(m_scenesStack);
 }
 
 bool SceneDirector::init()
 {
+	m_scenesStack=new CCArray();
+	m_scenesStack->init();
+
     return true;
 }
 
@@ -150,7 +153,7 @@ void SceneDirector::popToRootScene()
 }
 
 /**
- * 弹出栈元素，直到栈还个level个元素,并把栈顶的Scene显示出来
+ * 弹出栈元素，直到栈还有level个元素,并把栈顶的Scene显示出来
  */
 void SceneDirector::popToSceneStackLevel(int level)
 {
@@ -179,12 +182,19 @@ void SceneDirector::popToSceneStackLevel(int level)
 }
 
 //=====================以下直接操作Scene==============//
+//TODO 由于CCDirector没有开放直接访问m_pobScenesStack,所以不够灵活。
+//有二种改善方法:1.直接给CCDirector加入取得m_pobScenesStack的方法。
+//				 2.在每个操作方法里记录同样记录对scene操作。这样虽然有点性能损失，但场景切换不是每帧都执行，性能损失非常小，但不用修改CCDirector使得兼容性好。
+
+//TODO 由于CCDirector在把scene入栈的时候，并没有把之前scene的内容消除也没有执行cleanup，所以每push一个scene内存占用都会增加。
+//改进，当把scene入栈的时候，把之前scene的内容清除，如果切换到之前的scene，再重新加载其内容。
 
 /**
  * 开始运行一个Scene
  */
 void SceneDirector::runWithSceneDirectly(yhmvc::Scene *scene)
 {
+	//m_scenesStack->addObject(scene);
     CCDirector::sharedDirector()->runWithScene(scene);
 }
 
@@ -221,11 +231,10 @@ void SceneDirector::popToRootSceneDirectly()
 }
 
 /**
- * 弹出栈元素，直到栈还个level个元素,并把栈顶的Scene显示出来
+ * 弹出栈元素，直到栈还有level个元素,并把栈顶的Scene显示出来
  */
 void SceneDirector::popToSceneStackLevelDirectly(int level)
 {
-    
     CCDirector::sharedDirector()->popToSceneStackLevel(level);
 }
 

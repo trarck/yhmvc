@@ -63,11 +63,17 @@ public:
     void popToRootScene();
     
     /**
-     * 弹出栈元素，直到栈还个level个元素,并把栈顶的Scene显示出来
+     * 弹出栈元素，直到栈还有level个元素,并把栈顶的Scene显示出来
      */
 	void popToSceneStackLevel(int level);
     
-    
+	/**
+     * 获取当前Scene栈的大小
+     */
+	inline int getSceneStackSize(){
+		return m_scenes.size();
+	}
+
     //=====================以下直接操作Scene==============//
     
     /**
@@ -96,7 +102,7 @@ public:
     void popToRootSceneDirectly();
     
     /**
-     * 弹出栈元素，直到栈还个level个元素,并把栈顶的Scene显示出来
+     * 弹出栈元素，直到栈还有level个元素,并把栈顶的Scene显示出来
      */
 	void popToSceneStackLevelDirectly(int level);
 
