@@ -106,6 +106,14 @@ public:
      */
 	void popToSceneStackLevelDirectly(int level);
 
+	/**
+     * 获取当前直接的方式操作Scene栈的大小
+	 * TODO 暂不实现
+     */
+	inline int getSceneStackSizeDirectly(){
+		return 2;
+	}
+
 protected:
     
     /**
