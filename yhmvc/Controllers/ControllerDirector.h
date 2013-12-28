@@ -68,6 +68,13 @@ public:
      * 弹出栈元素，直到栈还个level个元素,并把栈顶的Scene级controller显示出来
      */
 	void popToSceneStackLevel(int level);
+
+	/**
+     * 获取当前Scene栈的大小
+     */
+	inline int getSceneStackSize(){
+		return m_scenes.size();
+	}
     
     //=====================以下直接操作Scene级controller==============//
     
@@ -98,6 +105,20 @@ public:
 
 	void setNextController();
 
+	/**
+     * 获取当前直接的方式操作Scene栈的大小
+     */
+	inline int getSceneStackSizeDirectly(){
+		return m_constrollersStack->count();
+	}
+
+	void setCurrentController(LayerController* currentController)
+	{
+		CC_SAFE_RETAIN(currentController);
+		CC_SAFE_RELEASE(m_currentController);
+		m_currentController = currentController;
+	}
+
 	inline LayerController* getCurrentController()
 	{
 		return m_currentController;
@@ -121,6 +142,11 @@ private:
     std::vector<std::string> m_scenes;
     
     std::map<std::string, ControllerCreate> m_controllerCreateMap;
+
+	/**
+	 * 为了标记当前操作scene是不是push，是push要特殊处理
+	 */
+	bool m_pushController;
 };
 
 NS_CC_YHMVC_END

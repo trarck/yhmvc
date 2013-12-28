@@ -8,6 +8,7 @@ ControllerDirector::ControllerDirector()
 :m_constrollersStack(NULL)
 ,m_currentController(NULL)
 ,m_nextController(NULL)
+,m_pushController(false)
 {
     
 }
@@ -183,6 +184,7 @@ void ControllerDirector::runWithController(LayerController* controller)
  */
 void ControllerDirector::pushController(LayerController* controller)
 {
+	m_pushController=true;
 	m_constrollersStack->addObject(controller);
 	m_nextController=controller;
 	setNextController();
@@ -193,6 +195,7 @@ void ControllerDirector::pushController(LayerController* controller)
  */
 void ControllerDirector::replaceController(LayerController *controller)
 {
+	m_pushController=false;
 	int size=m_constrollersStack->count();
 	m_constrollersStack->replaceObjectAtIndex(size-1,controller);
 	m_nextController=controller;
@@ -204,6 +207,7 @@ void ControllerDirector::replaceController(LayerController *controller)
  */
 void ControllerDirector::popController()
 {
+	m_pushController=false;
 	int size=m_constrollersStack->count();
 	//退到root controller则不能在退
 	if(size>1){
@@ -218,6 +222,7 @@ void ControllerDirector::popController()
  */
 void ControllerDirector::popToRootController()
 {
+	m_pushController=false;
 	int size=m_constrollersStack->count();
 	if(size<=1) return;
 	//退到root controller则不能在退
@@ -245,8 +250,14 @@ void ControllerDirector::setNextController()
     //下一个已经出现
 	m_nextController->layerDidAppear();
 
-	m_currentController=m_nextController;
-	m_currentController->retain();
+	//如果是push则把controller持有的layer删除，以减少占用内存
+	if (m_pushController && m_currentController)
+	{
+		m_currentController->setLayer(NULL);
+	}
+
+	setCurrentController(m_nextController);
+
 	m_nextController=NULL;
 }
 
