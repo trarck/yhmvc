@@ -123,6 +123,14 @@ public:
 	{
 		return m_currentController;
 	}
+
+	/**
+	 * 为了和SceneDirector保持一致
+	 */
+	inline yhmvc::LayerController* getRunningScene()
+	{
+		return m_currentController;	
+	}
     
 protected:
     
@@ -132,7 +140,7 @@ protected:
     yhmvc::LayerController* createController(const std::string& name);
     
     yhmvc::LayerController* createController(const std::string& name,CCObject* parameter);
-    
+
 private:
 	CCArray* m_constrollersStack;
 
