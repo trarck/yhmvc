@@ -4,6 +4,7 @@ NS_CC_YHMVC_BEGIN
 
 SceneDirector::SceneDirector()
 :m_scenesStack(NULL)
+,m_runningScene(NULL)
 {
     
     
@@ -95,9 +96,9 @@ void SceneDirector::runWithScene(const std::string& name)
     //保存scene的名子
     m_scenes.push_back(name);
     
-    yhmvc::Scene* scene=this->createScene(name);
+    m_runningScene=this->createScene(name);
     
-    CCDirector::sharedDirector()->runWithScene(scene);
+    CCDirector::sharedDirector()->runWithScene(m_runningScene);
 }
 
 /**
@@ -109,9 +110,9 @@ void SceneDirector::pushScene(const std::string& name)
     //保存scene的名子
     m_scenes.push_back(name);
     
-    yhmvc::Scene* scene=this->createScene(name);
+    m_runningScene=this->createScene(name);
     
-    CCDirector::sharedDirector()->replaceScene(scene);
+    CCDirector::sharedDirector()->replaceScene(m_runningScene);
 }
 
 /**
@@ -124,8 +125,8 @@ void SceneDirector::replaceScene(const std::string& name)
     m_scenes.pop_back();
     m_scenes.push_back(name);
     
-    yhmvc::Scene* scene=this->createScene(name);
-    CCDirector::sharedDirector()->replaceScene(scene);
+    m_runningScene=this->createScene(name);
+    CCDirector::sharedDirector()->replaceScene(m_runningScene);
 }
 
 
@@ -140,8 +141,8 @@ void SceneDirector::popScene()
     //TODO game end
     
     std::string name=m_scenes.back();
-    yhmvc::Scene* scene=this->createScene(name);
-    CCDirector::sharedDirector()->replaceScene(scene);
+    m_runningScene=this->createScene(name);
+    CCDirector::sharedDirector()->replaceScene(m_runningScene);
 }
 
 /**
@@ -177,8 +178,8 @@ void SceneDirector::popToSceneStackLevel(int level)
     }
     
     std::string name=m_scenes.back();
-    yhmvc::Scene* scene=this->createScene(name);
-    CCDirector::sharedDirector()->replaceScene(scene);
+    m_runningScene=this->createScene(name);
+    CCDirector::sharedDirector()->replaceScene(m_runningScene);
 }
 
 //=====================以下直接操作Scene==============//
@@ -238,5 +239,10 @@ void SceneDirector::popToSceneStackLevelDirectly(int level)
     CCDirector::sharedDirector()->popToSceneStackLevel(level);
 }
 
+
+yhmvc::Scene* SceneDirector::getRunningScene()
+{
+	return static_cast<yhmvc::Scene*>(CCDirector::sharedDirector()->getRunningScene());
+}
 
 NS_CC_YHMVC_END

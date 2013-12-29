@@ -114,6 +114,12 @@ public:
 		return 2;
 	}
 
+	/**
+     * 取得当前正在运行的Scene
+	 * 由于最终完全依赖CCDirector，直接取得CCDirector的runningScene
+     */
+	yhmvc::Scene* getRunningScene();
+
 protected:
     
     /**
@@ -130,6 +136,12 @@ protected:
     std::vector<std::string> m_scenes;
     
     std::map<std::string, SceneCreate> m_sceneCreateMap;
+
+	/**
+	 * 由于scene由CCDirector保持引用计数。这里使用弱引用。
+	 * 这里只作为在name regiester中保存createScene的反回结果。
+	 */
+	yhmvc::Scene* m_runningScene;
 };
 
 NS_CC_YHMVC_END
