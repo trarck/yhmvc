@@ -76,9 +76,30 @@ public:
      */
     CCArray* getDescendantLayerControllersByName(const std::string& name);
     
+    inline void setContext(CCObject* context)
+    {
+        CC_SAFE_RETAIN(context);
+        CC_SAFE_RELEASE(m_context);
+        m_context = context;
+    }
+    
+    inline CCObject* getContext()
+    {
+        return m_context;
+    }
+    
 private:
-        
+    
+    /**
+     * 包含的controllers
+     */
     CCArray* m_layerControllers;
+    
+    /**
+     * 上下文
+     * 主要用于scene向scene传递数据。
+     */
+    CCObject* m_context;
 };
 
 NS_CC_YHMVC_END
