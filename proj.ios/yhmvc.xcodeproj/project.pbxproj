@@ -18,6 +18,7 @@
 		577A79E3186D40FB00F1B5D5 /* SceneDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022A18698D8D00766C13 /* SceneDirector.cpp */; };
 		577A79E4186D40FB00F1B5D5 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022C18698D8D00766C13 /* Window.cpp */; };
 		57C664741867EBE600018691 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		57CF76FA18AB06D50085A22F /* Modle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57CF76F818AB06D50085A22F /* Modle.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +62,8 @@
 		576D022E18698D8D00766C13 /* yhmvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yhmvc.h; sourceTree = "<group>"; };
 		576D022F18698D8D00766C13 /* YHMVCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHMVCMacros.h; sourceTree = "<group>"; };
 		57C664731867EBE600018691 /* libyhmvc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libyhmvc.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		57CF76F818AB06D50085A22F /* Modle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Modle.cpp; sourceTree = "<group>"; };
+		57CF76F918AB06D50085A22F /* Modle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Modle.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -159,6 +162,8 @@
 		576D022318698D8D00766C13 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				57CF76F818AB06D50085A22F /* Modle.cpp */,
+				57CF76F918AB06D50085A22F /* Modle.h */,
 				576D022418698D8D00766C13 /* Layer.cpp */,
 				576D022518698D8D00766C13 /* Layer.h */,
 				576D022618698D8D00766C13 /* LayerController.cpp */,
@@ -230,6 +235,7 @@
 				577A79DC186D40FB00F1B5D5 /* CCBBuilder.cpp in Sources */,
 				577A79DD186D40FB00F1B5D5 /* YHBuilder.cpp in Sources */,
 				577A79DE186D40FB00F1B5D5 /* ControllerDirector.cpp in Sources */,
+				57CF76FA18AB06D50085A22F /* Modle.cpp in Sources */,
 				577A79DF186D40FB00F1B5D5 /* NavigateController.cpp in Sources */,
 				577A79E0186D40FB00F1B5D5 /* Layer.cpp in Sources */,
 				577A79E1186D40FB00F1B5D5 /* LayerController.cpp in Sources */,
