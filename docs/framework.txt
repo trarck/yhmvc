@@ -48,3 +48,17 @@ Component   ----- attribute  					View,Logic
 Data Entity	-----								Data
 
 Dao			------								Data operate
+
+5.middle big
+
+Game Object ----- only id					    View
+
+Property	----- 								Memery Data
+
+Component   -----			  					View,Logic
+	
+  Services  ----								Logic
+
+Model		-----								Logic,Data
+
+Data		------								Data operate
