@@ -1,0 +1,50 @@
+1. small middle
+				
+Game Entity ----- attribute(map|struct|Model)   View
+
+Component   ----- 								View,Logic
+	
+  Services  ----								Logic
+
+Model		-----								Logic,Data
+
+Dao			------								Data operate
+
+
+2. middle big
+
+Game Object ----- attribute(map|struct|Model)   View
+
+Component   ----- 								View,Logic
+	
+  Services  ----								Logic
+
+Data Entity	-----								Data
+
+Dao			------								Data operate
+
+
+3. small middle
+				
+Game Entity -----  only id						View
+
+Component   -----  attribute					View,Logic
+	
+  Services  ----								Logic
+
+Model		-----								Logic,Data
+
+Dao			------								Data operate
+
+
+4.middle big
+
+Game Object ----- only id					    View
+
+Component   ----- attribute  					View,Logic
+	
+  Services  ----								Logic
+
+Data Entity	-----								Data
+
+Dao			------								Data operate
