@@ -62,3 +62,71 @@ Component   -----			  					View,Logic
 Model		-----								Logic,Data
 
 Data		------								Data operate
+
+二、分层
+
+1.失血模型
+    domain object只包含属性
+结构：
+	Controller
+	   |
+	   |
+	  \|/
+	Service
+	   |
+	   |
+	  \|/
+	  Dao
+	   |
+	   |
+	  \|/
+ Domain Object(Model)
+ 
+2.贫血模型
+     domain object不仅包含属性，还包含方法。但是不操作Dao
+ 结构：
+ 	Controller
+ 	   |
+ 	   |
+ 	  \|/
+ 	Service
+ 	   |
+ 	   |
+ 	  \|/
+ 	  Dao
+ 	   |
+ 	   |
+ 	  \|/
+  Domain Object(Model)
+  
+3.充血模型
+      domain object不仅包含属性，还包含方法，还可以操作Dao
+  结构：
+  	Controller
+  	   |
+  	   |
+  	  \|/
+  	Service
+  	   |
+  	   |
+  	  \|/
+   Domain Object(Model)
+  	  /|\
+  	   |
+  	  \|/
+   	  Dao
+	  
+4.账血模型
+      domain object不仅包含属性，还包含方法，还可以操作Dao，还包含业务逻辑。
+  结构：
+  	Controller
+  	   |
+  	   |
+  	  \|/
+   Domain Object(Model)
+  	  /|\
+  	   |
+  	  \|/
+   	  Dao
+ 
+ 总结：4种模型中，domain object的角色越来越重。对于一个基于组件的系统，不适合其它三种模型，第一种比较适合。
