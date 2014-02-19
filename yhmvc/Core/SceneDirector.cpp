@@ -70,22 +70,22 @@ yhmvc::Scene* SceneDirector::createScene(const std::string& name)
     return NULL;
     
 }
-
-/**
- * 使用注册的Scene创建函数，创建一个Scene
- */
-yhmvc::Scene* SceneDirector::createScene(const std::string& name,CCObject* parameter)
-{
-    std::map<std::string, SceneCreate>::iterator iter=m_sceneCreateMap.find(name);
-    if (iter!=m_sceneCreateMap.end()) {
-        SceneCreate sceneCreate=(*iter).second;
-        
-        return sceneCreate();//the same as (*sceneCreate)();
-    }
-    
-    return NULL;
-    
-}
+//
+///**
+// * 使用注册的Scene创建函数，创建一个Scene
+// */
+//yhmvc::Scene* SceneDirector::createScene(const std::string& name,CCObject* parameter)
+//{
+//    std::map<std::string, SceneCreate>::iterator iter=m_sceneCreateMap.find(name);
+//    if (iter!=m_sceneCreateMap.end()) {
+//        SceneCreate sceneCreate=(*iter).second;
+//        
+//        return sceneCreate();//the same as (*sceneCreate)();
+//    }
+//    
+//    return NULL;
+//    
+//}
 
 
 /**

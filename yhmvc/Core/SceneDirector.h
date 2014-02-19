@@ -125,9 +125,12 @@ protected:
     /**
      * 使用注册的Scene创建函数，创建一个Scene
      */
-    yhmvc::Scene* createScene(const std::string& name);
+    virtual yhmvc::Scene* createScene(const std::string& name);
     
-    yhmvc::Scene* createScene(const std::string& name,CCObject* parameter);
+    //为了保持scene创建的简洁性，不提供带参数的创建scene的方法。
+    //如果提供了带参数的方法，在处理pop scene等方法时，不好处理。
+    //如果要达到传参数的目的，可以使用上下文对象。
+//    virtual yhmvc::Scene* createScene(const std::string& name,CCObject* parameter);
     
 protected:
     
