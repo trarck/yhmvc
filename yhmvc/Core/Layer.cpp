@@ -1,10 +1,10 @@
 ﻿#include "Layer.h"
-#include "LayerController.h"
+#include "Controller.h"
 
 NS_CC_YHMVC_BEGIN
 
 Layer::Layer()
-:m_layerController(NULL)
+:m_controller(NULL)
 {
 
 }
@@ -27,16 +27,16 @@ bool Layer::init()
 void Layer::onEnter()
 {
 	cocos2d::CCLayer::onEnter();
-	if(m_layerController){
-		m_layerController->onLayerEnter();
+	if(m_controller){
+		m_controller->onLayerEnter();
 	}
 }
 
 void Layer::onExit()
 {
 	cocos2d::CCLayer::onExit();
-	if(m_layerController){
-		m_layerController->onLayerExit();
+	if(m_controller){
+		m_controller->onLayerExit();
 	}
 }
 

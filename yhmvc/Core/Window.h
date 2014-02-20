@@ -1,12 +1,12 @@
-﻿#ifndef COCOS_YHMVC_WINDOW_H_
-#define COCOS_YHMVC_WINDOW_H_
+﻿#ifndef YHMVC_CORE_WINDOW_H_
+#define YHMVC_CORE_WINDOW_H_
 
 #include "cocos2d.h"
 #include "Scene.h"
 
 NS_CC_YHMVC_BEGIN
 
-class LayerController;
+class Controller;
 
 class Window : public Scene
 {
@@ -26,11 +26,11 @@ public:
      */
     virtual void loadContents();
 
-	void setRootLayerController(LayerController* rootLayerController);
+	void setRootController(Controller* rootController);
 
-	inline LayerController* getRootLayerController()
+	inline Controller* getRootController()
 	{
-		return m_rootLayerController;
+		return m_rootController;
 	}
 
 public:
@@ -49,9 +49,9 @@ private:
     
     static Window* s_currentWindow;
     
-	LayerController* m_rootLayerController;
+	Controller* m_rootController;
 };
 
 NS_CC_YHMVC_END
 
-#endif // COCOS_YHMVC_WINDOW_H_
+#endif // YHMVC_CORE_WINDOW_H_

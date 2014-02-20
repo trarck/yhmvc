@@ -1,8 +1,8 @@
-﻿#ifndef COCOS_YHMVC_CONTROLLERS_NAVIGATECONTROLLER_H_
-#define COCOS_YHMVC_CONTROLLERS_NAVIGATECONTROLLER_H_
+﻿#ifndef YHMVC_CONTROLLERS_NAVIGATECONTROLLER_H_
+#define YHMVC_CONTROLLERS_NAVIGATECONTROLLER_H_
 
 #include "cocos2d.h"
-#include "../Core/LayerController.h"
+#include "../Core/Controller.h"
 
 NS_CC_YHMVC_BEGIN
 
@@ -11,7 +11,7 @@ NS_CC_YHMVC_BEGIN
  * 用于任意controller切换
  * 可被扩展带有nav bar.
  */
-class NavigateController : public LayerController
+class NavigateController : public Controller
 {
 public:
     
@@ -21,24 +21,24 @@ public:
 
 	bool init();
 
-    void pushController(LayerController* controller);
+    void pushController(Controller* controller);
     void popController();
     void popToRootController();
-    void replaceController(LayerController *controller);
+    void replaceController(Controller *controller);
 
 	void setNextController();
 
-	inline LayerController* getCurrentController()
+	inline Controller* getCurrentController()
 	{
 		return m_currentController;
 	}
 private:
 	CCArray* m_constrollersStack;
 
-	LayerController* m_currentController;
-	LayerController* m_nextController;
+	Controller* m_currentController;
+	Controller* m_nextController;
 };
 
 NS_CC_YHMVC_END
 
-#endif // COCOS_YHMVC_CONTROLLERS_NAVIGATECONTROLLER_H_
+#endif // YHMVC_CONTROLLERS_NAVIGATECONTROLLER_H_

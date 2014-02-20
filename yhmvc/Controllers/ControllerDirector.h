@@ -1,12 +1,12 @@
-﻿#ifndef COCOS_YHMVC_CONTROLLERS_ControllerDirector_H_
-#define COCOS_YHMVC_CONTROLLERS_ControllerDirector_H_
+﻿#ifndef YHMVC_CONTROLLERS_CONTROLLERDIRECTOR_H_
+#define YHMVC_CONTROLLERS_CONTROLLERDIRECTOR_H_
 
 #include "cocos2d.h"
-#include "../Core/LayerController.h"
+#include "../Core/Controller.h"
 
 NS_CC_YHMVC_BEGIN
 
-typedef yhmvc::LayerController* (*ControllerCreate)() ;
+typedef yhmvc::Controller* (*ControllerCreate)() ;
 #define CONTROLLER_CREATE_SELECTOR(_SELECTOR) (cocos2d::yhmvc::ControllerCreate)(&_SELECTOR)
 
 /**
@@ -81,12 +81,12 @@ public:
 	/**
      * 开始运行一个controller.各个程序运行生命周期最多只执行一次。
      */
-    void runWithController(LayerController* controller);
+    void runWithController(Controller* controller);
 	
 	/**
      * 新的controller位于当前controller之上。
      */
-    void pushController(LayerController* controller);
+    void pushController(Controller* controller);
 
 	/**
      * 结束当前controller并用栈的下一个controller做为当前显示controller。
@@ -96,7 +96,7 @@ public:
 	/**
      * 替换当前的controller用新的controller显示。
      */
-    void replaceController(LayerController *controller);
+    void replaceController(Controller *controller);
 
 	/**
      * 消除controller栈内元素，直到最后一个controller，并把其显示。
@@ -112,14 +112,14 @@ public:
 		return m_constrollersStack->count();
 	}
 
-	void setCurrentController(LayerController* currentController)
+	void setCurrentController(Controller* currentController)
 	{
 		CC_SAFE_RETAIN(currentController);
 		CC_SAFE_RELEASE(m_currentController);
 		m_currentController = currentController;
 	}
 
-	inline LayerController* getCurrentController()
+	inline Controller* getCurrentController()
 	{
 		return m_currentController;
 	}
@@ -127,7 +127,7 @@ public:
 	/**
 	 * 为了和SceneDirector保持一致
 	 */
-	inline yhmvc::LayerController* getRunningScene()
+	inline yhmvc::Controller* getRunningScene()
 	{
 		return m_currentController;	
 	}
@@ -137,15 +137,15 @@ protected:
     /**
      * 使用注册的Controller创建函数，创建一个Controller
      */
-    yhmvc::LayerController* createController(const std::string& name);
+    yhmvc::Controller* createController(const std::string& name);
     
-    yhmvc::LayerController* createController(const std::string& name,CCObject* parameter);
+    yhmvc::Controller* createController(const std::string& name,CCObject* parameter);
 
 private:
 	CCArray* m_constrollersStack;
 
-	LayerController* m_currentController;
-	LayerController* m_nextController;
+	Controller* m_currentController;
+	Controller* m_nextController;
     
     std::vector<std::string> m_scenes;
     
@@ -159,4 +159,4 @@ private:
 
 NS_CC_YHMVC_END
 
-#endif // COCOS_YHMVC_CONTROLLERS_ControllerDirector_H_
+#endif // YHMVC_CONTROLLERS_CONTROLLERDIRECTOR_H_

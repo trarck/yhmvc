@@ -48,7 +48,7 @@ void ControllerDirector::removeControllerCreate(const std::string& name)
 /**
  * 使用注册的Controller创建函数，创建一个Controller
  */
-yhmvc::LayerController* ControllerDirector::createController(const std::string& name)
+yhmvc::Controller* ControllerDirector::createController(const std::string& name)
 {
     std::map<std::string, ControllerCreate>::iterator iter=m_controllerCreateMap.find(name);
     if (iter!=m_controllerCreateMap.end()) {
@@ -63,7 +63,7 @@ yhmvc::LayerController* ControllerDirector::createController(const std::string& 
 /**
  * 使用注册的Controller创建函数，创建一个Controller
  */
-yhmvc::LayerController* ControllerDirector::createController(const std::string& name,CCObject* parameter)
+yhmvc::Controller* ControllerDirector::createController(const std::string& name,CCObject* parameter)
 {
     std::map<std::string, ControllerCreate>::iterator iter=m_controllerCreateMap.find(name);
     if (iter!=m_controllerCreateMap.end()) {
@@ -83,7 +83,7 @@ void ControllerDirector::runWithScene(const std::string& name)
 {
     m_scenes.push_back(name);
     
-    yhmvc::LayerController* controller=this->createController(name);
+    yhmvc::Controller* controller=this->createController(name);
     
    this->runWithController(controller);
 }
@@ -97,7 +97,7 @@ void ControllerDirector::pushScene(const std::string& name)
     //保存scene的名子
     m_scenes.push_back(name);
     
-    yhmvc::LayerController* controller=this->createController(name);
+    yhmvc::Controller* controller=this->createController(name);
     
     this->replaceController(controller);
 }
@@ -112,7 +112,7 @@ void ControllerDirector::replaceScene(const std::string& name)
     m_scenes.pop_back();
     m_scenes.push_back(name);
     
-    yhmvc::LayerController* controller=this->createController(name);
+    yhmvc::Controller* controller=this->createController(name);
     this->replaceController(controller);
 }
 
@@ -127,7 +127,7 @@ void ControllerDirector::popScene()
     //TODO game end
     
     std::string name=m_scenes.back();
-    yhmvc::LayerController* controller=this->createController(name);
+    yhmvc::Controller* controller=this->createController(name);
     this->replaceController(controller);
 }
 
@@ -164,7 +164,7 @@ void ControllerDirector::popToSceneStackLevel(int level)
     }
     
     std::string name=m_scenes.back();
-    yhmvc::LayerController* controller=this->createController(name);
+    yhmvc::Controller* controller=this->createController(name);
     this->replaceController(controller);
 }
 
@@ -174,7 +174,7 @@ void ControllerDirector::popToSceneStackLevel(int level)
 /**
  * 开始运行一个controller.各个程序运行生命周期最多只执行一次。
  */
-void ControllerDirector::runWithController(LayerController* controller)
+void ControllerDirector::runWithController(Controller* controller)
 {
 	pushController(controller);
 }
@@ -182,7 +182,7 @@ void ControllerDirector::runWithController(LayerController* controller)
 /**
  * 新的controller位于当前controller之上。
  */
-void ControllerDirector::pushController(LayerController* controller)
+void ControllerDirector::pushController(Controller* controller)
 {
 	m_pushController=true;
 	m_constrollersStack->addObject(controller);
@@ -193,7 +193,7 @@ void ControllerDirector::pushController(LayerController* controller)
 /**
  * 替换当前的controller用新的controller显示。
  */
-void ControllerDirector::replaceController(LayerController *controller)
+void ControllerDirector::replaceController(Controller *controller)
 {
 	m_pushController=false;
 	int size=m_constrollersStack->count();
@@ -212,7 +212,7 @@ void ControllerDirector::popController()
 	//退到root controller则不能在退
 	if(size>1){
 		m_constrollersStack->removeLastObject();
-		m_nextController=static_cast<LayerController*>(m_constrollersStack->lastObject());
+		m_nextController=static_cast<Controller*>(m_constrollersStack->lastObject());
 		setNextController();
 	}
 }
@@ -229,7 +229,7 @@ void ControllerDirector::popToRootController()
 	while(size-->1){
 		m_constrollersStack->removeLastObject();
 	}
-	m_nextController=static_cast<LayerController*>(m_constrollersStack->lastObject());
+	m_nextController=static_cast<Controller*>(m_constrollersStack->lastObject());
 	setNextController();
 }
 
@@ -242,7 +242,7 @@ void ControllerDirector::setNextController()
 	if(m_currentController) m_currentController->layerWillDisappear();
 
 	//set new root controller
-	Window::getCurrentWindow()->setRootLayerController(m_nextController);
+	Window::getCurrentWindow()->setRootController(m_nextController);
 
     //当前已经消失
 	if(m_currentController) m_currentController->layerDidDisappear();

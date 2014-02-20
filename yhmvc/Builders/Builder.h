@@ -1,5 +1,5 @@
-﻿#ifndef COCOS_YHMVC_Builder_H_
-#define COCOS_YHMVC_Builder_H_
+﻿#ifndef YHMVC_BUILDERS_BUILDER_H_
+#define YHMVC_BUILDERS_BUILDER_H_
 
 #include "cocos2d.h"
 #include "../YHMVCMacros.h"
@@ -49,4 +49,4 @@ protected:
 
 NS_CC_YHMVC_END
 
-#endif // COCOS_YHMVC_Builder_H_
+#endif // YHMVC_BUILDERS_BUILDER_H_

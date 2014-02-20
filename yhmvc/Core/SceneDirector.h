@@ -1,5 +1,5 @@
-﻿#ifndef COCOS_YHMVC_SCENEDIRECTOR_H_
-#define COCOS_YHMVC_SCENEDIRECTOR_H_
+﻿#ifndef YHMVC_CORE_SCENEDIRECTOR_H_
+#define YHMVC_CORE_SCENEDIRECTOR_H_
 
 #include "cocos2d.h"
 #include "Scene.h"
@@ -149,4 +149,4 @@ protected:
 
 NS_CC_YHMVC_END
 
-#endif // COCOS_YHMVC_SCENEDIRECTOR_H_
+#endif // YHMVC_CORE_SCENEDIRECTOR_H_

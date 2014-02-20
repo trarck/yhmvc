@@ -1,5 +1,5 @@
-﻿#ifndef COCOS_YHMVC_LAYERCONTROLLER_H_
-#define COCOS_YHMVC_LAYERCONTROLLER_H_
+﻿#ifndef YHMVC_CORE_CONTROLLER_H_
+#define YHMVC_CORE_CONTROLLER_H_
 
 #include "cocos2d.h"
 #include "../YHMVCMacros.h"
@@ -15,18 +15,18 @@ typedef struct {
     unsigned int revert:4;//just for 8 int times
     
     
-} LayerControllerFlag;
+} ControllerFlag;
 
 class Layer;
 
-class LayerController : public CCObject
+class Controller : public CCObject
 {
 
 public:
     
-    LayerController();
+    Controller();
     
-    ~LayerController();
+    ~Controller();
     
     virtual bool init();
     
@@ -95,45 +95,45 @@ public:
     /**
      * 添加一个子controller
      */
-    virtual void addChildLayerController(LayerController* layerController);
+    virtual void addChildController(Controller* controller);
 
     /**
      * 移除一个子controller
      */
-    virtual void removeChildLayerController(LayerController* layerController);
+    virtual void removeChildController(Controller* controller);
     
     /**
      * 把自己从父controller中去除
      */
-    virtual void removeFromParentLayerController();
+    virtual void removeFromParentController();
     
     /**
      * 按名子取得一个子controller
      */
-    virtual LayerController* getLayerControllerByName(const std::string& name);
+    virtual Controller* getControllerByName(const std::string& name);
     
     /**
      * 按名子取得一个后代controller
      */
-    virtual LayerController* getDescendantLayerControllerByName(const std::string& name);
+    virtual Controller* getDescendantControllerByName(const std::string& name);
     
     /**
      * 按名子取得子controller
      */
-    virtual CCArray* getLayerControllersByName(const std::string& name);
+    virtual CCArray* getControllersByName(const std::string& name);
     
     /**
      * 按名子取得后代controller
      */
-    virtual CCArray* getDescendantLayerControllersByName(const std::string& name);
+    virtual CCArray* getDescendantControllersByName(const std::string& name);
 
-    virtual void willAddToParentLayerController(LayerController* parent);
+    virtual void willAddToParentController(Controller* parent);
 
-    virtual void didAddToParentLayerController(LayerController* parent);
+    virtual void didAddToParentController(Controller* parent);
     
-    virtual void willRemoveFromParentLayerController();
+    virtual void willRemoveFromParentController();
     
-    virtual void didRemoveFromParentLayerController();
+    virtual void didRemoveFromParentController();
     
     //==================get set=================//
     
@@ -157,19 +157,19 @@ public:
 		return m_sName;
 	}
 
-    inline void setParent(LayerController* parent)
+    inline void setParent(Controller* parent)
     {
         m_parent = parent;
     }
     
-    inline LayerController* getParent()
+    inline Controller* getParent()
     {
         return m_parent;
     }
     
-    inline CCArray* getChildLayerControllers()
+    inline CCArray* getChildControllers()
     {
-        return m_childLayerControllers;
+        return m_childControllers;
     }
     
     inline void setPreferredContentSize(CCSize preferredContentSize)
@@ -184,7 +184,7 @@ public:
 
 protected:
     
-    LayerControllerFlag m_tState;
+    ControllerFlag m_tState;
     
     std::string m_sDefineDataName;
 
@@ -192,9 +192,9 @@ protected:
     
     Layer* m_layer;
 
-    CCArray* m_childLayerControllers;
+    CCArray* m_childControllers;
     
-    LayerController* m_parent;
+    Controller* m_parent;
     
     //controller希望的大小。主要用于controller相关联的layer的大小。
     CCSize m_preferredContentSize;
@@ -202,4 +202,4 @@ protected:
 
 NS_CC_YHMVC_END
 
-#endif // COCOS_YHMVC_LAYERCONTROLLER_H_
+#endif // YHMVC_CORE_CONTROLLER_H_

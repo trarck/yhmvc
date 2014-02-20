@@ -1,5 +1,5 @@
-﻿#ifndef COCOS_YHMVC_YHBuilder_H_
-#define COCOS_YHMVC_YHBuilder_H_
+﻿#ifndef YHMVC_BUILDERS_YHBUILDER_H_
+#define YHMVC_BUILDERS_YHBUILDER_H_
 
 #include "Builder.h"
 
@@ -31,4 +31,4 @@ protected:
 
 NS_CC_YHMVC_END
 
-#endif // COCOS_YHMVC_YHBuilder_H_
+#endif // YHMVC_BUILDERS_YHBUILDER_H_

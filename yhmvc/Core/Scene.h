@@ -1,12 +1,12 @@
-﻿#ifndef COCOS_YHMVC_SCENE_H_
-#define COCOS_YHMVC_SCENE_H_
+﻿#ifndef YHMVC_CORE_SCENE_H_
+#define YHMVC_CORE_SCENE_H_
 
 #include "cocos2d.h"
 #include "../YHMVCMacros.h"
 
 NS_CC_YHMVC_BEGIN
 
-class LayerController;
+class Controller;
 
 class Scene : public cocos2d::CCScene
 {
@@ -38,43 +38,43 @@ public:
      * 添加一个controller
      * 没有事件仅仅作为以后用到controller做个容器
      */
-    void addLayerController(LayerController* layerController);
+    void addController(Controller* controller);
     
     /**
      * 添加一个controller
      * 没有事件仅仅作为以后用到controller做个容器
      */
-	void addLayerController(LayerController* layerController,const std::string& name);
+	void addController(Controller* controller,const std::string& name);
 
     /**
      * 移除一个controller
      */
-    void removeLayerController(LayerController* layerController);
+    void removeController(Controller* controller);
 
     /**
      * 移除所有controller名子和name相同
      */
-	void removeLayerControllerByName(const std::string& name);
+	void removeControllerByName(const std::string& name);
     
     /**
      * 按名子取得一个controller
      */
-    LayerController* getLayerControllerByName(const std::string& name);
+    Controller* getControllerByName(const std::string& name);
 
     /**
      * 按名子取得一个后代controller
      */
-    LayerController* getDescendantLayerControllerByName(const std::string& name);
+    Controller* getDescendantControllerByName(const std::string& name);
     
     /**
      * 按名子取得controller
      */
-    CCArray* getLayerControllersByName(const std::string& name);
+    CCArray* getControllersByName(const std::string& name);
     
     /**
      * 按名子取得后代controller
      */
-    CCArray* getDescendantLayerControllersByName(const std::string& name);
+    CCArray* getDescendantControllersByName(const std::string& name);
     
     inline void setContext(CCObject* context)
     {
@@ -93,7 +93,7 @@ private:
     /**
      * 包含的controllers
      */
-    CCArray* m_layerControllers;
+    CCArray* m_controllers;
     
     /**
      * 上下文
@@ -104,4 +104,4 @@ private:
 
 NS_CC_YHMVC_END
 
-#endif // COCOS_YHMVC_SCENE_H_
+#endif // YHMVC_CORE_SCENE_H_

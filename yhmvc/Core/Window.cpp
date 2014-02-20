@@ -1,5 +1,5 @@
 ﻿#include "Window.h"
-#include "LayerController.h"
+#include "Controller.h"
 #include "Layer.h"
 
 NS_CC_YHMVC_BEGIN
@@ -7,14 +7,14 @@ NS_CC_YHMVC_BEGIN
 Window* Window::s_currentWindow=NULL;
 
 Window::Window()
-:m_rootLayerController(NULL)
+:m_rootController(NULL)
 {
     
 }
 
 Window::~Window()
 {
-    CC_SAFE_RELEASE_NULL(m_rootLayerController);
+    CC_SAFE_RELEASE_NULL(m_rootController);
 }
 
 void Window::loadContents()
@@ -22,16 +22,16 @@ void Window::loadContents()
 
 }
 
-void Window::setRootLayerController(LayerController* rootLayerController)
+void Window::setRootController(Controller* rootController)
 {
-	if(m_rootLayerController){
-		this->removeChild(m_rootLayerController->getLayer(),true);
+	if(m_rootController){
+		this->removeChild(m_rootController->getLayer(),true);
 	}
 
-	CC_SAFE_RETAIN(rootLayerController);
-	CC_SAFE_RELEASE(m_rootLayerController);
-	m_rootLayerController = rootLayerController;
-	this->addChild(m_rootLayerController->getLayer());
+	CC_SAFE_RETAIN(rootController);
+	CC_SAFE_RELEASE(m_rootController);
+	m_rootController = rootController;
+	this->addChild(m_rootController->getLayer());
 }
 
 NS_CC_YHMVC_END

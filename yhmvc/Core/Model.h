@@ -1,5 +1,5 @@
-﻿#ifndef COCOS_YHMVC_MODEL_H_
-#define COCOS_YHMVC_MODEL_H_
+﻿#ifndef YHMVC_CORE_MODEL_H_
+#define YHMVC_CORE_MODEL_H_
 
 #include "cocos2d.h"
 #include "../YHMVCMacros.h"
@@ -20,4 +20,4 @@ public:
 
 NS_CC_YHMVC_END
 
-#endif // COCOS_YHMVC_MODEL_H_
+#endif // YHMVC_CORE_MODEL_H_

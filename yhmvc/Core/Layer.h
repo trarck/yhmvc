@@ -1,12 +1,12 @@
-﻿#ifndef COCOS_YHMVC_LAYER_H_
-#define COCOS_YHMVC_LAYER_H_
+﻿#ifndef YHMVC_CORE_LAYER_H_
+#define YHMVC_CORE_LAYER_H_
 
 #include "cocos2d.h"
 #include "../YHMVCMacros.h"
 
 NS_CC_YHMVC_BEGIN
 
-class LayerController;
+class Controller;
 
 class Layer : public cocos2d::CCLayer
 {
@@ -29,21 +29,21 @@ public:
 
     CREATE_FUNC(Layer);
 
-	inline void setLayerController(LayerController* layerController)
+	inline void setController(Controller* controller)
 	{
-		m_layerController = layerController;
+		m_controller = controller;
 	}
 
-	inline LayerController* getLayerController()
+	inline Controller* getController()
 	{
-		return m_layerController;
+		return m_controller;
 	}
 
 protected:
-	LayerController* m_layerController;
+	Controller* m_controller;
 
 };
 
 NS_CC_YHMVC_END
 
-#endif // COCOS_YHMVC_LAYER_H_
+#endif // YHMVC_CORE_LAYER_H_

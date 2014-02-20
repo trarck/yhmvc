@@ -13,7 +13,7 @@
 		577A79DE186D40FB00F1B5D5 /* ControllerDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D021F18698D8D00766C13 /* ControllerDirector.cpp */; };
 		577A79DF186D40FB00F1B5D5 /* NavigateController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022118698D8D00766C13 /* NavigateController.cpp */; };
 		577A79E0186D40FB00F1B5D5 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022418698D8D00766C13 /* Layer.cpp */; };
-		577A79E1186D40FB00F1B5D5 /* LayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022618698D8D00766C13 /* LayerController.cpp */; };
+		577A79E1186D40FB00F1B5D5 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022618698D8D00766C13 /* Controller.cpp */; };
 		577A79E2186D40FB00F1B5D5 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022818698D8D00766C13 /* Scene.cpp */; };
 		577A79E3186D40FB00F1B5D5 /* SceneDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022A18698D8D00766C13 /* SceneDirector.cpp */; };
 		577A79E4186D40FB00F1B5D5 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022C18698D8D00766C13 /* Window.cpp */; };
@@ -51,8 +51,8 @@
 		576D022218698D8D00766C13 /* NavigateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigateController.h; sourceTree = "<group>"; };
 		576D022418698D8D00766C13 /* Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Layer.cpp; sourceTree = "<group>"; };
 		576D022518698D8D00766C13 /* Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layer.h; sourceTree = "<group>"; };
-		576D022618698D8D00766C13 /* LayerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LayerController.cpp; sourceTree = "<group>"; };
-		576D022718698D8D00766C13 /* LayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerController.h; sourceTree = "<group>"; };
+		576D022618698D8D00766C13 /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
+		576D022718698D8D00766C13 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
 		576D022818698D8D00766C13 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
 		576D022918698D8D00766C13 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		576D022A18698D8D00766C13 /* SceneDirector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneDirector.cpp; sourceTree = "<group>"; };
@@ -166,8 +166,8 @@
 				57CF76F918AB06D50085A22F /* Model.h */,
 				576D022418698D8D00766C13 /* Layer.cpp */,
 				576D022518698D8D00766C13 /* Layer.h */,
-				576D022618698D8D00766C13 /* LayerController.cpp */,
-				576D022718698D8D00766C13 /* LayerController.h */,
+				576D022618698D8D00766C13 /* Controller.cpp */,
+				576D022718698D8D00766C13 /* Controller.h */,
 				576D022818698D8D00766C13 /* Scene.cpp */,
 				576D022918698D8D00766C13 /* Scene.h */,
 				576D022A18698D8D00766C13 /* SceneDirector.cpp */,
@@ -238,7 +238,7 @@
 				57CF76FA18AB06D50085A22F /* Model.cpp in Sources */,
 				577A79DF186D40FB00F1B5D5 /* NavigateController.cpp in Sources */,
 				577A79E0186D40FB00F1B5D5 /* Layer.cpp in Sources */,
-				577A79E1186D40FB00F1B5D5 /* LayerController.cpp in Sources */,
+				577A79E1186D40FB00F1B5D5 /* Controller.cpp in Sources */,
 				577A79E2186D40FB00F1B5D5 /* Scene.cpp in Sources */,
 				577A79E3186D40FB00F1B5D5 /* SceneDirector.cpp in Sources */,
 				577A79E4186D40FB00F1B5D5 /* Window.cpp in Sources */,

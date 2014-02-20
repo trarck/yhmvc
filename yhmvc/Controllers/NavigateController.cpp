@@ -20,7 +20,7 @@ NavigateController::~NavigateController()
 
 bool NavigateController::init()
 {
-	if(!LayerController::init()){
+	if(!Controller::init()){
 		return false;
 	}
 	m_constrollersStack=new CCArray();
@@ -28,7 +28,7 @@ bool NavigateController::init()
 	return true;
 }
 
-void NavigateController::pushController(LayerController* controller)
+void NavigateController::pushController(Controller* controller)
 {
 	m_constrollersStack->addObject(controller);
 	m_nextController=controller;
@@ -41,7 +41,7 @@ void NavigateController::popController()
 	//退到root controller则不能在退
 	if(size>1){
 		m_constrollersStack->removeLastObject();
-		m_nextController=static_cast<LayerController*>(m_constrollersStack->lastObject());
+		m_nextController=static_cast<Controller*>(m_constrollersStack->lastObject());
 		setNextController();
 	}
 }
@@ -54,11 +54,11 @@ void NavigateController::popToRootController()
 	while(size-->1){
 		m_constrollersStack->removeLastObject();
 	}
-	m_nextController=static_cast<LayerController*>(m_constrollersStack->lastObject());
+	m_nextController=static_cast<Controller*>(m_constrollersStack->lastObject());
 	setNextController();
 }
 
-void NavigateController::replaceController(LayerController *controller)
+void NavigateController::replaceController(Controller *controller)
 {
 	int size=m_constrollersStack->count();
 	m_constrollersStack->replaceObjectAtIndex(size-1,controller);
