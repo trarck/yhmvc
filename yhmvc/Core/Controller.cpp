@@ -1,5 +1,5 @@
 ﻿#include "Controller.h"
-#include "Layer.h"
+#include "View.h"
 
 NS_CC_YHMVC_BEGIN
 
@@ -7,7 +7,7 @@ static const ControllerFlag kDefaultControllerFlag={0};
 
 Controller::Controller()
 :m_sDefineDataName("")
-,m_layer(NULL)
+,m_view(NULL)
 ,m_childControllers(NULL)
 ,m_parent(NULL)
 ,m_sName("")
@@ -19,7 +19,7 @@ Controller::Controller()
 
 Controller::~Controller()
 {
-    CC_SAFE_RELEASE_NULL(m_layer);
+    CC_SAFE_RELEASE_NULL(m_view);
     CC_SAFE_RELEASE_NULL(m_childControllers);
     m_parent=NULL;
 }
@@ -42,88 +42,88 @@ bool Controller::init(const std::string& name)
 }
 
 //默认从描述文件中加载
-void Controller::loadLayer()
+void Controller::loadView()
 {
     if(m_sDefineDataName==""){
-        //create a empty layer
-        Layer* layer=new Layer();
-        layer->init();
-        setLayer(layer);
-		layer->release();
+        //create a empty view
+        View* view=new View();
+        view->init();
+        setView(view);
+		view->release();
     }else{
         //TODO load from define file
 
     }
 }
 
-bool Controller::isLayerLoaded()
+bool Controller::isViewLoaded()
 {
     return m_tState.isLoaded;
 }
 
-void Controller::setLayer(Layer* layer)
+void Controller::setView(View* view)
 {
-    CC_SAFE_RETAIN(layer);
-	if(m_layer) m_layer->setController(NULL);
-    CC_SAFE_RELEASE(m_layer);
-    m_layer = layer;
-	if(m_layer) m_layer->setController(this);
+    CC_SAFE_RETAIN(view);
+	if(m_view) m_view->setController(NULL);
+    CC_SAFE_RELEASE(m_view);
+    m_view = view;
+	if(m_view) m_view->setController(this);
 }
 
-Layer* Controller::getLayer()
+View* Controller::getView()
 {
-    if (!m_layer) {
-        this->loadLayer();
+    if (!m_view) {
+        this->loadView();
         m_tState.isLoaded=true;
-        this->layerDidLoad();
+        this->viewDidLoad();
     }
-    return m_layer;
+    return m_view;
 }
 
-//layer.已经加载。如果是从配置文件中加载。此处提供而外操作
+//view.已经加载。如果是从配置文件中加载。此处提供而外操作
 //比如绑定事件，修改文体内容
-void Controller::layerDidLoad()
+void Controller::viewDidLoad()
 {
     
 }
 
 /**
- * 当layer的onEnter事件执行时调用
+ * 当view的onEnter事件执行时调用
  */
-void Controller::onLayerEnter()
+void Controller::onViewEnter()
 {
 
 }
 
 /**
- * 当layer的onExit事件执行时调用
+ * 当view的onExit事件执行时调用
  */
-void Controller::onLayerExit()
+void Controller::onViewExit()
 {
 
 }
 
-void Controller::layerWillAppear()
-{
-    
-}
-
-void Controller::layerDidAppear()
+void Controller::viewWillAppear()
 {
     
 }
 
-void Controller::layerWillDisappear()
+void Controller::viewDidAppear()
 {
     
 }
 
-void Controller::layerDidDisappear()
+void Controller::viewWillDisappear()
 {
     
 }
 
-//==================child layer controller=================//
+void Controller::viewDidDisappear()
+{
+    
+}
+
+//==================child view controller=================//
 
 /**
  * 添加一个子controller

@@ -1,5 +1,5 @@
 ﻿#include "NavigateController.h"
-#include "../Core/Layer.h"
+#include "../Core/View.h"
 
 NS_CC_YHMVC_BEGIN
 
@@ -68,17 +68,17 @@ void NavigateController::replaceController(Controller *controller)
 
 void NavigateController::setNextController()
 {
-	if(m_currentController) m_currentController->layerWillDisappear();
-	m_nextController->layerWillAppear();
+	if(m_currentController) m_currentController->viewWillDisappear();
+	m_nextController->viewWillAppear();
 
-	//can't use m_pLayer，becase m_pLayer may be non't create
-	Layer* selfLayer=getLayer();
+	//can't use m_pView，becase m_pView may be non't create
+	View* selfView=getView();
 	
-	if(m_currentController) selfLayer->removeChild(m_currentController->getLayer());
-	selfLayer->addChild(m_nextController->getLayer());
+	if(m_currentController) selfView->removeChild(m_currentController->getView());
+	selfView->addChild(m_nextController->getView());
 
-	if(m_currentController) m_currentController->layerDidDisappear();
-	m_nextController->layerDidAppear();
+	if(m_currentController) m_currentController->viewDidDisappear();
+	m_nextController->viewDidAppear();
 
 	m_currentController=m_nextController;
 	m_currentController->retain();

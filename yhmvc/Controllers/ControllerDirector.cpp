@@ -1,5 +1,5 @@
 ﻿#include "ControllerDirector.h"
-#include "../Core/Layer.h"
+#include "../Core/View.h"
 #include "../Core/Window.h"
 
 NS_CC_YHMVC_BEGIN
@@ -236,24 +236,24 @@ void ControllerDirector::popToRootController()
 void ControllerDirector::setNextController()
 {
     //下一个将要出现
-    m_nextController->layerWillAppear();
+    m_nextController->viewWillAppear();
     
     //当前将要消失
-	if(m_currentController) m_currentController->layerWillDisappear();
+	if(m_currentController) m_currentController->viewWillDisappear();
 
 	//set new root controller
 	Window::getCurrentWindow()->setRootController(m_nextController);
 
     //当前已经消失
-	if(m_currentController) m_currentController->layerDidDisappear();
+	if(m_currentController) m_currentController->viewDidDisappear();
     
     //下一个已经出现
-	m_nextController->layerDidAppear();
+	m_nextController->viewDidAppear();
 
-	//如果是push则把controller持有的layer删除，以减少占用内存
+	//如果是push则把controller持有的view删除，以减少占用内存
 	if (m_pushController && m_currentController)
 	{
-		m_currentController->setLayer(NULL);
+		m_currentController->setView(NULL);
 	}
 
 	setCurrentController(m_nextController);

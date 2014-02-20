@@ -17,7 +17,7 @@ typedef struct {
     
 } ControllerFlag;
 
-class Layer;
+class View;
 
 class Controller : public CCObject
 {
@@ -35,62 +35,62 @@ public:
    	/**
 	 * 默认从描述文件中加载
 	 */
-    virtual void loadLayer();
+    virtual void loadView();
     	    
 	/**
-	 * layer是否已经加载成功
+	 * view是否已经加载成功
 	 */
-    bool isLayerLoaded();
+    bool isViewLoaded();
        
-    void setLayer(Layer* layer);
+    void setView(View* view);
     
-    Layer* getLayer();
+    View* getView();
 
     /**
-	 * layer.已经加载。如果是从配置文件中加载。此处提供而外操作
+	 * view.已经加载。如果是从配置文件中加载。此处提供而外操作
      * 比如绑定事件，修改文体内容
 	 */
-    virtual void layerDidLoad();    
+    virtual void viewDidLoad();    
     
 	/**
-	 * 当layer的onEnter事件执行时调用
+	 * 当view的onEnter事件执行时调用
 	 */
-	virtual void onLayerEnter();
+	virtual void onViewEnter();
 
 	/**
-	 * 当layer的onExit事件执行时调用
+	 * 当view的onExit事件执行时调用
 	 */
-	virtual void onLayerExit();
+	virtual void onViewExit();
 
 	/**
-	 * layer将要显示
+	 * view将要显示
 	 * 主要用于显示动画前的回调
 	 * 如果不是直接做为scene的子结点，不会调用这4种事件。
 	 * 这4种事件用法待定
 	 */
-    virtual void layerWillAppear();
+    virtual void viewWillAppear();
 	
 	/**
-	 * layer显示完成
+	 * view显示完成
 	 * 主要用于显示动画结束回调
 	 * 如果没有使用动画，则会和will appear一起调用
 	 */
-    virtual void layerDidAppear();
+    virtual void viewDidAppear();
 
 	/**
-	 * layer将要隐藏
+	 * view将要隐藏
 	 * 主要用于隐藏动画开始前回调
 	 */
-    virtual void layerWillDisappear();
+    virtual void viewWillDisappear();
 
 	/**
-	 * layer已经被隐藏
+	 * view已经被隐藏
 	 * 主要用于显示动画结束回调
 	 * 如果没有使用动画，则会和will disappear一起调用
 	 */
-    virtual void layerDidDisappear();
+    virtual void viewDidDisappear();
 
-    //==================child layer controller=================//
+    //==================child view controller=================//
     
     /**
      * 添加一个子controller
@@ -190,13 +190,13 @@ protected:
 
 	std::string m_sName;
     
-    Layer* m_layer;
+    View* m_view;
 
     CCArray* m_childControllers;
     
     Controller* m_parent;
     
-    //controller希望的大小。主要用于controller相关联的layer的大小。
+    //controller希望的大小。主要用于controller相关联的view的大小。
     CCSize m_preferredContentSize;
 };
 

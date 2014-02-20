@@ -3,7 +3,7 @@
 
 #include "YHMVCMacros.h"
 
-#include "Core/Layer.h"
+#include "Core/View.h"
 #include "Core/Controller.h"
 #include "Core/Scene.h"
 #include "Core/Window.h"

@@ -8,18 +8,18 @@ NS_CC_YHMVC_BEGIN
 
 class Controller;
 
-class Layer : public cocos2d::CCLayer
+class View : public cocos2d::CCNode
 {
 public:
 
-	Layer();
+	View();
 
-	~Layer();
+	~View();
     
 	bool init();  
 	
 	/**
-	 * layer将要显示。
+	 * view将要显示。
 	 * 由于cocos2d没有实现显示动画，即onEnterTransitionDidFinish没有实际意义。
 	 * 如果要自己实现显示动画，则可以忽略onEnterTransitionDidFinish。
 	 */
@@ -27,7 +27,7 @@ public:
 
 	void onExit();
 
-    CREATE_FUNC(Layer);
+    CREATE_FUNC(View);
 
 	inline void setController(Controller* controller)
 	{

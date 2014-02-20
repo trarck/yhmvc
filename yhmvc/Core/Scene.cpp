@@ -41,7 +41,7 @@ void Scene::loadContents()
 
 }
 
-//==================child layer controller=================//
+//==================child view controller=================//
 
 /**
  * 添加一个controller

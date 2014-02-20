@@ -27,12 +27,12 @@ public:
     
     /**
      * 加载场景内容。
-     * 一般是添加layer controller。由layer controller管理实际的显示内容。
+     * 一般是添加view controller。由view controller管理实际的显示内容。
      * 默认从描述文件中加载。也可以覆盖，手动创建。
      */
     virtual void loadContents();
 
-    //==================child layer controller=================//
+    //==================child view controller=================//
     
     /**
      * 添加一个controller
