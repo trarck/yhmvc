@@ -293,6 +293,8 @@
 					"$(SRCROOT)/../../../cocos2dx/platform/third_party/ios",
 					"$(SRCROOT)/../../../cocos2dx/platform/ios",
 					"$(SRCROOT)/../../../cocos2dx/platform/ios/Simulation",
+					"$(SRCROOT)/../../yhge",
+					"$(SRCROOT)/../../yhgui",
 					"$(SRCROOT)/../",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
@@ -348,6 +350,8 @@
 					"$(SRCROOT)/../../../cocos2dx/platform/third_party/ios",
 					"$(SRCROOT)/../../../cocos2dx/platform/ios",
 					"$(SRCROOT)/../../../cocos2dx/platform/ios/Simulation",
+					"$(SRCROOT)/../../yhge",
+					"$(SRCROOT)/../../yhgui",
 					"$(SRCROOT)/../",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
