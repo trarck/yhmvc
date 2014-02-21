@@ -3,12 +3,17 @@
 
 #include "cocos2d.h"
 #include "../YHMVCMacros.h"
+#include <yhgui/Component.h>
 
 NS_CC_YHMVC_BEGIN
 
 class Controller;
 
+#ifdef USE_VIEW_FOR_YHGUI
+class View : public yhgui::Component
+#else
 class View : public cocos2d::CCNode
+#endif
 {
 public:
 
