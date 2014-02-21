@@ -9,10 +9,10 @@ NS_CC_YHMVC_BEGIN
 
 class Controller;
 
-#ifdef USE_VIEW_FOR_YHGUI
-class View : public yhgui::Component
-#else
+#ifdef USE_VIEW_FOR_COMMON
 class View : public cocos2d::CCNode
+#else
+class View : public yhgui::Component
 #endif
 {
 public:
