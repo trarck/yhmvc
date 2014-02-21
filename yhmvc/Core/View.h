@@ -1,5 +1,5 @@
-﻿#ifndef YHMVC_CORE_LAYER_H_
-#define YHMVC_CORE_LAYER_H_
+﻿#ifndef YHMVC_CORE_VIEW_H_
+#define YHMVC_CORE_VIEW_H_
 
 #include "cocos2d.h"
 #include "../YHMVCMacros.h"
@@ -9,11 +9,11 @@ NS_CC_YHMVC_BEGIN
 
 class Controller;
 
-#ifdef USE_VIEW_FOR_COMMON
+//#ifdef USE_VIEW_FOR_COMMON
 class View : public cocos2d::CCNode
-#else
-class View : public yhgui::Component
-#endif
+//#else
+//class View : public yhgui::Component
+//#endif
 {
 public:
 
@@ -51,4 +51,4 @@ protected:
 
 NS_CC_YHMVC_END
 
-#endif // YHMVC_CORE_LAYER_H_
+#endif // YHMVC_CORE_VIEW_H_
