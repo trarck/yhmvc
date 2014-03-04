@@ -37,4 +37,14 @@ CCNode* YHBuilder::buildFromData(CCDictionary* data,CCObject* parameter)
     return NULL;
 }
 
+CCNode* YHBuilder::buildFromJson(void* jsonData)
+{
+    return NULL;
+}
+
+CCNode* YHBuilder::buildFromJson(void* jsonData,CCObject* parameter)
+{
+    return NULL;
+}
+
 NS_CC_YHMVC_END

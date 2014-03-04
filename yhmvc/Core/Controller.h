@@ -135,17 +135,19 @@ public:
     
     virtual void didRemoveFromParentController();
     
+    CREATE_FUNC(Controller);
+    
     //==================get set=================//
     
-	inline void setDefineDataName(const std::string& defineDataName)
-	{
-		m_sDefineDataName = defineDataName;
-	}
-
-	inline const std::string& getDefineDataName()
-	{
-		return m_sDefineDataName;
-	}
+    inline void setViewFile(std::string viewFile)
+    {
+        m_viewFile = viewFile;
+    }
+    
+    inline std::string getViewFile()
+    {
+        return m_viewFile;
+    }
 
 	inline void setName(const std::string& name)
 	{
@@ -186,7 +188,7 @@ protected:
     
     ControllerFlag m_tState;
     
-    std::string m_sDefineDataName;
+    std::string m_viewFile;
 
 	std::string m_sName;
     

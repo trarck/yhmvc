@@ -6,7 +6,7 @@ NS_CC_YHMVC_BEGIN
 static const ControllerFlag kDefaultControllerFlag={0};
 
 Controller::Controller()
-:m_sDefineDataName("")
+:m_viewFile("")
 ,m_view(NULL)
 ,m_childControllers(NULL)
 ,m_parent(NULL)
@@ -44,7 +44,7 @@ bool Controller::init(const std::string& name)
 //默认从描述文件中加载
 void Controller::loadView()
 {
-    if(m_sDefineDataName==""){
+    if(m_viewFile==""){
         //create a empty view
         View* view=new View();
         view->init();
@@ -53,6 +53,7 @@ void Controller::loadView()
     }else{
         //TODO load from define file
 
+        
     }
 }
 

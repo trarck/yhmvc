@@ -24,6 +24,10 @@ public:
 
     virtual CCNode* buildFromData(CCDictionary* data,CCObject* parameter);
     
+    virtual CCNode* buildFromJson(void* jsonData);
+    
+    virtual CCNode* buildFromJson(void* jsonData,CCObject* parameter);
+    
 protected:
 
     

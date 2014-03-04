@@ -17,6 +17,9 @@
 		577A79E2186D40FB00F1B5D5 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022818698D8D00766C13 /* Scene.cpp */; };
 		577A79E3186D40FB00F1B5D5 /* SceneDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022A18698D8D00766C13 /* SceneDirector.cpp */; };
 		577A79E4186D40FB00F1B5D5 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576D022C18698D8D00766C13 /* Window.cpp */; };
+		57BEBA1118C56B8500AA720B /* GUIBuilderExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57BEBA0F18C56B8500AA720B /* GUIBuilderExtension.cpp */; };
+		57BEBA1418C5704200AA720B /* MvcBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57BEBA1218C5704200AA720B /* MvcBuilder.cpp */; };
+		57BEBA5E18C5E0B600AA720B /* MvcBuilderConsts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57BEBA5C18C5E0B600AA720B /* MvcBuilderConsts.cpp */; };
 		57C664741867EBE600018691 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		57CF76FA18AB06D50085A22F /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57CF76F818AB06D50085A22F /* Model.cpp */; };
 /* End PBXBuildFile section */
@@ -61,6 +64,12 @@
 		576D022D18698D8D00766C13 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
 		576D022E18698D8D00766C13 /* yhmvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yhmvc.h; sourceTree = "<group>"; };
 		576D022F18698D8D00766C13 /* YHMVCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHMVCMacros.h; sourceTree = "<group>"; };
+		57BEBA0F18C56B8500AA720B /* GUIBuilderExtension.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUIBuilderExtension.cpp; sourceTree = "<group>"; };
+		57BEBA1018C56B8500AA720B /* GUIBuilderExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIBuilderExtension.h; sourceTree = "<group>"; };
+		57BEBA1218C5704200AA720B /* MvcBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MvcBuilder.cpp; sourceTree = "<group>"; };
+		57BEBA1318C5704200AA720B /* MvcBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MvcBuilder.h; sourceTree = "<group>"; };
+		57BEBA5C18C5E0B600AA720B /* MvcBuilderConsts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MvcBuilderConsts.cpp; sourceTree = "<group>"; };
+		57BEBA5D18C5E0B600AA720B /* MvcBuilderConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MvcBuilderConsts.h; sourceTree = "<group>"; };
 		57C664731867EBE600018691 /* libyhmvc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libyhmvc.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		57CF76F818AB06D50085A22F /* Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Model.cpp; sourceTree = "<group>"; };
 		57CF76F918AB06D50085A22F /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
@@ -142,6 +151,12 @@
 				576D021918698D8D00766C13 /* Builder.h */,
 				576D021A18698D8D00766C13 /* CCBBuilder.cpp */,
 				576D021B18698D8D00766C13 /* CCBBuilder.h */,
+				57BEBA0F18C56B8500AA720B /* GUIBuilderExtension.cpp */,
+				57BEBA1018C56B8500AA720B /* GUIBuilderExtension.h */,
+				57BEBA1218C5704200AA720B /* MvcBuilder.cpp */,
+				57BEBA1318C5704200AA720B /* MvcBuilder.h */,
+				57BEBA5C18C5E0B600AA720B /* MvcBuilderConsts.cpp */,
+				57BEBA5D18C5E0B600AA720B /* MvcBuilderConsts.h */,
 				576D021C18698D8D00766C13 /* YHBuilder.cpp */,
 				576D021D18698D8D00766C13 /* YHBuilder.h */,
 			);
@@ -240,8 +255,11 @@
 				577A79E0186D40FB00F1B5D5 /* View.cpp in Sources */,
 				577A79E1186D40FB00F1B5D5 /* Controller.cpp in Sources */,
 				577A79E2186D40FB00F1B5D5 /* Scene.cpp in Sources */,
+				57BEBA1118C56B8500AA720B /* GUIBuilderExtension.cpp in Sources */,
 				577A79E3186D40FB00F1B5D5 /* SceneDirector.cpp in Sources */,
 				577A79E4186D40FB00F1B5D5 /* Window.cpp in Sources */,
+				57BEBA5E18C5E0B600AA720B /* MvcBuilderConsts.cpp in Sources */,
+				57BEBA1418C5704200AA720B /* MvcBuilder.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +270,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
@@ -308,7 +326,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "armv6 armv7 i386";
+				VALID_ARCHS = "armv6 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -316,7 +334,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
@@ -365,14 +383,14 @@
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv6 armv7 i386";
+				VALID_ARCHS = "armv6 armv7 armv7s";
 			};
 			name = Release;
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: 小明 张 (L4ZF355VQS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 小明 张 (L4ZF355VQS)";
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -383,14 +401,14 @@
 				PROVISIONING_PROFILE = "0C43CFE2-55C4-429A-9A03-BFB76D31630B";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0C43CFE2-55C4-429A-9A03-BFB76D31630B";
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "armv6 armv7 i386";
+				VALID_ARCHS = "armv6 armv7 armv7s";
 			};
 			name = Debug;
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: 小明 张 (L4ZF355VQS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 小明 张 (L4ZF355VQS)";
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -402,7 +420,7 @@
 				PROVISIONING_PROFILE = "0C43CFE2-55C4-429A-9A03-BFB76D31630B";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DB6844BA-2943-44DB-B10A-3A3F0E8A52B8";
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "armv6 armv7 i386";
+				VALID_ARCHS = "armv6 armv7 armv7s";
 			};
 			name = Release;
 		};
