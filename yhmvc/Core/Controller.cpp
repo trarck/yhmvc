@@ -51,10 +51,14 @@ void Controller::loadView()
         setView(view);
 		view->release();
     }else{
-        //TODO load from define file
-
-        
+        loadViewFromFile();
     }
+}
+
+//从文件中创建view
+void Controller::loadViewFromFile()
+{
+    
 }
 
 bool Controller::isViewLoaded()

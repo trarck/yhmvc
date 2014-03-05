@@ -183,7 +183,15 @@ public:
     {
         return m_preferredContentSize;
     }
+    
+protected:
 
+    /**
+     * 从文件中创建view
+     * 由具体的子类实现。根据不同的项目，实现不同的加载方法。
+     */
+    virtual void loadViewFromFile();
+    
 protected:
     
     ControllerFlag m_tState;
