@@ -98,7 +98,7 @@ public:
         return m_context;
     }
     
-private:
+protected:
     
     /**
      * 名字
