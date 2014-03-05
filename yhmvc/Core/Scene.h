@@ -76,6 +76,16 @@ public:
      */
     CCArray* getDescendantControllersByName(const std::string& name);
     
+    inline void setName(const std::string& name)
+    {
+        m_name = name;
+    }
+    
+    inline const std::string& getName()
+    {
+        return m_name;
+    }
+    
     inline void setContext(CCObject* context)
     {
         CC_SAFE_RETAIN(context);
@@ -89,6 +99,11 @@ public:
     }
     
 private:
+    
+    /**
+     * 名字
+     */
+    std::string m_name;
     
     /**
      * 包含的controllers

@@ -5,6 +5,8 @@ NS_CC_YHMVC_BEGIN
 
 Scene::Scene()
 :m_controllers(NULL)
+,m_name("")
+,m_context(NULL)
 {
     
 }
@@ -12,6 +14,7 @@ Scene::Scene()
 Scene::~Scene()
 {
     CC_SAFE_RELEASE_NULL(m_controllers);
+    CC_SAFE_RELEASE_NULL(m_context);
 }
 
 bool Scene::init()

@@ -64,7 +64,9 @@ yhmvc::Scene* SceneDirector::createScene(const std::string& name)
     if (iter!=m_sceneCreateMap.end()) {
         SceneCreate sceneCreate=(*iter).second;
         
-        return sceneCreate();//the same as (*sceneCreate)();
+        yhmvc::Scene* scene= sceneCreate();//the same as (*sceneCreate)();
+        scene->setName(name);
+        return scene;
     }
     
     return NULL;
