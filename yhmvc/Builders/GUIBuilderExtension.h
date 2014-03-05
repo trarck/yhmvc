@@ -6,6 +6,7 @@
 #include "../YHMVCMacros.h"
 #include "../Core/Controller.h"
 #include "../Core/Scene.h"
+#include "../Core/View.h"
 
 NS_CC_YHMVC_BEGIN
 
@@ -29,13 +30,13 @@ class ControllerCreator:public yhgui::ElementCreator
 {
 public:
     
-    virtual CCNode * createElement(const yhge::Json::Value& defineData);
+    virtual CCNode * createElement(const yhge::Json::Value& defineData,yhgui::UIBuilder* builder);
     YHGUI_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(ControllerCreator,creator);
 };
 
 //==================element property parser==================//
 /**
- * @brief 子控制器属性处理
+ * @brief scene的子控制器属性处理
  */
 class SceneControllerPropertyParser:public yhgui::PropertyParser
 {
@@ -46,7 +47,41 @@ public:
     YHGUI_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(SceneControllerPropertyParser,create);
 };
 
+/**
+ * @brief 控制器名称处理
+ */
+class ControllerNamePropertyParser:public yhgui::PropertyParser
+{
+public:
+    
+    void parse(CCNode* node,const yhge::Json::Value& properties,CCNode* parent,yhgui::UIBuilder* builder);
+    
+    YHGUI_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(ControllerNamePropertyParser,create);
+};
 
+/**
+ * @brief 控制器视图处理
+ */
+class ControllerViewPropertyParser:public yhgui::PropertyParser
+{
+public:
+    
+    void parse(CCNode* node,const yhge::Json::Value& properties,CCNode* parent,yhgui::UIBuilder* builder);
+    
+    YHGUI_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(ControllerViewPropertyParser,create);
+};
+
+/**
+ * @brief controller的子控制器属性处理
+ */
+class SubControllerPropertyParser:public yhgui::PropertyParser
+{
+public:
+    
+    void parse(CCNode* node,const yhge::Json::Value& properties,CCNode* parent,yhgui::UIBuilder* builder);
+    
+    YHGUI_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(SubControllerPropertyParser,create);
+};
 
 NS_CC_YHMVC_END
 
