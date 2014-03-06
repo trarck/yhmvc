@@ -8,9 +8,13 @@ NS_CC_YHMVC_BEGIN
 
 extern const char* kElementTypeScene;
 extern const char* kElementTypeController;
+extern const char* kElementTypeView;
 
 extern const char* kElementPropertyController;
 extern const char* kElementPropertyName;
+extern const char* kElementPropertyPreferredContentSize;
+extern const char* kElementPropertyPreferredContentWidth;
+extern const char* kElementPropertyPreferredContentHeight;
 extern const char* kElementPropertyViewFile;
 extern const char* kElementPropertyView;
 

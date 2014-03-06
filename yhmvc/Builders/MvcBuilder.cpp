@@ -1,4 +1,6 @@
 ﻿#include "MvcBuilder.h"
+#include "MvcBuilderConsts.h"
+#include "GUIBuilderExtension.h"
 
 NS_CC_YHMVC_BEGIN
 
@@ -14,37 +16,27 @@ MvcBuilder::~MvcBuilder()
 
 bool MvcBuilder::init()
 {
-    return true;
+    if(UIBuilder::init()){
+        
+        setupExtend();
+        
+        return true;
+    }
+    
+    return false;
 }
 
-CCNode* MvcBuilder::buildFromFile(const std::string& filename)
+void MvcBuilder::setupExtend()
 {
-    return NULL;
-}
-
-CCNode* MvcBuilder::buildFromFile(const std::string& filename,CCObject* parameter)
-{
-    return NULL;
-}
-
-CCNode* MvcBuilder::buildFromData(CCDictionary* data)
-{
-    return NULL;
-}
-
-CCNode* MvcBuilder::buildFromData(CCDictionary* data,CCObject* parameter)
-{
-    return NULL;
-}
-
-CCNode* MvcBuilder::buildFromJson(void* jsonData)
-{
-    return NULL;
-}
-
-CCNode* MvcBuilder::buildFromJson(void* jsonData,CCObject* parameter)
-{
-    return NULL;
+    //set creator
+    m_elementCreatorFactory->registerElementCreator(kElementTypeScene, SceneCreator::creator());
+    m_elementCreatorFactory->registerElementCreator(kElementTypeController, ControllerCreator::creator());
+    m_elementCreatorFactory->registerElementCreator(kElementTypeView, MvcViewCreator::creator());
+    
+    //set property parser
+    m_elementParserFactory->registerElementParser(kElementTypeScene, SceneParser::create());
+    m_elementParserFactory->registerElementParser(kElementTypeController, ControllerParser::create());
+    m_elementParserFactory->registerElementParser(kElementTypeView, MvcViewParser::create());
 }
 
 NS_CC_YHMVC_END

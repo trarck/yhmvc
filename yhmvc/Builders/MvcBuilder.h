@@ -18,17 +18,12 @@ public:
 
     virtual bool init();
     
-    virtual CCNode* buildFromFile(const std::string& filename);
+    /**
+     * @brief 安装扩展
+     */
+    virtual void setupExtend();
     
-    virtual CCNode* buildFromFile(const std::string& filename,CCObject* parameter);
-    
-    virtual CCNode* buildFromData(CCDictionary* data);
-
-    virtual CCNode* buildFromData(CCDictionary* data,CCObject* parameter);
-    
-    virtual CCNode* buildFromJson(void* jsonData);
-    
-    virtual CCNode* buildFromJson(void* jsonData,CCObject* parameter);
+public:
     
     inline void setControllers(CCArray* controllers)
     {

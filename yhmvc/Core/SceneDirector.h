@@ -73,6 +73,16 @@ public:
 	inline int getSceneStackSize(){
 		return m_scenes.size();
 	}
+    
+    inline const std::string& getCurrentSceneName()
+    {
+        return m_scenes.back();
+    }
+    
+    inline const std::vector<std::string>& getScenes()
+    {
+        return m_scenes;
+    }
 
     //=====================以下直接操作Scene==============//
     

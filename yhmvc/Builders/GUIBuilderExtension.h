@@ -30,8 +30,24 @@ class ControllerCreator:public yhgui::ElementCreator
 {
 public:
     
-    virtual CCNode * createElement(const yhge::Json::Value& defineData,yhgui::UIBuilder* builder);
+    virtual CCNode * createElement(const yhge::Json::Value& defineData,yhgui::UIBuilder* builder,CCNode* parent);
+    
     YHGUI_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(ControllerCreator,creator);
+
+protected:
+    
+    yhmvc::View* createView(const yhge::Json::Value& properties,CCNode* parent,yhgui::UIBuilder* builder);
+    
+};
+
+/**
+ * @brief controller 结点创建
+ */
+class MvcViewCreator:public yhgui::ElementCreator
+{
+public:
+    YHGUI_VIRTUAL_NEW_AUTORELEASE_CREATE_ELEMENT_METHOD(yhmvc::View);
+    YHGUI_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(MvcViewCreator,creator);
 };
 
 //==================element property parser==================//
@@ -60,6 +76,18 @@ public:
 };
 
 /**
+ * @brief 控制器大小处理
+ */
+class ControllerPreferredContentSizePropertyParser:public yhgui::PropertyParser
+{
+public:
+    
+    void parse(CCNode* node,const yhge::Json::Value& properties,CCNode* parent,yhgui::UIBuilder* builder);
+    
+    YHGUI_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(ControllerPreferredContentSizePropertyParser,create);
+};
+
+/**
  * @brief 控制器视图处理
  */
 class ControllerViewPropertyParser:public yhgui::PropertyParser
@@ -82,6 +110,45 @@ public:
     
     YHGUI_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(SubControllerPropertyParser,create);
 };
+
+//==================element parser==================//
+
+/**
+ * @brief Scene的处理器
+ */
+class SceneParser:public yhgui::NodeParser
+{
+public:
+    
+    virtual void setupPropertyParser();
+    
+    YHGUI_STATIC_NEW_AUTORELEASE_OBJECT_WITH_INIT_METHOD(SceneParser,create);
+};
+
+/**
+ * @brief Controller的处理器
+ */
+class ControllerParser:public yhgui::NodeParser
+{
+public:
+    
+    virtual void setupPropertyParser();
+    
+    YHGUI_STATIC_NEW_AUTORELEASE_OBJECT_WITH_INIT_METHOD(ControllerParser,create);
+};
+
+/**
+ * @brief View的处理器
+ */
+class MvcViewParser:public yhgui::NodeParser
+{
+public:
+    
+    virtual void setupPropertyParser();
+    
+    YHGUI_STATIC_NEW_AUTORELEASE_OBJECT_WITH_INIT_METHOD(MvcViewParser,create);
+};
+
 
 NS_CC_YHMVC_END
 
