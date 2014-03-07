@@ -36,12 +36,6 @@
     <ClInclude Include="..\yhmvc\Controllers\NavigateController.h">
       <Filter>yhmvc\Controllers</Filter>
     </ClInclude>
-    <ClInclude Include="..\yhmvc\Core\Layer.h">
-      <Filter>yhmvc\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\yhmvc\Core\LayerController.h">
-      <Filter>yhmvc\Core</Filter>
-    </ClInclude>
     <ClInclude Include="..\yhmvc\Core\Scene.h">
       <Filter>yhmvc\Core</Filter>
     </ClInclude>
@@ -49,6 +43,12 @@
       <Filter>yhmvc\Core</Filter>
     </ClInclude>
     <ClInclude Include="..\yhmvc\Core\Window.h">
+      <Filter>yhmvc\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\yhmvc\Core\Controller.h">
+      <Filter>yhmvc\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\yhmvc\Core\View.h">
       <Filter>yhmvc\Core</Filter>
     </ClInclude>
   </ItemGroup>
@@ -68,12 +68,6 @@
     <ClCompile Include="..\yhmvc\Controllers\NavigateController.cpp">
       <Filter>yhmvc\Controllers</Filter>
     </ClCompile>
-    <ClCompile Include="..\yhmvc\Core\Layer.cpp">
-      <Filter>yhmvc\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\yhmvc\Core\LayerController.cpp">
-      <Filter>yhmvc\Core</Filter>
-    </ClCompile>
     <ClCompile Include="..\yhmvc\Core\Scene.cpp">
       <Filter>yhmvc\Core</Filter>
     </ClCompile>
@@ -81,6 +75,12 @@
       <Filter>yhmvc\Core</Filter>
     </ClCompile>
     <ClCompile Include="..\yhmvc\Core\Window.cpp">
+      <Filter>yhmvc\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\yhmvc\Core\Controller.cpp">
+      <Filter>yhmvc\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\yhmvc\Core\View.cpp">
       <Filter>yhmvc\Core</Filter>
     </ClCompile>
   </ItemGroup>
