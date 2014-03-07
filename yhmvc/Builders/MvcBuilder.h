@@ -4,6 +4,7 @@
 #include "cocos2d.h"
 #include <yhgui/yhgui.h>
 #include "../YHMVCMacros.h"
+#include "../Core/Controller.h"
 
 NS_CC_YHMVC_BEGIN
 
@@ -23,6 +24,7 @@ public:
      */
     virtual void setupExtend();
     
+    virtual void buildChildren(const yhge::Json::Value& children,CCNode* parent);
     
     virtual MvcBuilder* clone();
     
@@ -45,9 +47,23 @@ public:
         return m_controllers;
     }
     
+    inline void setRootController(Controller* rootController)
+    {
+        CC_SAFE_RETAIN(rootController);
+        CC_SAFE_RELEASE(m_rootController);
+        m_rootController = rootController;
+    }
+    
+    inline Controller* getRootController()
+    {
+        return m_rootController;
+    }
+    
 protected:
 
     CCArray* m_controllers;
+    
+    Controller* m_rootController;
     
 };
 

@@ -1,6 +1,6 @@
 ﻿#include "GUIBuilderExtension.h"
-#include "../Core/View.h"
 #include "MvcBuilderConsts.h"
+#include "MvcBuilder.h"
 
 NS_CC_YHMVC_BEGIN
 
@@ -17,9 +17,22 @@ ControllerCreator::loadView(
                             const yhge::Json::Value& defineData,
                             CCNode* parent,yhgui::UIBuilder* builder)
 {
+    MvcBuilder* mvcBuilder=dynamic_cast<MvcBuilder*>(builder);
+    CCAssert(mvcBuilder!=NULL, "ControllerCreator::loadView mvcBuilder is null");
+    //切换根控制器
+    Controller* rootController=mvcBuilder->getRootController();
+    if(rootController) rootController->retain();
+    mvcBuilder->setRootController(controller);
+    
     yhmvc::View* view=createView(defineData[yhgui::kPropertyNameProperties], parent, builder);//yhmvc::View::create(); //createView(defineData[yhgui::kPropertyNameProperties], NULL, builder);
-    controller->setView(view);
-    controller->viewDidLoad();
+    if (view) {
+        controller->setView(view);
+        controller->viewDidLoad();
+    }
+    
+    mvcBuilder->setRootController(rootController);
+    if(rootController) rootController->release();
+
     return view;
 }
 
@@ -99,6 +112,14 @@ void ControllerPreferredContentSizePropertyParser::parse(CCNode* node,const yhge
 
 void ControllerViewPropertyParser::parse(CCNode* node,const yhge::Json::Value& properties,CCNode* parent,yhgui::UIBuilder* builder)
 {
+    MvcBuilder* mvcBuilder=dynamic_cast<MvcBuilder*>(builder);
+    if(mvcBuilder->getRootController()){
+        
+        yhmvc::View* view=static_cast<View*>(node);
+
+        mvcBuilder->getRootController()->addChildController(view->getController());
+    }
+    
 //    yhmvc::View* view=NULL;
 //    
 //    yhge::Json::Value viewValue=properties[kElementPropertyView];

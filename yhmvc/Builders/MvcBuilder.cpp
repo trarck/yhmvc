@@ -5,13 +5,14 @@
 NS_CC_YHMVC_BEGIN
 
 MvcBuilder::MvcBuilder()
+:m_rootController(NULL)
 {
     
 }
 
 MvcBuilder::~MvcBuilder()
 {
-
+    CC_SAFE_RELEASE_NULL(m_rootController);
 }
 
 bool MvcBuilder::init()
@@ -37,6 +38,26 @@ void MvcBuilder::setupExtend()
     m_elementParserFactory->registerElementParser(kElementTypeScene, SceneParser::create());
     m_elementParserFactory->registerElementParser(kElementTypeController, ControllerParser::create());
     m_elementParserFactory->registerElementParser(kElementTypeView, MvcViewParser::create());
+}
+
+void MvcBuilder::buildChildren(const yhge::Json::Value& children,CCNode* parent)
+{
+    if (!children.isNull() && parent) {
+        CCNode* child=NULL;
+        for (int i=0; i<children.size(); ++i) {
+            child=this->buildElement(children[i],parent);
+//            if (child) {
+////                parent->addChild(child);
+//                
+//                View* view=dynamic_cast<View*>(child);
+//                if (view) {
+//                    if (m_rootController) {
+//                        m_rootController->addChildController(view->getController());
+//                    }
+//                }
+//            }
+        }
+    }
 }
 
 MvcBuilder* MvcBuilder::clone()
