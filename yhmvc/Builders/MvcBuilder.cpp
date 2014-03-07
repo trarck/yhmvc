@@ -39,4 +39,22 @@ void MvcBuilder::setupExtend()
     m_elementParserFactory->registerElementParser(kElementTypeView, MvcViewParser::create());
 }
 
+MvcBuilder* MvcBuilder::clone()
+{
+    MvcBuilder* newBuilder=new MvcBuilder();
+    
+    cloneProperties(newBuilder);
+    
+    newBuilder->autorelease();
+    return newBuilder;
+}
+
+/**
+ * @brief 复制属性
+ */
+void MvcBuilder::cloneProperties(MvcBuilder* builder)
+{
+    UIBuilder::cloneProperties(builder);
+}
+
 NS_CC_YHMVC_END

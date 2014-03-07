@@ -8,10 +8,18 @@ NS_CC_YHMVC_BEGIN
 
 CCNode* ControllerCreator::createElement(const yhge::Json::Value& defineData,yhgui::UIBuilder* builder,CCNode* parent)
 {
-    Controller* controller=Controller::create();
+    return loadView(createController(), defineData, parent, builder);
+}
+
+yhmvc::View*
+ControllerCreator::loadView(
+                            yhmvc::Controller* controller,
+                            const yhge::Json::Value& defineData,
+                            CCNode* parent,yhgui::UIBuilder* builder)
+{
     yhmvc::View* view=createView(defineData[yhgui::kPropertyNameProperties], parent, builder);//yhmvc::View::create(); //createView(defineData[yhgui::kPropertyNameProperties], NULL, builder);
     controller->setView(view);
-    
+    controller->viewDidLoad();
     return view;
 }
 
@@ -48,7 +56,9 @@ void SceneControllerPropertyParser::parse(CCNode* node,const yhge::Json::Value& 
         yhmvc::View* view=NULL;
         
         yhge::Json::Value::UInt count=controllersValue.size();
+        
         for (int i=0;i<count;i++) {
+            
             view=static_cast<yhmvc::View*>(builder->buildElement(controllersValue[i],node));
             scene->addController(view->getController());
             //创建的时候没有添加，这里添加

@@ -23,6 +23,14 @@ public:
      */
     virtual void setupExtend();
     
+    
+    virtual MvcBuilder* clone();
+    
+    /**
+     * @brief 复制属性
+     */
+    void cloneProperties(MvcBuilder* builder);
+    
 public:
     
     inline void setControllers(CCArray* controllers)

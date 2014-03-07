@@ -10,6 +10,10 @@
 
 NS_CC_YHMVC_BEGIN
 
+#define YHMVC_BUILDER_CREATE_CONTROLLER(T) virtual T* createController(){ \
+return T::create();\
+}
+
 //==================element creator==================//
 
 /**
@@ -36,7 +40,11 @@ public:
 
 protected:
     
-    yhmvc::View* createView(const yhge::Json::Value& properties,CCNode* parent,yhgui::UIBuilder* builder);
+    YHMVC_BUILDER_CREATE_CONTROLLER(Controller);
+    
+    virtual yhmvc::View* loadView(yhmvc::Controller* controller,const yhge::Json::Value& defineData,CCNode* parent,yhgui::UIBuilder* builder);
+    
+    virtual yhmvc::View* createView(const yhge::Json::Value& properties,CCNode* parent,yhgui::UIBuilder* builder);
     
 };
 
