@@ -51,6 +51,15 @@
     <ClInclude Include="..\yhmvc\Core\View.h">
       <Filter>yhmvc\Core</Filter>
     </ClInclude>
+    <ClInclude Include="..\yhmvc\Builders\GUIBuilderExtension.h">
+      <Filter>yhmvc\Builders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\yhmvc\Builders\MvcBuilder.h">
+      <Filter>yhmvc\Builders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\yhmvc\Builders\MvcBuilderConsts.h">
+      <Filter>yhmvc\Builders</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\yhmvc\Builders\Builder.cpp">
@@ -82,6 +91,15 @@
     </ClCompile>
     <ClCompile Include="..\yhmvc\Core\View.cpp">
       <Filter>yhmvc\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\yhmvc\Builders\GUIBuilderExtension.cpp">
+      <Filter>yhmvc\Builders</Filter>
+    </ClCompile>
+    <ClCompile Include="..\yhmvc\Builders\MvcBuilder.cpp">
+      <Filter>yhmvc\Builders</Filter>
+    </ClCompile>
+    <ClCompile Include="..\yhmvc\Builders\MvcBuilderConsts.cpp">
+      <Filter>yhmvc\Builders</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
