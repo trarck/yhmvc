@@ -8,7 +8,14 @@ NS_CC_YHMVC_BEGIN
 
 CCNode* ControllerCreator::createElement(const yhge::Json::Value& defineData,yhgui::UIBuilder* builder,CCNode* parent)
 {
-    return loadView(createController(), defineData, parent, builder);
+    yhmvc::Controller* controller=createController();
+
+    //加入到控制器结点
+    MvcBuilder* mvcBuilder=dynamic_cast<MvcBuilder*>(builder);
+    if(mvcBuilder->getRootController()){
+        mvcBuilder->getRootController()->addChildController(controller);
+    }
+    return loadView(controller, defineData, parent, builder);
 }
 
 yhmvc::View*
@@ -27,7 +34,8 @@ ControllerCreator::loadView(
     yhmvc::View* view=createView(defineData[yhgui::kPropertyNameProperties], parent, builder);//yhmvc::View::create(); //createView(defineData[yhgui::kPropertyNameProperties], NULL, builder);
     if (view) {
         controller->setView(view);
-        controller->viewDidLoad();
+        //controller还有属性没有处理，在处理view属性的时候调用view已经加载完成。
+        //controller->viewDidLoad();
     }
     
     mvcBuilder->setRootController(rootController);
@@ -111,15 +119,12 @@ void ControllerPreferredContentSizePropertyParser::parse(CCNode* node,const yhge
 }
 
 void ControllerViewPropertyParser::parse(CCNode* node,const yhge::Json::Value& properties,CCNode* parent,yhgui::UIBuilder* builder)
-{
-    MvcBuilder* mvcBuilder=dynamic_cast<MvcBuilder*>(builder);
-    if(mvcBuilder->getRootController()){
-        
-        yhmvc::View* view=static_cast<View*>(node);
+{    
+    yhmvc::View* tempView=static_cast<yhmvc::View*>(node);
+    yhmvc::Controller* controller=tempView->getController();
 
-        mvcBuilder->getRootController()->addChildController(view->getController());
-    }
-    
+    controller->viewDidLoad();
+
 //    yhmvc::View* view=NULL;
 //    
 //    yhge::Json::Value viewValue=properties[kElementPropertyView];
