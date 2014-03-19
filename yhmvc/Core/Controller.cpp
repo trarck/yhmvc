@@ -97,7 +97,7 @@ void Controller::viewDidLoad()
  */
 void Controller::onViewEnter()
 {
-
+    m_tState.viewEnter=1;
 }
 
 /**
@@ -105,7 +105,7 @@ void Controller::onViewEnter()
  */
 void Controller::onViewExit()
 {
-
+    m_tState.viewEnter=0;
 }
 
 void Controller::viewWillAppear()

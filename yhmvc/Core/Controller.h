@@ -11,7 +11,7 @@ typedef struct {
     unsigned int appearState:2;
     unsigned int loadFromDefineData:1;
     unsigned int isLoaded:1;
-    
+    unsigned int viewEnter:1;
     unsigned int revert:4;//just for 8 int times
     
     
