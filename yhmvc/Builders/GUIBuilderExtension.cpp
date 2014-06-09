@@ -36,6 +36,9 @@ ControllerCreator::loadView(
         controller->setView(view);
         //controller还有属性没有处理，在处理view属性的时候调用view已经加载完成。
         //controller->viewDidLoad();
+    }else{
+        //配置文件中没有定义view，则使用constroller的view.
+        view=controller->getView();
     }
     
     mvcBuilder->setRootController(rootController);
