@@ -36,6 +36,8 @@ ControllerCreator::loadView(
         controller->setView(view);
         //controller还有属性没有处理，在处理view属性的时候调用view已经加载完成。
         //controller->viewDidLoad();
+    }else{
+        view=controller->getView();
     }
     
     mvcBuilder->setRootController(rootController);
